@@ -1,0 +1,100 @@
+%tmp-logo {
+  width: 84px;
+
+  @include _more-than($bp-xxl-375) {
+    width: #{get-vw(84px, $bp-xxl-375)};
+  }
+
+  @include _more-than($bp-lg-979) {
+    width: #{get-vw(84px, $bp-lg-979)};
+  }
+
+  @include _more-than($bp-md-768) {
+    width: #{get-vw(84px, $bp-md-768)};
+  }
+}
+
+.consultation {
+  background: $windowBackground;
+  position: relative;
+  height: 324px;
+
+  &__logo {
+    @extend %tmp-logo;
+    object-fit: contain;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  &__content {
+    height: 100%;
+    @include padding(0px, 28px, 0px, 28px);
+    position: relative;
+    z-index: $z-index-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__action {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include padding(34px, 0px, 34px, 0px);
+  }
+
+  &__btn {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-family: $fontFamilyPrimary;
+    color: $textColorSecondary;
+    @include font-size(12px);
+    text-align: left;
+
+    &--subtext {
+      display: block;
+      font-family: $fontFamilySecondary;
+    }
+  }
+
+  &__bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.scroll-bar {
+  text-align: center;
+  @include padding(8px, 24px, 8px, 24px);
+
+  &__btn {
+    background: none;
+    border: none;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
+  }
+
+  &__img {
+    object-fit: contain;
+    object-position: bottom;
+  }
+}

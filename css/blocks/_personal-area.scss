@@ -1,0 +1,176 @@
+.profile {
+  @include margin(80px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__wrap {
+    z-index: $z-index-content;
+  }
+
+  &__content {
+    @include margin(23px);
+  }
+
+  &__background {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    height: 34%;
+  }
+
+  &__header {
+
+  }
+
+  &__footer {
+    @include padding(24px, 0px, 12px, 0px);
+  }
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    color: #000000;
+    @include font-size(24px);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__nav-slider {
+
+  }
+}
+
+.p-slider {
+  //min-height: 40vh;
+
+  &__img-wrapper {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 6px;
+
+    @include _more-than($bp-xxl-375) {
+      border-radius: #{get-vw(6px, $bp-xxl-375)};
+    }
+
+    @include _more-than($bp-lg-979) {
+      border-radius: #{get-vw(6px, $bp-lg-979)};
+    }
+
+    @include _more-than($bp-md-768) {
+      border-radius: #{get-vw(6px, $bp-md-768)};
+    }
+  }
+
+  &__img {
+    display: none;
+    object-fit: contain;
+
+    &--show {
+      display: block;
+    }
+  }
+}
+
+.p-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__column {
+
+  }
+
+  &__text {
+    font-family: $fontFamilyPrimary;
+    font-style: italic;
+    @include font-size(18px);
+    @include padding(0px, 80px, 0px, 0px);
+  }
+}
+
+.profile-nav {
+  width: 100%;
+  @extend %s-border;
+  background-color: $popupBackground;
+  @include padding(14px, 0px, 0px, 0px);
+
+  &__header {
+    background: #191847;
+    @include padding(14px, 18px, 14px, 18px);
+  }
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    @include font-size(24px);
+    color: #FFFEFE;
+  }
+
+  &__body {
+    @include padding(12px, 18px, 6px, 18px);
+  }
+}
+
+.accordion {
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: center;
+
+    width: 100%;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+
+    padding: 5px;
+
+    border: none;
+    text-align: left;
+    outline: none;
+
+    transition: 0.5s;
+
+    &--active, &:hover {
+      background-color: #E1F1FE;
+    }
+  }
+
+  &__item-title {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+    @include margin(0px, 0px, 0px, 15px);
+  }
+
+  &__item-inner {
+    max-height: 0;
+    @include padding(0px, 0px, 0px, 22px);
+    @include margin(0px, 0px, 15px, 12px);
+    overflow: hidden;
+    border-left: 2px solid #E1F1FE;
+    transition: max-height 0.3s ease-out;
+
+    ol > li {
+      padding: 8px 0;
+      font-family: $fontFamilyPrimary;
+      @include font-size(15px);
+      color: #9B9B9B;
+    }
+  }
+
+  &__item-text {
+
+  }
+}

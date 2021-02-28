@@ -1,0 +1,23 @@
+@import 'slider';
+
+.stages {
+  @include margin(150px);
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $textColorSecondary;
+    color: #000000;
+    @include font-size(24px);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include margin(18px);
+  }
+}

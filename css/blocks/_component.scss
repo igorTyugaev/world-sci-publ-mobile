@@ -1,0 +1,68 @@
+.component {
+  position: relative;
+  @include margin(120px);
+  z-index: #{$z-index-menu + 1};
+
+  &__img {
+    position: absolute;
+    object-fit: contain;
+    object-position: top;
+    top: 0;
+    left: 0;
+  }
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    color: $textColorSecondary;
+    @include font-size(24px);
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: #{$z-index-menu + 2};
+    @include padding(60px, 20px, 60px, 20px);
+  }
+
+  &__inner {
+    margin-top: 56px;
+    width: 100%;
+  }
+
+  &__text {
+    @include font-size(14px);
+    color: $textColorSecondary;
+  }
+}
+
+.quote {
+  display: flex;
+  flex-direction: row;
+  @include margin(50px);
+  height: 100%;
+
+  &__text {
+    align-items: center;
+    font-style: italic;
+    color: #000000;
+    @include font-size(12px);
+  }
+
+  &::before {
+    content: "“";
+  }
+
+  &::after {
+    content: "“";
+    transform: rotateZ(180deg);
+  }
+
+  &::before, &::after {
+    height: 10px;
+    line-height: 0%;
+    font-family: $fontFamilyPrimary;
+    color: #000000;
+    @include font-size(52px);
+  }
+}

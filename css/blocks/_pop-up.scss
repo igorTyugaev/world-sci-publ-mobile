@@ -1,0 +1,511 @@
+.pop-up {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 100;
+  display: flex;
+  transform: translateY(-100%);
+  overflow: hidden;
+
+  &_transition {
+    transition: transform 0.5s;
+  }
+
+  &_active {
+    transform: translateY(0);
+  }
+
+  &__poster {
+    position: relative;
+    flex: 1;
+  }
+
+  &__labels {
+    @include padding-size(0px, 12px, 12px, 12px);
+    @include font-size(10px);
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+
+  &__label {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+
+    color: #FFFFFF;
+
+    display: block;
+
+    &--black {
+      color: $textColorAccent;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 0;
+    top: -2.85%;
+    object-fit: contain;
+
+    $h-logo: 160px;
+    height: $h-logo;
+
+    @include _more-than($bp-xxl-375) {
+      height: #{get-vw($h-logo, $bp-xxl-375)};
+    }
+
+    @include _more-than($bp-lg-979) {
+      height: #{get-vw($h-logo, $bp-lg-979)};
+    }
+
+    @include _more-than($bp-sm-576) {
+      height: #{get-vw($h-logo, $bp-sm-576)};
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include padding(24px, 52px, 24px, 52px);
+  }
+
+  &__inner {
+    height: 85%;
+
+    &--narrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__narrow {
+    width: 70%;
+  }
+
+
+  &__desc {
+    font-weight: normal;
+    @include font-size(14px);
+    display: block;
+    width: 80%;
+
+    color: #000000;
+    @include margin(40px);
+  }
+
+
+  &__input {
+    width: 100%;
+    font-weight: normal;
+    cursor: text;
+    @include margin(15px);
+    @include font-size(14px);
+    @include padding(12px, 12px, 12px, 12px);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+
+    &--file {
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    border: 1px solid #000000;
+    border-radius: 300px;
+    background-color: #fff;
+    @include padding(12px, 50px, 12px, 50px);
+    transition: 0.3s;
+    cursor: pointer;
+    @include margin(20px);
+
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  &__super-desc {
+    font-weight: normal;
+    @include margin(21px);
+    @include font-size(10px);
+    color: #BBBBBB;
+    text-align: left;
+
+    &--link {
+      margin: 0;
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 120%;
+
+    color: #000000;
+  }
+
+  &__video {
+    width: 80%;
+  }
+
+  &__social {
+    @include margin(28px);
+
+    .social__link {
+      width: 8%;
+    }
+  }
+
+  &__iframe {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+
+    & iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      width: inherit;
+      height: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+
+    @include _more-than($bp-xxl-375) {
+      right: #{get-vw(20px, $bp-xxl-375)};
+      top: #{get-vw(20px, $bp-xxl-375)};
+      width: #{get-vw(30px, $bp-xxl-375)};
+      height: #{get-vw(30px, $bp-xxl-375)};
+      margin-right: #{get-vw(12px, $bp-xxl-375)};
+
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.popup-2 {
+  &__promo {
+    font-family: $fontFamilySecondary;
+    @include font-size(24px);
+    @include padding(24px, 24px, 24px, 24px);
+    background: #ECECEC;
+    border-radius: 6px;
+  }
+
+  &__description {
+    font-family: $fontFamilyPrimary;
+    @include font-size(28px);
+    @include margin(60px);
+    text-align: left;
+  }
+
+  &__form {
+    width: 80%;
+  }
+}
+
+.popup-3 {
+  &__promo {
+    font-family: $fontFamilySecondary;
+    @include font-size(24px);
+    @include padding(24px, 24px, 24px, 24px);
+    background: #ECECEC;
+    border-radius: 6px;
+  }
+
+  &__description {
+    font-family: $fontFamilyPrimary;
+    @include font-size(24px);
+    @include padding(0px, 140px, 0px, 0px);
+    @include margin(20px);
+    text-align: left;
+  }
+
+  &__form {
+    width: 60%;
+
+    input[type="file"] {
+      display: none;
+    }
+  }
+}
+
+.p-uploader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  @include padding(12px, 12px, 12px, 12px);
+
+  &:active {
+    background-color: #0F5C30;
+  }
+
+  &__choose {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    object-fit: contain;
+    width: 8%;
+  }
+
+  &__text {
+    display: block;
+    text-align: left;
+    font-style: $fontFamilyPrimary;
+    @include font-size(14px);
+
+    color: rgba(183, 183, 183, 1);
+
+    &:hover {
+      color: rgba(32, 32, 32, 1);
+    }
+  }
+}
+
+.popup-4 {
+
+}
+
+.popup-7 {
+
+}
+
+.pdf-reader {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    flex: 50;
+    width: 100%;
+    background-color: $popupBackground;
+  }
+
+  &__viewer {
+    flex: 508;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__footer {
+    flex: 60;
+    width: 100%;
+    background-color: $popupBackground;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  &__iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__close {
+
+  }
+
+  &__btn {
+    border: 1px solid #000000;
+    border-radius: 300px;
+    background-color: #fff;
+    @include padding(12px, 50px, 12px, 50px);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+.pdf-download {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    @include font-size(14px);
+  }
+
+  &__img {
+    height: 10%;
+    @include padding(0px, 12px, 0px, 12px);
+  }
+}
+
+.selector {
+  position: relative;
+  width: 100%;
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFEFE;
+    @include margin(15px);
+
+    color: rgba(183, 183, 183, 1);
+    font-style: $fontFamilyPrimary;
+    @include font-size(14px);
+    @include padding(12px, 12px, 12px, 12px);
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 6px;
+    z-index: $z-index-menu;
+
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(32, 32, 32, 1);
+    }
+
+    &--show {
+      border: 1px solid $colorAccent;
+      background-color: $colorAccent;
+      color: #FFFEFE;
+
+      &:hover {
+        color: #FFFEFE;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: calc(100% - 6px);
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border: 1px solid #c7ccd1;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    transition: all 0.3s ease-out;
+
+    opacity: 0;
+    z-index: $z-index-content;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + label {
+      background-color: $colorAccent;
+      overflow: hidden;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    max-height: 0;
+    padding: 0 16px;
+
+    font-style: $fontFamilyPrimary;
+    @include font-size(14px);
+
+    transition: all 0.2s ease-out;
+    background-color: rgba(236, 236, 236, 1);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    & + input + & {
+      border-top: 0 solid #C7CCD160;
+    }
+
+    &:hover {
+      background-color: rgba(206, 206, 206, 1);
+    }
+
+    &:active {
+      background-color: $colorAccent;
+    }
+  }
+
+  &[data-state="active"] {
+    .selector__title {
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+      }
+    }
+
+    .selector__content {
+      opacity: 1;
+    }
+
+    .selector__label + .selector__input + .selector__label {
+      max-height: 40px;
+      border-top-width: 1px;
+    }
+  }
+}

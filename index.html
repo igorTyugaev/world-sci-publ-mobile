@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <base href="/landing-test/">-->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="./media/incons/favicon.ico" rel="shortcut icon">
+    <title>WorldSciPubl</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NF7Q6BJ');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- VK Pixel Code -->
+    <script type="text/javascript">
+        !(function () {
+            var t = document.createElement('script');
+            (t.type = 'text/javascript'),
+                (t.async = !0),
+                (t.src = 'https://vk.com/js/api/openapi.js?162'),
+                (t.onload = function () {
+                    VK.Retargeting.Init('VK-RTRG-391973-cXaZw'),
+                        VK.Retargeting.Hit();
+                }),
+                document.head.appendChild(t);
+        })();
+    </script>
+    <!-- End VK Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod
+                    ? n.callMethod.apply(n, arguments)
+                    : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(
+            window,
+            document,
+            'script',
+            'https://connect.facebook.net/en_US/fbevents.js'
+        );
+        fbq('init', '2365479983546227');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <!-- Yandex.Metrika counter -->
+    <script>
+        var yaParams = {
+            ip: "<?=$_SERVER['REMOTE_ADDR'];?>",
+        };
+    </script>
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter50181778 = new Ya.Metrika2({
+                        id: 50181778,
+                        params: window.yaParams,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true,
+                    });
+                } catch (e) {}
+            });
+
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://mc.yandex.ru/metrika/tag.js';
+
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks2');
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-125087961-1"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-125087961-1');
+    </script>
+    <!-- Start for Saving cookie -->
+    <script>
+        var utmCookie = {
+            cookieNamePrefix: '_uc_',
+            utmParams: [
+                'utm_source',
+                'utm_medium',
+                'utm_campaign',
+                'utm_term',
+                'utm_content',
+            ],
+            cookieExpiryDays: 365,
+            createCookie: function (c, d, e) {
+                if (e) {
+                    var b = new Date();
+                    b.setTime(b.getTime() + e * 24 * 60 * 60 * 1000);
+                    var a = '; expires=' + b.toGMTString();
+                } else {
+                    var a = '';
+                }
+                document.cookie =
+                    this.cookieNamePrefix + c + '=' + d + a + '; path=/';
+            },
+            readCookie: function (b) {
+                var e = this.cookieNamePrefix + b + '=';
+                var a = document.cookie.split(';');
+                for (var d = 0; d < a.length; d++) {
+                    var f = a[d];
+                    while (f.charAt(0) == ' ') {
+                        f = f.substring(1, f.length);
+                    }
+                    if (f.indexOf(e) == 0) {
+                        return f.substring(e.length, f.length);
+                    }
+                }
+                return null;
+            },
+            eraseCookie: function (a) {
+                this.createCookie(a, '', -1);
+            },
+            getParameterByName: function (b) {
+                b = b.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var a = '[\\?&]' + b + '=([^&#]*)';
+                var d = new RegExp(a);
+                var c = d.exec(window.location.search);
+                if (c == null) {
+                    return '';
+                } else {
+                    return decodeURIComponent(c[1].replace(/\+/g, ' '));
+                }
+            },
+            utmPresentInUrl: function () {
+                var d = false;
+                for (var a = 0; a < this.utmParams.length; a++) {
+                    var c = this.utmParams[a];
+                    var b = this.getParameterByName(c);
+                    if (b != '' && b != undefined) {
+                        d = true;
+                    }
+                }
+                return d;
+            },
+            writeUtmCookieFromParams: function () {
+                for (var a = 0; a < this.utmParams.length; a++) {
+                    var c = this.utmParams[a];
+                    var b = this.getParameterByName(c);
+                    this.createCookie(c, b, this.cookieExpiryDays);
+                }
+            },
+            writeCookieOnce: function (a, c) {
+                var b = this.readCookie(a);
+                if (!b) {
+                    this.createCookie(a, c, this.cookieExpiryDays);
+                }
+            },
+            writeReferrerOnce: function () {
+                value = document.referrer;
+                if (value === '' || value === undefined) {
+                    this.writeCookieOnce('referrer', 'direct');
+                } else {
+                    this.writeCookieOnce('referrer', value);
+                }
+            },
+            referrer: function () {
+                return this.readCookie('referrer');
+            },
+        };
+        utmCookie.writeReferrerOnce();
+        if (utmCookie.utmPresentInUrl()) {
+            utmCookie.writeUtmCookieFromParams();
+        }
+    </script>
+    <!-- End for saving cookie -->
+
+</head>
+<body>
+
+<header class="header" id="header">
+
+    <div class="header__menu menu">
+
+        <div class="menu__burger" id="navToggle">
+            <div class="burger" id="navBurger"></div>
+            <p class="menu__title">
+                МЕНЮ
+            </p>
+        </div>
+
+        <nav class="header__nav nav" id="navBar">
+
+            <div class="nav__header">
+                <img loading="lazy" class="nav__header-logo"
+                     src="./media/logo-white.svg"
+                     alt="logo">
+            </div>
+
+            <div class="nav__links">
+                <button class="nav__link" data-show-popup="1000">
+                    Активировать промокод
+                </button>
+                <button class="nav__link" data-scroll="#works">Личный кабинет</button>
+                <button class="nav__link" data-scroll="#team-section">
+                    Блог “Кафедра WSP”
+                </button>
+                <button class="nav__link" data-scroll="#faq-section">F.A.Q.</button>
+                <button class="nav__link" data-scroll="#footer-section">Контакты</button>
+                <button class="nav__link" data-scroll="#footer-section">Соцсети</button>
+                <button class="nav__link nav__link--special" data-show-popup="1">
+                    Оставить заявку
+                </button>
+            </div>
+
+            <div class="nav__footer">
+                <img loading="lazy" class="nav__logo" src="./media/logo.svg" alt="logo">
+                <p class="nav__date">2021 г.</p>
+            </div>
+
+        </nav>
+
+    </div>
+
+    <a class="header__call" href="tel:+74951277926">
+<!--        <span class="header__call-text">RU | ENG</span>-->
+        <span class="header__call-text">+7 (495) 127 - 79 - 26</span>
+    </a>
+
+    <img src="./media/logo.svg" alt="logo" class="header__logo">
+
+</header>
+
+
+<main>
+    @import "consultation.html"
+
+    @import "cost.html"
+
+    @import "advantages.html"
+
+<!--    <section id="quiz-0" class="quiz">-->
+<!--        &lt;!&ndash;@import "quiz.html"&ndash;&gt;-->
+<!--    </section>-->
+
+    @import "promo.html"
+
+    @import "guaranty.html"
+
+    @import "component.html"
+
+    @import "stages.html"
+
+    @import "profile.html"
+
+<section class="audit" id="audit">
+
+    <div class="audit__wrap container">
+        <h2 class="audit__title">
+            Предлагаем бесплатно проанализировать Вашу статью
+            и рассчитать стоимость необходимых услуг
+        </h2>
+
+        <div class="audit__inner">
+
+            <div class="audit__main extended-block">
+
+                <div class="audit__header extended-header">
+                    <h3 class="audit__subtitle">
+                        Проведем бесплатный технический аудит, чтобы оценить
+                        возможность публикации Вашей рукописи в журнале с
+                        необходимыми характеристиками, а также сформировать
+                        перечень требующихся доработок и рассчитать их стоимость
+                    </h3>
+                </div>
+
+                <div class="audit__content">
+
+                    <form novalidate name="24" class="audit__form audit-form" action="/"
+                          method="get">
+
+                        <div class="audit-form__inputs">
+
+                            <div class="input-wrapper audit-form__input-wrapper">
+                                <input class="audit-form__input"
+                                       type="text"
+                                       name="lastname"
+                                       placeholder="Фамилия"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                            <div class="input-wrapper audit-form__input-wrapper">
+                                <input class="audit-form__input"
+                                       type="text"
+                                       name="firstname"
+                                       placeholder="Имя"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                            <div class="input-wrapper audit-form__input-wrapper">
+                                <input class="audit-form__input"
+                                       type="tel"
+                                       name="phone"
+                                       placeholder="Номер телефона"
+                                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                            <div class="input-wrapper audit-form__input-wrapper">
+                                <input class="audit-form__input"
+                                       type="email"
+                                       name="email"
+                                       placeholder="Электронная почта"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="audit-form__inputs audit-form__inputs--file">
+                            <div class="uploader">
+                                <label for="file-upload-4" class="uploader__choose">
+                                    <img loading="lazy" class="uploader__img" src="./media/folder.png"
+                                         alt="uploader-img">
+                                </label>
+                                <span class="uploader__text">
+                                Нажмите на квадрат,
+                                чтобы загрузить с компьютера
+                                статью для аудита
+                            </span>
+                                <div class="input-wrapper">
+                                    <input name="file" id="file-upload-4" type="file"/>
+                                    <span class="input-wrapper__error"></span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="button audit-form__btn"
+                                    name="submit"
+                                    data-show-popup="20">
+                                Отправить заявку на бесплатный аудит
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <div class="audit__instruction">
+                        <h4 class="audit__instruction-title">
+                            На электронную почту Вам поступит
+                            следующая информация:
+                        </h4>
+                        <ol class="audit__instruction-text">
+                            <li>1) Результат проверки текста на наличие заимствований</li>
+                            <li>2) Технический аудит разделов статьи</li>
+                            <li>3) Перечень и стоимость работ</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="audit__items">
+
+                <div class="audit__item audit-cart">
+                    <div class="audit-cart__inner">
+                        <h3 class="audit-cart__title">Технический аудит</h3>
+                        <p class="audit-cart__text">
+                            Заранее определим необходимые доработки
+                            и их последовательность для
+                            успешной публикации Вашей рукописи
+                        </p>
+                        <button class="button audit-cart__link"
+                                data-show-popup="200">Открыть пример
+                        </button>
+                    </div>
+                    <img loading="lazy" src="./media/human_a.svg" alt="human_a" class="audit-cart__img">
+                </div>
+
+                <div class="audit__item audit-cart">
+                    <div class="audit-cart__inner">
+                        <h3 class="audit-cart__title">Предварительная экспертная оценка</h3>
+                        <p class="audit-cart__text">
+                            Проверим научную составляющую и получим ценные рекомендации от
+                            действующего рецензента авторитетного журнала по Вашей тематике
+                        </p>
+                        <button class="button audit-cart__link"
+                                data-show-popup="202">Открыть пример
+                        </button>
+                    </div>
+                    <img loading="lazy" src="./media/audit/humaaans-2.svg" alt="human_a"
+                         class="audit-cart__img">
+                </div>
+
+                <div class="audit__item audit-cart">
+                    <div class="audit-cart__inner">
+                        <h3 class="audit-cart__title">До / После</h3>
+                        <p class="audit-cart__text">
+                            Мы вкладываем 80% бюджета в доработку статьи, состоящую из 11
+                            этапов. Посмотрите, как изменится Ваша статья перед отправкой в
+                            журнал
+                        </p>
+                        <button class="button audit-cart__link" data-show-popup="206">
+                            Открыть пример
+                        </button>
+                    </div>
+                    <img loading="lazy" src="./media/audit/humaaans-3.svg" alt="human_a"
+                         class="audit-cart__img">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    @import "team.html"
+
+    @import "foreign.html"
+
+    @import "reviews.html"
+
+    @import "geography.html"
+
+<!--    <section id="quiz-1" class="quiz">-->
+<!--        &lt;!&ndash;@import "quiz.html"&ndash;&gt;-->
+<!--    </section>-->
+
+    @import "faq.html"
+
+    @import "footer.html"
+</main>
+
+<!--data-show-popup="2" data-read-popup="1"-->
+
+<!-- Из меню "Активировать промокод" -->
+<section id='popup-1000' class="pop-up">
+
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Быкова Альбина</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-1@2x.jpg, 2x"
+             src="./media/pop-up/photo-1.jpg"
+             srcset="./media/pop-up/photo-1@2x.jpg, 2x" alt="photo-1">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Необходима публикация
+                    в Scopus/Web of Science?
+                </h3>
+
+                <p class="pop-up__desc">
+                    Мы перезвоним Вам, <br>
+                    чтобы подобрать лучшее решение
+                </p>
+
+                <form novalidate name="1" data-popup="1000" action="/">
+                    <div class="pop-up__inputs">
+
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="coupon" class="pop-up__input"
+                                   placeholder="Промокод">
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="2"
+                            data-read-popup="1">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--ФИО, Тел., Промо-->
+
+<!-- Первый экран -->
+<section id='popup-1' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Быкова Альбина</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-1@2x.jpg, 2x"
+             src="./media/pop-up/photo-1.jpg"
+             srcset="./media/pop-up/photo-1@2x.jpg, 2x" alt="photo-1">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Необходима публикация
+                    в Scopus/Web of Science?
+                </h3>
+
+                <p class="pop-up__desc">
+                    Мы перезвоним Вам, <br>
+                    чтобы подобрать лучшее решение
+                </p>
+
+                <form novalidate name="1" action="/">
+                    <div class="pop-up__inputs">
+
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="2"
+                            data-read-popup="1">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--ФИО, Тел.-->
+
+<section id='popup-2' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Быкова Альбина</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-2@2x.jpg, 2x"
+             src="media/pop-up/photo-2.jpg" alt="photo-2">
+
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-2">
+            <p class="popup-2__promo">
+                Спасибо, мы получили Ваш номер
+                телефона, в ближайшее время ответственный
+                специалист свяжется с Вами
+            </p>
+
+            <div class="pop-up__narrow">
+
+                <p class="popup-2__description">
+                    Узнайте, как обезопасить себя
+                    от финансовых потерь при
+                    публикации.
+                </p>
+
+                <p class="pop-up__desc">
+                    Укажите Email, на который направить <br>
+                    статью в PDF–формате
+                </p>
+
+                <div class="popup-2__form">
+
+                    <form novalidate name="2" action="/">
+                        <div class="pop-up__inputs">
+
+                            <div class="input-wrapper">
+                                <input name="email" type="email" class="pop-up__input"
+                                       placeholder="Email"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="pop-up__button" data-show-popup="3"
+                                data-read-popup="2">
+                            Получить
+                        </button>
+                    </form>
+
+                    <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                        обработку
+                        своих персональных данных и соглашаетесь с
+                        <button class="pop-up__super-desc pop-up__super-desc--link"
+                                data-show-popup="500">
+                            Политикой конфиденциальности
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Email -->
+
+<section id='popup-3' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Быкова Альбина</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-3@2x.jpg, 2x"
+             src="media/pop-up/photo-3.jpg" alt="photo-3">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-3">
+
+            <p class="popup-3__promo">
+                Статья о финансовых рисках
+                была направлена на указанную
+                Вами почту
+            </p>
+
+            <p class="popup-3__description">
+                Мы можем сразу провести бесплатный аудит Вашей статьи по основным
+                параметрам,
+                чтобы чтобы заранее определить соответствие техническим аспектам
+                академического письма
+            </p>
+
+            <p class="pop-up__desc">
+                Укажите Email, на который направить <br>
+                статью в PDF–формате
+            </p>
+
+            <div class="popup-3__form">
+
+                <form novalidate name="3" enctype="multipart/form-data" method="post"
+                      action="/">
+                    <div class="pop-up__inputs">
+
+                        <!--                        <input name="scopus" type="text" class="pop-up__input"-->
+                        <!--                               placeholder="Выберите базу (Scopus/WoS)">-->
+
+
+                        <div class="selector" data-state="">
+                            <div class="selector__title" data-default="Option 0">
+                                Выберите базу (Scopus/WoS)
+                            </div>
+                            <div class="selector__content">
+
+                                <input id="singleSelect0" class="selector__input"
+                                       type="radio" name="db" value="0" required/>
+                                <label for="singleSelect0" class="selector__label">
+                                    Выберите базу (Scopus/WoS)
+                                </label>
+
+                                <input id="singleSelect1" class="selector__input"
+                                       type="radio" name="db" value="1" required/>
+                                <label for="singleSelect1" class="selector__label">
+                                    Scopus
+                                </label>
+
+                                <input id="singleSelect2" class="selector__input"
+                                       type="radio" name="db" value="0" required/>
+                                <label for="singleSelect2" class="selector__label">
+                                    Web of Science
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="p-uploader pop-up__input pop-up__input--file">
+                            <label for="file-upload-1" class="p-uploader__choose">
+                                <span class="p-uploader__text">Загрузить статью</span>
+                                <img loading="lazy" class="p-uploader__img"
+                                     src="./media/folder.png"
+                                     alt="uploader-img">
+                            </label>
+                            <input name="file" id="file-upload-1" type="file"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="4"
+                            data-read-popup="3">
+                        Отправить
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Файл -->
+
+<section id='popup-4' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Быкова Альбина</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-4@2x.jpg, 2x"
+             src="./media/pop-up/photo-4.jpg" alt="photo-4">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Хорошего дня -->
+
+
+<!-- Узнать стоимость -->
+<section id='popup-5' class="pop-up">
+
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label pop-up__label--black">Марсель Кадыров</span>
+            <span class="pop-up__label pop-up__label--black">Соучредитель компании</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-5@2x.jpg, 2x"
+             src="media/pop-up/photo-5.jpg" alt="photo-5">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">Необходима публикация
+                    в Scopus/Web of Science?</h3>
+                <p class="pop-up__desc">Мы перезвоним Вам, <br>
+                    чтобы подобрать лучшее решение </p>
+
+                <form novalidate name="5" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+                    <button class="pop-up__button" type="submit" data-show-popup="6">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--ФИО, Тел.-->
+
+<section id='popup-6' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label pop-up__label--black">Марсель Кадыров</span>
+            <span class="pop-up__label pop-up__label--black">Соучредитель компании</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-6@2x.jpg, 2x"
+             src="media/pop-up/photo-6.jpg" alt="photo-6">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-6">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Хорошего дня -->
+
+
+<!-- Quiz -->
+<section id='popup-7' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова София</span>
+            <span class="pop-up__label">Ведущий специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-7@2x.jpg, 2x"
+             src="media/pop-up/photo-7.jpg" alt="photo-7">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Уточните, пожалуйста, как
+                    с Вами связаться
+                </h3>
+
+                <p class="pop-up__desc">
+                    Укажите свои контактные данные,<br>
+                    чтобы специалист мог связаться с Вами после<br>
+                    обработки запроса
+                </p>
+
+                <form novalidate name="7" data-popup="7" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="email" type="email" class="pop-up__input"
+                                   placeholder="Email"
+                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button class="pop-up__button" type="submit" data-show-popup="8">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="">
+    </div>
+
+</section> <!--ФИО, Тел.-->
+
+<section id='popup-8' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова София</span>
+            <span class="pop-up__label">Ведущий специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-8@2x.jpg, 2x"
+             src="media/pop-up/photo-8.jpg" alt="photo-8">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-6">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Хорошего дня -->
+
+<!--WARNING-->
+<!-- Мультик -->
+<section id='popup-9' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Ермакова Виктория</span>
+            <span class="pop-up__label">Ведущий специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-9@2x.jpg, 2x"
+             src="media/pop-up/photo-9.jpg" alt="photo-9">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-2">
+            <p class="popup-2__promo">
+                Спасибо, мы получили Ваш номер
+                телефона, в ближайшее время ответственный
+                специалист свяжется с Вами
+            </p>
+
+            <div class="pop-up__narrow">
+
+                <p class="popup-2__description">
+                    Узнайте, как обезопасить себя
+                    от финансовых потерь при
+                    публикации.
+                </p>
+
+                <p class="pop-up__desc">
+                    Укажите Email, на который направить <br>
+                    статью в PDF–формате
+                </p>
+
+                <div class="popup-2__form">
+
+                    <form novalidate name="9" action="/">
+                        <div class="pop-up__inputs">
+
+                            <div class="input-wrapper">
+                                <input name="email" type="email" class="pop-up__input"
+                                       placeholder="Email"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="pop-up__button" data-show-popup="10"
+                                data-read-popup="9">
+                            Получить
+                        </button>
+                    </form>
+
+                    <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                        обработку
+                        своих персональных данных и соглашаетесь с
+                        <button class="pop-up__super-desc pop-up__super-desc--link"
+                                data-show-popup="500">
+                            Политикой конфиденциальности
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Email -->
+
+<section id='popup-10' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Ермакова Виктория</span>
+            <span class="pop-up__label">Ведущий специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-10@2x.jpg, 2x"
+             src="media/pop-up/photo-10.jpg" alt="photo-10">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-3">
+
+            <p class="popup-3__promo">
+                Статья о финансовых рисках
+                была направлена на указанную
+                Вами почту
+            </p>
+
+            <p class="popup-3__description">
+                Мы можем сразу провести бесплатный аудит Вашей статьи по основным
+                параметрам,
+                чтобы чтобы заранее определить соответствие техническим аспектам
+                академического письма
+            </p>
+
+            <p class="pop-up__desc">
+                Укажите Email, на который направить <br>
+                статью в PDF–формате
+            </p>
+
+            <div class="popup-3__form">
+
+                <form novalidate name="10" action="/">
+                    <div class="pop-up__inputs">
+                        <input name="scopus" type="text" class="pop-up__input"
+                               placeholder="Выберите базу (Scopus/WoS)">
+                        <input name="file" type="file" class="pop-up__input">
+                        <div class="p-uploader pop-up__input pop-up__input--file">
+                            <label for="file-upload-2" class="p-uploader__choose">
+                                <img loading="lazy" class="p-uploader__img"
+                                     src="./media/folder.png"
+                                     alt="uploader-img">
+                            </label>
+                            <span class="p-uploader__text">Загрузить статью</span>
+                            <input name="file" id="file-upload-2" type="file"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="11"
+                            data-read-popup="10">
+                        Отправить
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Файл -->
+
+<section id='popup-11' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Ермакова Виктория</span>
+            <span class="pop-up__label">Ведущий специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-11@2x.jpg, 2x"
+             src="media/pop-up/photo-11.jpg" alt="photo-11">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Хорошего дня -->
+
+<!--WARNING-->
+<!-- Гарантии -->
+<section id='popup-12' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Болгова Татьяна</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-12@2x.jpg, 2x"
+             src="media/pop-up/photo-12.jpg" alt="photo-12">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-2">
+            <p class="popup-2__promo">
+                Спасибо, мы получили Ваш номер
+                телефона, в ближайшее время ответственный
+                специалист свяжется с Вами
+            </p>
+
+            <div class="pop-up__narrow">
+
+                <p class="popup-2__description">
+                    Узнайте, как обезопасить себя
+                    от финансовых потерь при
+                    публикации.
+                </p>
+
+                <p class="pop-up__desc">
+                    Укажите Email, на который направить <br>
+                    статью в PDF–формате
+                </p>
+
+                <div class="popup-2__form">
+
+                    <form novalidate name="12" action="/">
+                        <div class="pop-up__inputs">
+
+                            <div class="input-wrapper">
+                                <input name="email" type="email" class="pop-up__input"
+                                       placeholder="Email"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="pop-up__button" data-show-popup="13"
+                                data-read-popup="12">
+                            Получить
+                        </button>
+                    </form>
+
+                    <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                        обработку
+                        своих персональных данных и соглашаетесь с
+                        <button class="pop-up__super-desc pop-up__super-desc--link"
+                                data-show-popup="500">
+                            Политикой конфиденциальности
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Email -->
+
+<section id='popup-13' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Болгова Татьяна</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-13@2x.jpg, 2x"
+             src="media/pop-up/photo-13.jpg" alt="photo-13">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-3">
+
+            <p class="popup-3__promo">
+                Статья о финансовых рисках
+                была направлена на указанную
+                Вами почту
+            </p>
+
+            <p class="popup-3__description">
+                Мы можем сразу провести бесплатный аудит Вашей статьи по основным
+                параметрам,
+                чтобы чтобы заранее определить соответствие техническим аспектам
+                академического письма
+            </p>
+
+            <p class="pop-up__desc">
+                Укажите Email, на который направить <br>
+                статью в PDF–формате
+            </p>
+
+            <div class="popup-3__form">
+
+                <form novalidate name="13" action="/">
+                    <div class="pop-up__inputs">
+                        <input name="scopus" type="text" class="pop-up__input"
+                               placeholder="Выберите базу (Scopus/WoS)">
+                        <input name="file" type="file" class="pop-up__input">
+                        <div class="p-uploader pop-up__input pop-up__input--file">
+                            <label for="file-upload-3" class="p-uploader__choose">
+                                <img loading="lazy" class="p-uploader__img"
+                                     src="./media/folder.png"
+                                     alt="uploader-img">
+                            </label>
+                            <span class="p-uploader__text">Загрузить статью</span>
+                            <input name="file" id="file-upload-3" type="file"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="14"
+                            data-read-popup="13">
+                        Отправить
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Файл -->
+
+<section id='popup-14' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Болгова Татьяна</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-14@2x.jpg, 2x"
+             src="media/pop-up/photo-14.jpg" alt="photo-14">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Хорошего дня -->
+
+
+<!-- Этапы -->
+<section id='popup-15' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Быкова Альбина</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-15@2x.jpg, 2x"
+             src="media/pop-up/photo-15.jpg" alt="photo-15">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Необходима публикация
+                    в Scopus/Web of Science?
+                </h3>
+
+                <p class="pop-up__desc">
+                    Мы перезвоним Вам, <br>
+                    чтобы подобрать лучшее решение
+                </p>
+
+                <form novalidate name="15" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button class="pop-up__button" type="submit" data-show-popup="16">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--ФИО, Тел.-->
+
+<section id='popup-16' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Быкова Альбина</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-16@2x.jpg, 2x"
+             src="media/pop-up/photo-16.jpg" alt="photo-16">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--Хорошего дня-->
+
+
+<!--Технический аудит-->
+<section id='popup-20' class="pop-up">
+
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова Мария</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-20@2x.jpg, 2x"
+             src="media/pop-up/photo-20.jpg" alt="photo-20">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!-- Хорошего дня после отправки-->
+
+<section id='popup-300' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="http://docs.google.com/viewer?url=http%3A%2F%2Fwww.apsolyamov.ru%2Ffiles%2Fpdf_test.pdf&embedded=true"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Договор о сотрудничестве с World Sci Publ
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="19">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- PDF-reader -->
+
+<section id='popup-19' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова Мария</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-19@2x.jpg, 2x"
+             src="media/pop-up/photo-19.jpg" alt="photo-19">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Необходима публикация
+                    в Scopus/Web of Science?
+                </h3>
+
+                <p class="pop-up__desc">
+                    Мы перезвоним Вам, <br>
+                    чтобы подобрать лучшее решение
+                </p>
+
+                <form novalidate name="19" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button class="pop-up__button" type="submit" data-show-popup="20">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--ФИО, Тел.-->
+
+
+<!-- Работаем с зарубежными экспертами -->
+<section id='popup-400' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="http://docs.google.com/viewer?url=http%3A%2F%2Fwww.apsolyamov.ru%2Ffiles%2Fpdf_test.pdf&embedded=true"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Договор о сотрудничестве с World Sci Publ
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="21">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- PDF-reader -->
+
+<section id='popup-21' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Перегудова Юлия</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-21@2x.jpg, 2x"
+             src="media/pop-up/photo-21.jpg" alt="photo-21">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Необходима публикация
+                    в Scopus/Web of Science?
+                </h3>
+
+                <p class="pop-up__desc">
+                    Мы перезвоним Вам, <br>
+                    чтобы подобрать лучшее решение
+                </p>
+
+                <form novalidate name="21" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button class="pop-up__button" type="submit" data-show-popup="22">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--ФИО, Тел.-->
+
+<section id='popup-22' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Перегудова Юлия</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-22@2x.jpg, 2x"
+             src="media/pop-up/photo-22.jpg" alt="photo-22">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--Хорошего дня-->
+
+
+<!--Получить договор-->
+<section id='popup-100' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1FsZtaF1WD9b-Yaw7LBbDWfTarXqNLlnK/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Договор о сотрудничестве с World Sci Publ
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="17">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section id='popup-17' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Пряхина Юлия</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-17@2x.jpg, 2x"
+             src="media/pop-up/photo-17.jpg" alt="photo-17">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Необходима публикация
+                    в Scopus/Web of Science?
+                </h3>
+
+                <p class="pop-up__desc">
+                    Мы перезвоним Вам, <br>
+                    чтобы подобрать лучшее решение
+                </p>
+
+                <form novalidate name="17" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button class="pop-up__button" type="submit" data-show-popup="18">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
+                    обработку
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--ФИО, Тел.-->
+
+<section id='popup-18' class="pop-up">
+
+    <div class="pop-up__poster">
+
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Пряхина Юлия</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo"
+             src="./media/logo-min.svg"
+             alt="pop-up__logo">
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-18@2x.jpg, 2x"
+             src="media/pop-up/photo-18.jpg" alt="photo-18">
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное письмо от
+                ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">
+                Хорошего дня!
+            </h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img">
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img">
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img">
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img">
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+    </div>
+
+</section> <!--Хорошего дня-->
+
+
+<section id='popup-200' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1djZm7FK6MSEs2uvf9RO8FlQm53HP22TJ/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Пример технического аудита
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="15">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="https://drive.google.com/u/0/uc?id=1djZm7FK6MSEs2uvf9RO8FlQm53HP22TJ&export=download"
+               target="_blank" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- Пример технического аудита -->
+
+<section id='popup-201' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1lsS4x17tt1xZep4yBPbFOfCZ2YnWnQpu/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Договор о сотрудничестве с World Sci Publ
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="15">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="https://drive.google.com/u/0/uc?id=1lsS4x17tt1xZep4yBPbFOfCZ2YnWnQpu&export=download"
+               target="_blank" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- Договор о сотрудничестве с World Sci Publ -->
+
+
+<section id='popup-202' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1yJMEpbTCqqu7kJmzuz3JQVVHjW0Gcv1-/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Пример предварительной экспертной оценки
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="15">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="https://drive.google.com/u/0/uc?id=1yJMEpbTCqqu7kJmzuz3JQVVHjW0Gcv1-&export=download"
+               target="_blank" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- Пример предварительной экспертной оценки -->
+
+<section id='popup-203' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1pqEmIpPLWBEhOjG6Z8YFTT6q_ERx0iL7/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Пример научного редактирования
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="15">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="https://drive.google.com/u/0/uc?id=1pqEmIpPLWBEhOjG6Z8YFTT6q_ERx0iL7&export=download"
+               target="_blank" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- Пример научного редактирования -->
+
+<section id='popup-204' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1UwiDnFwhuqZ_vNfmECiMB24PS_EMELaL/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Пример сертификата о редактировании
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="15">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a
+                    href="https://drive.google.com/u/0/uc?id=1UwiDnFwhuqZ_vNfmECiMB24PS_EMELaL&export=download"
+                    target="_blank"
+                    class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- Пример сертификата о редактировании -->
+
+<section id='popup-205' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Пример сопроводительного письма
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="15">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="https://drive.google.com/u/0/uc?id=1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw&export=download"
+               target="_blank"
+               class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- Пример сопроводительного письма -->
+
+<section id='popup-206' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/10mCFkj6RJhnUAU9diMi2F2PP9kS517cj/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Пример финальной версии статьи перед подачей <br>
+                в журнал и изначальный вид
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="15">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="https://drive.google.com/u/0/uc?id=1NgI7xbL_bN-kvvgyWtCRCxvFGzGUwk1-&export=download"
+               target="_blank"
+               class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- Пример финальной версии статьи перед подачей в
+журнал и изначальный вид -->
+
+<!-- Политика конфиденциальности -->
+<section id='popup-500' class="pop-up pdf-reader">
+
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw/preview"
+                width="700" height="500"
+                style="border: none;">
+
+        </iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">
+                Политика конфиденциальности
+            </h2>
+        </div>
+
+        <div class="pdf-reader__column">
+            <button class="pdf-reader__btn" data-show-popup="21">
+                Перейти к обсуждению
+            </button>
+        </div>
+
+        <div class="pdf-reader__column">
+
+            <a href="https://drive.google.com/u/0/uc?id=1MF_Wx6QopTXjhBHDtE-IRUXVrxKyIZ8o&export=download"
+               target="_blank" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</section> <!-- PDF-reader -->
+
+
+<noscript>
+    <img
+            src="https://vk.com/rtrg?p=VK-RTRG-391973-cXaZw"
+            style="position: fixed; left: -999px"
+            alt=""
+    />
+</noscript>
+<noscript>
+    <img
+            height="1"
+            width="1"
+            style="display: none"
+            src="https://www.facebook.com/tr?id=2365479983546227&ev=PageView&noscript=1"
+    />
+</noscript>
+<noscript>
+    <div>
+        <img
+                src="https://mc.yandex.ru/watch/50181778"
+                style="position: absolute; left: -9999px"
+                alt=""
+        />
+    </div>
+</noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NF7Q6BJ"
+            height="0"
+            width="0"
+            style="display: none; visibility: hidden"
+    ></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script>
+    // var csrfToken = '<?=$_SESSION['
+    // csrf - token
+    // ']?>';
+    var csrfToken = 228;
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/selector.js"></script>
+<script src="./js/pop-up.js"></script>
+<script src="./js/header.js"></script>
+<script src="./js/profile.js"></script>
+<script src="./js/stages"></script>
+<script src="./js/team.js"></script>
+<script src="./js/faq.js"></script>
+<script src="./js/consultation.js"></script>
+<script src="./js/reviews.js"></script>
+<script src="./js/forms.js"></script>
+<script src="./js/quiz.js"></script>
+<script src="./js/float-navbar.js"></script>
+
+<!-- Roistat -->
+<script>
+    (function (w, d, s, h, id) {
+        w.roistatProjectId = id;
+        w.roistatHost = h;
+        var p = d.location.protocol == 'https:' ? 'https://' : 'http://';
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie)
+            ? '/dist/module.js'
+            : '/api/site/1.0/' + id + '/init';
+        var js = d.createElement(s);
+        js.charset = 'UTF-8';
+        js.async = 1;
+        js.src = p + h + u;
+        var js2 = d.getElementsByTagName(s)[0];
+        js2.parentNode.insertBefore(js, js2);
+    })(
+        window,
+        document,
+        'script',
+        'cloud.roistat.com',
+        '3637cf6d91e2208e61bad15f7e17651d'
+    );
+</script>
+<!-- /Roistat -->
+
+</body>
+</html>

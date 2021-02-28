@@ -1,0 +1,55 @@
+.guaranty {
+  @include margin(90px);
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    @include font-size(24px);
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include margin(24px);
+  }
+}
+
+.protection {
+  display: flex;
+  flex-direction: column;
+
+  &__poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__img {
+    align-self: center;
+    height: 421px;
+
+    @include _more-than($bp-xxl-375) {
+      height: #{get-vw(421px, $bp-xxl-375)};
+    }
+
+    @include _more-than($bp-lg-979) {
+      height: #{get-vw(421px, $bp-lg-979)};
+    }
+  }
+
+  &__text {
+    font-family: $fontFamilySecondary;
+    @include font-size(18px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-60%);
+  }
+
+  &__form {
+    @include margin(38px);
+  }
+}
