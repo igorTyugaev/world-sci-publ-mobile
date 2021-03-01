@@ -27,19 +27,14 @@
   }
 
   @include font-size(18px);
+  line-height: 116%;
   text-align: center;
-  padding: 12px;
+  padding: 8px;
 
   @include _more-than($bp-xxl-375) {
     box-shadow: #{get-vw(1px, $bp-xxl-375)} #{get-vw(1px, $bp-xxl-375)} #{get-vw(4px, $bp-xxl-375)} $colorShadow;
     border-radius: #{get-vw(24px, $bp-xxl-375)};
-    padding: #{get-vw(12px, $bp-xxl-375)};
-  }
-
-  @include _more-than($bp-lg-979) {
-    box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
-    border-radius: #{get-vw(24px, $bp-lg-979)};
-    padding: #{get-vw(12px, $bp-lg-979)};
+    padding: #{get-vw(8px, $bp-xxl-375)};
   }
 
   &--submit {

@@ -10,14 +10,11 @@
   }
 
   &__title {
+    @include font-size(24px);
     padding: 12px;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
+    font-family: $fontFamilySecondary;
     line-height: 120%;
-    text-align: center;
-
+    text-align: left;
     color: #161616;
   }
 
@@ -36,28 +33,6 @@
 
   &__card {
 
-  }
-
-  &__footer {
-    width: 100%;
-    background: #001437;
-    text-align: center;
-    @include padding(36px, 0px, 36px, 0px);
-    margin-top: 160px;
-
-    &-title {
-      font-family: $fontFamilySecondary;
-      color: $textColorSecondary;
-      @include font-size(24px);
-    }
-
-    @include _more-than($bp-xxl-375) {
-      margin-top: #{get-vw(160px, $bp-xxl-375)};
-    }
-
-    @include _more-than($bp-lg-979) {
-      margin-top: #{get-vw(90px, $bp-lg-979)};
-    }
   }
 }
 

@@ -25,14 +25,6 @@
   @media (min-width: $bp-xxl-375) {
     font-size: #{get-vw($f-size, $bp-xxl-375)};
   }
-
-  @media (min-width: #{$bp-lg-979}) {
-    font-size: #{get-vw($f-size, $bp-lg-979)};
-  }
-
-  @media (min-width: #{$bp-sm-576}) {
-    font-size: #{get-vw($f-size, $bp-sm-576)};
-  }
 }
 
 %s-border {

@@ -1,14 +1,10 @@
 .geography {
   @include margin(140px);
 
-  &__wrap {
-
-  }
-
   &__title {
     font-family: $fontFamilySecondary;
-    @include font-size(34px);
-    text-align: center;
+    @include font-size(14px);
+    text-align: left;
   }
 
   &__map {

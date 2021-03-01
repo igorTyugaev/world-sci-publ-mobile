@@ -39,10 +39,8 @@
     &:before {
       display: inline;
       content: "0" counter(counter-spoiler);
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 36px;
+      font-family: $fontFamilySecondary;
+      @include font-size(16px);
       line-height: 122%;
       padding-right: 12px;
       color: #000000;
@@ -52,10 +50,8 @@
   &__label {
     cursor: pointer;
     width: 95%;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
     line-height: 120%;
 
     border-bottom: 2px solid #C4C4C4;
@@ -74,18 +70,18 @@
 
   &__label {
     background: transparent;
-    padding: 24px 18px 24px 0;
+    @include padding(21px, 18px, 21px, 0px);
     overflow: hidden;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
   }
 
   &__text {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
     line-height: 140%;
 
     color: #000000;
@@ -110,10 +106,8 @@
     &:before {
       display: inline;
       content: "00";
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 36px;
+      font-family: $fontFamilySecondary;
+      @include font-size(16px);
       line-height: 122%;
       padding-right: 12px;
       color: transparent;

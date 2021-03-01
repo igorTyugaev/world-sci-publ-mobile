@@ -3,13 +3,22 @@
 .header {
   z-index: $z-index-menu;
   position: fixed;
+  top: 0;
+  left: 0;
+
   width: 100vw;
-  @include padding(12px, 28px, 12px, 28px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: $windowBackground;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  @include _more-than($bp-xxl-375) {
+    padding-top: #{get-vw(8px, $bp-xxl-375)};
+    padding-bottom: #{get-vw(8px, $bp-xxl-375)};
+  }
 
   &__call {
     display: flex;
@@ -36,6 +45,7 @@
     font-family: $fontFamilyPrimary;
     color: #000000;
     @include font-size(10px);
+    text-align: center;
     line-height: 116.6666%;
   }
 
@@ -43,6 +53,10 @@
     object-fit: contain;
     object-position: center;
     width: 50px;
+    margin-left: 18px;
+    @include _more-than($bp-xxl-375) {
+      margin-left: #{get-vw(18px, $bp-xxl-375)};
+    }
   }
 }
 

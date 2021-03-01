@@ -8,7 +8,7 @@
 
   &__title {
     font-family: $fontFamilySecondary;
-    @include font-size(36px);
+    @include font-size(24px);
     text-align: left;
   }
 
@@ -25,7 +25,7 @@
 
   &__description {
     font-family: $fontFamilyPrimary;
-    @include font-size(24px);
+    @include font-size(12px);
     @include margin(36px);
   }
 
@@ -39,26 +39,10 @@
 
     border-radius: 6px;
     min-height: 93px;
-
-    @include _more-than($bp-xxl-375) {
-      border-radius: #{get-vw(6px, $bp-xxl-375)};
-      min-height: #{get-vw(93px, $bp-xxl-375)};
-    }
-
-    @include _more-than($bp-lg-979) {
-      border-radius: #{get-vw(6px, $bp-lg-979)};
-      min-height: #{get-vw(93px, $bp-lg-979)};
-    }
-
-    @include _more-than($bp-md-768) {
-      border-radius: #{get-vw(6px, $bp-lg-979)};
-      min-height: #{get-vw(93px, $bp-lg-979)};
-    }
-
   }
 
   &__email {
-    width: 30%;
+    width: 80%;
     @include padding(10px, 10px, 10px, 10px);
     @include margin(20px);
     background-color: #FFFEFE;
@@ -73,7 +57,7 @@
     color: #000000;
     border-radius: 50px;
 
-    width: 30%;
+    width: 80%;
     @include margin(20px);
   }
 }
