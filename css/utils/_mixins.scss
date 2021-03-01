@@ -104,33 +104,6 @@
     padding-bottom: #{get-vw($bottom, $bp-xxl-375)};
     padding-left: #{get-vw($left, $bp-xxl-375)};
   }
-
-  @media (max-width: #{$bp-lg-979}) {
-    padding-top: #{get-vw($top, $bp-lg-979)};
-    padding-right: #{get-vw($right, $bp-lg-979)};
-    padding-bottom: #{get-vw($bottom, $bp-lg-979)};
-    padding-left: #{get-vw($left, $bp-lg-979)};
-  }
-
-  @media (max-width: #{$bp-sm-576}) {
-  }
-}
-
-@mixin padding-size($t-padding: 0px, $r-padding: 0px, $b-padding: 0px, $l-padding: 0px) {
-  padding: $t-padding $r-padding $b-padding $l-padding;
-
-  @media (min-width: $bp-xxl-375) {
-    padding: #{get-vw($t-padding, $bp-xxl-375)}
-    #{get-vw($r-padding, $bp-xxl-375)}
-    #{get-vw($b-padding, $bp-xxl-375)}
-    #{get-vw($l-padding, $bp-xxl-375)};
-  }
-
-  @media (max-width: #{$bp-lg-979}) {
-  }
-
-  @media (max-width: #{$bp-sm-576}) {
-  }
 }
 
 @mixin margin($t-margin: 0px, $r-margin: 0px, $b-margin: 0px, $l-margin: 0px) {

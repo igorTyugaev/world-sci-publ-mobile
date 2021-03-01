@@ -474,8 +474,8 @@ input {
   border: 1px solid rgba(51,51,51,0.6);
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   border-radius: 24px;
-  padding: 10px;
-  font-size: 14px;
+  font-size: 12px;
+  padding: 11px;
 }
 
 .button-quiz:hover {
@@ -488,32 +488,6 @@ input {
   border-color: transparent;
   color: #FFFFFF;
   background: #0F5C30;
-}
-
-.img-frame__img {
-  position: relative;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 6px;
-}
-
-.img-frame__labels {
-  padding: 0px 12px 12px 12px;
-  font-size: 10px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.img-frame__label {
-  font-family: Helvetica;
-  font-style: italic;
-  font-size: 12px;
-  color: #FFFFFF;
-  display: block;
 }
 
 .spoilers {
@@ -634,6 +608,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .quizlet__question {
@@ -644,6 +619,7 @@ input {
 
 .quizlet__answers {
   width: 100%;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -652,6 +628,10 @@ input {
 
 .quizlet__option {
   width: 100%;
+}
+
+.quizlet__option+.quizlet__option {
+  margin-top: 20px;
 }
 
 .progress-bar__bar {
@@ -691,7 +671,7 @@ input {
 }
 
 .progress-bar__inner {
-  margin: 3px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1269,7 +1249,7 @@ input {
 }
 
 .advantages {
-  margin: 80px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
 }
 
 .advantages__item {
@@ -1300,49 +1280,88 @@ input {
 }
 
 .quiz {
-  margin: 160px 0px 0px 0px;
+  margin: 100px 0px 0px 0px;
 }
 
 .quiz__title {
   font-family: "HelveticaBold";
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .quiz__subtitle {
   font-family: "HelveticaBold";
   color: #FFFFFF;
   font-size: 14px;
-  padding-top: 7px;
-  padding-right: 64px;
-  padding-bottom: 7px;
-  padding-left: 82px;
+  padding-top: 8px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+}
+
+.quiz__main {
+  transform: translateY(-46px);
 }
 
 .quiz__inner {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 36px 0px 0px 0px;
+  height: 664px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  border-radius: 6px;
 }
 
 .quiz__header {
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   background-color: #001437;
 }
 
-.quiz__main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 476px;
-}
-
 .quiz__content {
-  margin: 20px 0px 0px 0px;
+  padding-top: 18px;
+  padding-right: 12px;
+  padding-bottom: 18px;
+  padding-left: 12px;
 }
 
 .quiz__poster {
   width: 100%;
   position: relative;
+  margin: 24px 0px 0px 0px;
+}
+
+.quiz__button-next {
+  margin-top: 20px;
+}
+
+.img-frame__img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-frame__labels {
+  padding-top: 0px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  font-size: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 46px;
+  right: 0;
+  text-align: right;
+}
+
+.img-frame__label {
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: 12px;
+  color: #FFFFFF;
+  display: block;
 }
 
 .promo {
@@ -2902,7 +2921,10 @@ input {
 }
 
 .pop-up__labels {
-  padding: 0px 12px 12px 12px;
+  padding-top: 0px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
   font-size: 10px;
   width: 100%;
   position: absolute;
@@ -3458,20 +3480,8 @@ input {
     border: 0.2666666667vw solid rgba(51,51,51,0.6);
     box-shadow: 0.2666666667vw 0.2666666667vw 1.0666666667vw rgba(0,0,0,0.25);
     border-radius: 6.4vw;
-    font-size: 3.7333333333vw;
-    padding: 2.6666666667vw;
-  }
-
-  .img-frame__labels {
-    padding: 0vw 3.2vw 3.2vw 3.2vw;
-  }
-
-  .img-frame__labels {
-    font-size: 2.6666666667vw;
-  }
-
-  .img-frame__label {
     font-size: 3.2vw;
+    padding: 2.9333333333vw;
   }
 
   .spoiler__header:before {
@@ -3523,7 +3533,7 @@ input {
   }
 
   .progress-bar__inner {
-    margin: 0.8vw 0vw 0vw 0vw;
+    margin: 3.2vw 0vw 0vw 0vw;
   }
 
   .float-navbar {
@@ -3656,7 +3666,7 @@ input {
   }
 
   .advantages {
-    margin: 21.3333333333vw 0vw 0vw 0vw;
+    margin: 8vw 0vw 0vw 0vw;
   }
 
   .feature-card__title {
@@ -3672,11 +3682,11 @@ input {
   }
 
   .quiz {
-    margin: 42.6666666667vw 0vw 0vw 0vw;
+    margin: 26.6666666667vw 0vw 0vw 0vw;
   }
 
   .quiz__title {
-    font-size: 4.8vw;
+    font-size: 6.4vw;
   }
 
   .quiz__subtitle {
@@ -3684,18 +3694,49 @@ input {
   }
 
   .quiz__subtitle {
-    padding-top: 1.8666666667vw;
-    padding-right: 17.0666666667vw;
-    padding-bottom: 1.8666666667vw;
-    padding-left: 21.8666666667vw;
+    padding-top: 2.1333333333vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 2.1333333333vw;
+    padding-left: 2.6666666667vw;
+  }
+
+  .quiz__main {
+    transform: translateY(-12.2666666667vw);
   }
 
   .quiz__inner {
-    margin: 9.6vw 0vw 0vw 0vw;
+    height: 177.0666666667vw;
+    border-radius: 1.6vw;
   }
 
   .quiz__content {
-    margin: 5.3333333333vw 0vw 0vw 0vw;
+    padding-top: 4.8vw;
+    padding-right: 3.2vw;
+    padding-bottom: 4.8vw;
+    padding-left: 3.2vw;
+  }
+
+  .quiz__poster {
+    margin: 6.4vw 0vw 0vw 0vw;
+  }
+
+  .img-frame__labels {
+    padding-top: 0vw;
+    padding-right: 3.2vw;
+    padding-bottom: 3.2vw;
+    padding-left: 3.2vw;
+  }
+
+  .img-frame__labels {
+    font-size: 2.6666666667vw;
+  }
+
+  .img-frame__labels {
+    bottom: 12.2666666667vw;
+  }
+
+  .img-frame__label {
+    font-size: 3.2vw;
   }
 
   .promo {
@@ -4424,7 +4465,10 @@ input {
   }
 
   .pop-up__labels {
-    padding: 0vw 3.2vw 3.2vw 3.2vw;
+    padding-top: 0vw;
+    padding-right: 3.2vw;
+    padding-bottom: 3.2vw;
+    padding-left: 3.2vw;
   }
 
   .pop-up__labels {
@@ -4608,38 +4652,9 @@ input {
   }
 }
 
-@media (min-width:720px) {
-  .quiz__subtitle {
-    padding-top: 7px;
-    padding-right: 28px;
-    padding-bottom: 7px;
-    padding-left: 0px;
-  }
-}
-
-@media (min-width:720px) and (min-width:375px) {
-  .quiz__subtitle {
-    padding-top: 1.8666666667vw;
-    padding-right: 7.4666666667vw;
-    padding-bottom: 1.8666666667vw;
-    padding-left: 0vw;
-  }
-}
-
 @media (min-width:768px) {
   .extended-subtitle:after {
     border-radius: 0.78125vw;
-  }
-
-  .button-quiz {
-    border: 0.1302083333vw solid rgba(51,51,51,0.6);
-    box-shadow: 0.1302083333vw 0.1302083333vw 0.5208333333vw rgba(0,0,0,0.25);
-    border-radius: 3.125vw;
-    padding: 1.3020833333vw;
-  }
-
-  .progress-bar__bar {
-    height: 0.6510416667vw;
   }
 
   .progress-bar__circle {
@@ -4753,17 +4768,6 @@ input {
     border-radius: 3.4729315628vw;
   }
 
-  .button-quiz {
-    border: 0.102145046vw solid rgba(51,51,51,0.6);
-    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
-    border-radius: 2.4514811032vw;
-    padding: 1.0214504597vw;
-  }
-
-  .progress-bar__bar {
-    height: 0.5107252298vw;
-  }
-
   .progress-bar__circle {
     width: 2.2471910112vw;
     height: 2.2471910112vw;
@@ -4809,12 +4813,6 @@ input {
   }
 }
 
-@media (min-width:999px) {
-  .button-quiz {
-    font-size: 13px;
-  }
-}
-
 @media (min-width:1025px) {
   .scroll-indicator-controller {
     right: 20px;
@@ -4822,10 +4820,6 @@ input {
 }
 
 @media (min-width:1170px) {
-  .progress-bar__bar {
-    height: 0.4273504274vw;
-  }
-
   .progress-bar__circle {
     width: 1.8803418803vw;
     height: 1.8803418803vw;
@@ -4882,375 +4876,10 @@ input {
     box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
   }
 
-  .input-wrapper__error {
-    padding-top: 0.4085801839vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .button--contract {
-    padding-top: 1.6343207354vw;
-    padding-right: 1.6343207354vw;
-    padding-bottom: 1.6343207354vw;
-    padding-left: 1.6343207354vw;
-  }
-
-  .button--consultation {
-    padding-top: 1.0214504597vw;
-    padding-right: 2.4514811032vw;
-    padding-bottom: 1.0214504597vw;
-    padding-left: 2.4514811032vw;
-  }
-
-  .spoiler__label {
-    padding-top: 2.1450459653vw;
-    padding-right: 1.8386108274vw;
-    padding-bottom: 2.1450459653vw;
-    padding-left: 0vw;
-  }
-
-  .nav__link {
-    padding-top: 0.4085801839vw;
-    padding-right: 2.7579162411vw;
-    padding-bottom: 0.4085801839vw;
-    padding-left: 2.7579162411vw;
-  }
-
-  .nav {
-    padding-top: 0vw;
-    padding-right: 5.1072522983vw;
-    padding-bottom: 0vw;
-    padding-left: 5.1072522983vw;
-  }
-
-  .nav__link {
-    padding-top: 0.8171603677vw;
-    padding-right: 2.0429009193vw;
-    padding-bottom: 0.8171603677vw;
-    padding-left: 2.0429009193vw;
-  }
-
-  .scroll-bar {
-    padding-top: 0.8171603677vw;
-    padding-right: 2.4514811032vw;
-    padding-bottom: 0.8171603677vw;
-    padding-left: 2.4514811032vw;
-  }
-
-  .quiz__subtitle {
-    padding-top: 0.7150153218vw;
-    padding-right: 6.5372829418vw;
-    padding-bottom: 0.7150153218vw;
-    padding-left: 8.3758937692vw;
-  }
-
-  .promo__footer {
-    padding-top: 3.6772216547vw;
-    padding-right: 0vw;
-    padding-bottom: 3.6772216547vw;
-    padding-left: 0vw;
-  }
-
-  .manifest {
-    padding-top: 1.2257405516vw;
-    padding-right: 0.5107252298vw;
-    padding-bottom: 2.0429009193vw;
-    padding-left: 2.1450459653vw;
-  }
-
-  .manifest--logo {
-    padding-top: 5.1072522983vw;
-    padding-right: 1.6343207354vw;
-    padding-bottom: 6.1287027579vw;
-    padding-left: 2.860061287vw;
-  }
-
-  .manifest__text:not(:first-child) {
-    padding-top: 1.8386108274vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .app-form__input,
-  .audit-form__input {
-    padding-top: 1.0214504597vw;
-    padding-right: 2.0429009193vw;
-    padding-bottom: 1.0214504597vw;
-    padding-left: 2.0429009193vw;
-  }
-
   .app-form__input,
   .audit-form__input {
     border: 0.102145046vw solid rgba(0,0,0,0.3);
     border-radius: 0.6128702758vw;
-  }
-
-  .component__content {
-    padding-top: 6.1287027579vw;
-    padding-right: 2.0429009193vw;
-    padding-bottom: 6.1287027579vw;
-    padding-left: 2.0429009193vw;
-  }
-
-  .stages-slider__item {
-    padding-top: 0vw;
-    padding-right: 0vw;
-    padding-bottom: 4.9029622063vw;
-    padding-left: 0vw;
-  }
-
-  .stages-slider__text:not(:first-child) {
-    padding-top: 2.0429009193vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .profile__footer {
-    padding-top: 2.4514811032vw;
-    padding-right: 0vw;
-    padding-bottom: 1.2257405516vw;
-    padding-left: 0vw;
-  }
-
-  .p-footer__text {
-    padding-top: 0vw;
-    padding-right: 8.1716036772vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .profile-nav {
-    padding-top: 1.4300306435vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .profile-nav__header {
-    padding-top: 1.4300306435vw;
-    padding-right: 1.8386108274vw;
-    padding-bottom: 1.4300306435vw;
-    padding-left: 1.8386108274vw;
-  }
-
-  .profile-nav__body {
-    padding-top: 1.2257405516vw;
-    padding-right: 1.8386108274vw;
-    padding-bottom: 0.6128702758vw;
-    padding-left: 1.8386108274vw;
-  }
-
-  .accordion__item-inner {
-    padding-top: 0vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 2.2471910112vw;
-  }
-
-  .audit__subtitle {
-    padding-top: 2.1450459653vw;
-    padding-right: 3.7793667007vw;
-    padding-bottom: 2.1450459653vw;
-    padding-left: 0vw;
-  }
-
-  .audit__main {
-    padding-top: 2.0429009193vw;
-    padding-right: 0vw;
-    padding-bottom: 2.0429009193vw;
-    padding-left: 0vw;
-  }
-
-  .audit-cart__link {
-    padding-top: 0.6128702758vw;
-    padding-right: 0.6128702758vw;
-    padding-bottom: 0.6128702758vw;
-    padding-left: 0.6128702758vw;
-  }
-
-  .tabs-team__tab {
-    padding-top: 1.0214504597vw;
-    padding-right: 1.8386108274vw;
-    padding-bottom: 1.0214504597vw;
-    padding-left: 1.8386108274vw;
-  }
-
-  .tabs-team__inner {
-    padding-top: 6.9458631256vw;
-    padding-right: 2.7579162411vw;
-    padding-bottom: 5.924412666vw;
-    padding-left: 2.7579162411vw;
-  }
-
-  .tabs-team__text:not(:first-child) {
-    padding-top: 2.0429009193vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .card-txt {
-    padding-top: 2.860061287vw;
-    padding-right: 3.8815117467vw;
-    padding-bottom: 1.4300306435vw;
-    padding-left: 2.4514811032vw;
-  }
-
-  .card-profile__header {
-    padding-top: 2.860061287vw;
-    padding-right: 2.860061287vw;
-    padding-bottom: 2.860061287vw;
-    padding-left: 2.860061287vw;
-  }
-
-  .card-profile__option {
-    padding-top: 0.3064351379vw;
-    padding-right: 2.2471910112vw;
-    padding-bottom: 0.3064351379vw;
-    padding-left: 0.7150153218vw;
-  }
-
-  .card-profile__body {
-    padding-top: 1.5321756895vw;
-    padding-right: 2.860061287vw;
-    padding-bottom: 2.0429009193vw;
-    padding-left: 2.860061287vw;
-  }
-
-  .card-profile__btn {
-    padding-top: 0.4085801839vw;
-    padding-right: 1.0214504597vw;
-    padding-bottom: 0.4085801839vw;
-    padding-left: 1.0214504597vw;
-  }
-
-  .review__text:not(:first-child) {
-    padding-top: 2.0429009193vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .review-card__header {
-    padding-top: 1.4300306435vw;
-    padding-right: 1.2257405516vw;
-    padding-bottom: 1.4300306435vw;
-    padding-left: 0.7150153218vw;
-  }
-
-  .review-card__bio {
-    padding-top: 0vw;
-    padding-right: 1.8386108274vw;
-    padding-bottom: 0vw;
-    padding-left: 1.8386108274vw;
-  }
-
-  .review-card__item {
-    padding-top: 0.6128702758vw;
-    padding-right: 0.2042900919vw;
-    padding-bottom: 0.6128702758vw;
-    padding-left: 0.2042900919vw;
-  }
-
-  .your-question__textarea {
-    padding-top: 1.0214504597vw;
-    padding-right: 1.0214504597vw;
-    padding-bottom: 1.0214504597vw;
-    padding-left: 1.0214504597vw;
-  }
-
-  .your-question__email {
-    padding-top: 1.0214504597vw;
-    padding-right: 1.0214504597vw;
-    padding-bottom: 1.0214504597vw;
-    padding-left: 1.0214504597vw;
-  }
-
-  .footer {
-    padding-top: 1.6343207354vw;
-    padding-right: 0vw;
-    padding-bottom: 1.6343207354vw;
-    padding-left: 0vw;
-  }
-
-  .footer__about-text:not(:first-child) {
-    padding-top: 1.8386108274vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .pop-up__main {
-    padding-top: 2.4514811032vw;
-    padding-right: 5.3115423902vw;
-    padding-bottom: 2.4514811032vw;
-    padding-left: 5.3115423902vw;
-  }
-
-  .pop-up__input {
-    padding-top: 1.2257405516vw;
-    padding-right: 1.2257405516vw;
-    padding-bottom: 1.2257405516vw;
-    padding-left: 1.2257405516vw;
-  }
-
-  .pop-up__button {
-    padding-top: 1.2257405516vw;
-    padding-right: 5.1072522983vw;
-    padding-bottom: 1.2257405516vw;
-    padding-left: 5.1072522983vw;
-  }
-
-  .popup-2__promo {
-    padding-top: 2.4514811032vw;
-    padding-right: 2.4514811032vw;
-    padding-bottom: 2.4514811032vw;
-    padding-left: 2.4514811032vw;
-  }
-
-  .popup-3__promo {
-    padding-top: 2.4514811032vw;
-    padding-right: 2.4514811032vw;
-    padding-bottom: 2.4514811032vw;
-    padding-left: 2.4514811032vw;
-  }
-
-  .popup-3__description {
-    padding-top: 0vw;
-    padding-right: 14.3003064351vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .p-uploader {
-    padding-top: 1.2257405516vw;
-    padding-right: 1.2257405516vw;
-    padding-bottom: 1.2257405516vw;
-    padding-left: 1.2257405516vw;
-  }
-
-  .pdf-reader__btn {
-    padding-top: 1.2257405516vw;
-    padding-right: 5.1072522983vw;
-    padding-bottom: 1.2257405516vw;
-    padding-left: 5.1072522983vw;
-  }
-
-  .pdf-download__img {
-    padding-top: 0vw;
-    padding-right: 1.2257405516vw;
-    padding-bottom: 0vw;
-    padding-left: 1.2257405516vw;
-  }
-
-  .selector__title {
-    padding-top: 1.2257405516vw;
-    padding-right: 1.2257405516vw;
-    padding-bottom: 1.2257405516vw;
-    padding-left: 1.2257405516vw;
   }
 }
 
@@ -5283,24 +4912,6 @@ input {
   .tabs-team__tab {
     border-radius: 1.0416666667vw;
     box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
-  }
-}
-
-@media (min-width:720px) and (max-width:979px) {
-  .quiz__subtitle {
-    padding-top: 0.7150153218vw;
-    padding-right: 2.860061287vw;
-    padding-bottom: 0.7150153218vw;
-    padding-left: 0vw;
-  }
-}
-
-@media (min-width:768px) and (max-width:979px) {
-  .review-card__item {
-    padding-top: 1.2257405516vw;
-    padding-right: 0.2042900919vw;
-    padding-bottom: 1.2257405516vw;
-    padding-left: 0.2042900919vw;
   }
 }
 

@@ -13,18 +13,6 @@
     @include _more-than($bp-xxl-375) {
       height: #{get-vw(5px, $bp-xxl-375)};
     }
-
-    @include _more-than($bp-xl-1170) {
-      height: #{get-vw(5px, $bp-xl-1170)};
-    }
-
-    @include _more-than($bp-lg-979) {
-      height: #{get-vw(5px, $bp-lg-979)};
-    }
-
-    @include _more-than($bp-md-768) {
-      height: #{get-vw(5px, $bp-md-768)};
-    }
   }
 
   &__circle {
@@ -79,7 +67,7 @@
   }
 
   &__inner {
-    @include margin(3px);
+    @include margin(12px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;

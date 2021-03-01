@@ -24,7 +24,7 @@
   }
 
   &__labels {
-    @include padding-size(0px, 12px, 12px, 12px);
+    @include padding(0px, 12px, 12px, 12px);
     @include font-size(10px);
     width: 100%;
 

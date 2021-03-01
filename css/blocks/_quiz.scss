@@ -1,9 +1,9 @@
 .quiz {
-  @include margin(160px);
+  @include margin(100px);
 
   &__title {
     font-family: $fontFamilySecondary;
-    @include font-size(18px);
+    @include font-size(24px);
   }
 
   &__subtitle {
@@ -11,10 +11,14 @@
     color: $textColorSecondary;
 
     @include font-size(14px);
-    @include padding(7px, 64px, 7px, 82px);
+    @include padding(8px, 10px, 8px, 10px);
+  }
 
-    @include _more-than(720px) {
-      @include padding(7px, 28px, 7px, 0px);
+  &__main {
+    transform: translateY(-46px);
+
+    @include _more-than($bp-xxl-375) {
+      transform: translateY(#{get-vw(-46px, $bp-xxl-375)});
     }
   }
 
@@ -22,26 +26,69 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    @include margin(36px);
+    height: 664px;
+
+    background: $popupBackground;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+
+    @include _more-than($bp-xxl-375) {
+      height: #{get-vw(664px, $bp-xxl-375)};
+      border-radius: #{get-vw(6px, $bp-xxl-375)};
+    }
   }
 
   &__header {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     background-color: $subtitleBackground;
   }
 
-  &__main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 476px;
-  }
-
   &__content {
-    @include margin(20px);
+    @include padding(18px, 12px, 18px, 12px);
   }
 
   &__poster {
     width: 100%;
     position: relative;
+    @include margin(24px);
+  }
+
+  &__button-next {
+    margin-top: 20px;
+  }
+}
+
+.img-frame {
+  &__img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__labels {
+    @include padding(0px, 12px, 12px, 12px);
+    @include font-size(10px);
+    width: 100%;
+
+    position: absolute;
+    bottom: 46px;
+    right: 0;
+    text-align: right;
+
+    @include _more-than($bp-xxl-375) {
+      bottom: #{get-vw(46px, $bp-xxl-375)};
+    }
+  }
+
+
+  &__label {
+    font-family: Helvetica;
+    font-style: italic;
+    @include font-size(12px);
+    color: #FFFFFF;
+    display: block;
   }
 }

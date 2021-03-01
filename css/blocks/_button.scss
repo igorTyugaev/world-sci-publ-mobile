@@ -111,34 +111,14 @@
   border: 1px solid rgba(51, 51, 51, 0.6);
   box-shadow: 1px 1px 4px $colorShadow;
   border-radius: 24px;
-  padding: 10px;
-  font-size: 14px;
+  font-size: 12px;
+  padding: 11px;
 
   @include _more-than($bp-xxl-375) {
     border: #{get-vw(1px, $bp-xxl-375)} solid rgba(51, 51, 51, 0.6);
     box-shadow: #{get-vw(1px, $bp-xxl-375)} #{get-vw(1px, $bp-xxl-375)} #{get-vw(4px, $bp-xxl-375)} $colorShadow;
     border-radius: #{get-vw(24px, $bp-xxl-375)};
-    font-size: #{get-vw(14px, $bp-xxl-375)};
-    padding: #{get-vw(10px, $bp-xxl-375)};
-  }
-
-  @include _more-than(999px) {
-    font-size: 13px;
-  }
-
-  @include _more-than($bp-lg-979) {
-    border: #{get-vw(1px, $bp-lg-979)} solid rgba(51, 51, 51, 0.6);
-    box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
-    border-radius: #{get-vw(24px, $bp-lg-979)};
-    padding: #{get-vw(10px, $bp-lg-979)};
-  }
-
-
-  @include _more-than($bp-md-768) {
-    border: #{get-vw(1px, $bp-md-768)} solid rgba(51, 51, 51, 0.6);
-    box-shadow: #{get-vw(1px, $bp-md-768)} #{get-vw(1px, $bp-md-768)} #{get-vw(4px, $bp-md-768)} $colorShadow;
-    border-radius: #{get-vw(24px, $bp-md-768)};
-
-    padding: #{get-vw(10px, $bp-md-768)};
+    font-size: #{get-vw(12px, $bp-xxl-375)};
+    padding: #{get-vw(11px, $bp-xxl-375)};
   }
 }
