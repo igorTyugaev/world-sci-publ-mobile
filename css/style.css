@@ -630,23 +630,6 @@ input {
   content: "-";
 }
 
-.feature-card {
-  background: #FFFFFF;
-  padding: 30px 24px 30px 17px;
-}
-
-.feature-card__title {
-  font-family: "HelveticaBold";
-  color: #373737;
-  font-size: 48px;
-}
-
-.feature-card__text {
-  color: #373737;
-  font-size: 12px;
-  margin-top: 4px;
-}
-
 .quizlet {
   display: flex;
   flex-direction: column;
@@ -1289,14 +1272,31 @@ input {
   margin: 80px 0px 0px 0px;
 }
 
-.advantages__inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.advantages__item {
+  margin-left: 14px;
+  width: 64%;
+  height: 154px;
 }
 
-.advantages__item {
-  width: 18.9263565891%;
+.advantages-carousel {
+  margin-left: 14px;
+}
+
+.feature-card {
+  background: #FFFFFF;
+  padding: 20px 15px 20px 15px;
+}
+
+.feature-card__title {
+  font-family: "HelveticaBold";
+  color: #373737;
+  font-size: 36px;
+}
+
+.feature-card__text {
+  color: #373737;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 .quiz {
@@ -3497,22 +3497,6 @@ input {
     font-size: 4.2666666667vw;
   }
 
-  .feature-card {
-    padding: 8vw 6.4vw 12.8vw 4.5333333333vw;
-  }
-
-  .feature-card__title {
-    font-size: 12.8vw;
-  }
-
-  .feature-card__text {
-    font-size: 3.2vw;
-  }
-
-  .feature-card__text {
-    margin-top: 1.0666666667vw;
-  }
-
   .quizlet__question {
     font-size: 3.7333333333vw;
   }
@@ -3673,6 +3657,18 @@ input {
 
   .advantages {
     margin: 21.3333333333vw 0vw 0vw 0vw;
+  }
+
+  .feature-card__title {
+    font-size: 9.6vw;
+  }
+
+  .feature-card__text {
+    font-size: 3.2vw;
+  }
+
+  .feature-card__text {
+    margin-top: 1.0666666667vw;
   }
 
   .quiz {
@@ -4599,18 +4595,6 @@ input {
 }
 
 @media (min-width:576px) {
-  .advantages__inner {
-    flex-wrap: wrap;
-  }
-
-  .advantages__item {
-    width: 48%;
-  }
-
-  .advantages__item:nth-child(n+3) {
-    margin-top: 20px;
-  }
-
   .manifest__logo {
     height: 13.8888888889vw;
   }
@@ -4774,14 +4758,6 @@ input {
     box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
     border-radius: 2.4514811032vw;
     padding: 1.0214504597vw;
-  }
-
-  .feature-card {
-    padding: 3.064351379vw 2.4514811032vw 4.9029622063vw 1.7364657814vw;
-  }
-
-  .feature-card__text {
-    margin-top: 0.4085801839vw;
   }
 
   .progress-bar__bar {

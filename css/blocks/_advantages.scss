@@ -1,28 +1,35 @@
 .advantages {
   @include margin(80px);
 
-  &__inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   &__item {
-    width: 18.9263565891%;
+    margin-left: 14px;
+    width: 64%;
+    height: 154px;
+  }
+}
+
+.advantages-carousel {
+  margin-left: 14px;
+}
+
+.feature-card {
+  background: $popupBackground;
+  @extend %s-border;
+  padding: 20px 15px 20px 15px;
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    color: $textColorAccent;
+    @include font-size(36px);
   }
 
-  @include _more-than($bp-sm-576) {
-    &__inner {
-      //flex-direction: column;
-      flex-wrap: wrap;
-    }
+  &__text {
+    color: $textColorAccent;
+    @include font-size(12px);
+    margin-top: 4px;
 
-    &__item {
-      width: 48%;
-
-      &:nth-child(n + 3) {
-        margin-top: 20px;
-      }
+    @include _more-than($bp-xxl-375) {
+      margin-top: #{get-vw(4px, $bp-xxl-375)};
     }
   }
 }
