@@ -35,21 +35,6 @@
       width: #{get-vw(22px, $bp-xxl-375)};
       height: #{get-vw(22px, $bp-xxl-375)};
     }
-
-    @include _more-than($bp-xl-1170) {
-      width: #{get-vw(22px, $bp-xl-1170)};
-      height: #{get-vw(22px, $bp-xl-1170)};
-    }
-
-    @include _more-than($bp-lg-979) {
-      width: #{get-vw(22px, $bp-lg-979)};
-      height: #{get-vw(22px, $bp-lg-979)};
-    }
-
-    @include _more-than($bp-md-768) {
-      width: #{get-vw(22px, $bp-md-768)};
-      height: #{get-vw(22px, $bp-md-768)};
-    }
   }
 
   &__circle-text {
@@ -67,7 +52,7 @@
   }
 
   &__inner {
-    @include margin(12px);
+    @include margin(3px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -88,6 +73,11 @@
         &__circle_1 {
           background: #FFC700;
           transition: background-color 0.3s 0.6s;
+
+          .progress-bar__circle-text {
+            transition: color 0.3s 0.6s;
+            color: #000000;
+          }
         }
 
         &__bar-inner {
@@ -106,6 +96,11 @@
         &__circle_2 {
           background: #FFC700;
           transition: background-color 0.3s 0.6s;
+
+          .progress-bar__circle-text {
+            transition: color 0.3s 0.6s;
+            color: #000000;
+          }
         }
 
         &__bar-inner {
@@ -129,6 +124,11 @@
         &__circle_3 {
           background: #FFC700;
           transition: background-color 0.3s 0.6s;
+
+          .progress-bar__circle-text {
+            transition: color 0.3s 0.6s;
+            color: #000000;
+          }
         }
 
         &__bar-inner {
@@ -157,6 +157,11 @@
         &__circle_4 {
           background: #FFC700;
           transition: background-color 0.3s 0.6s;
+
+          .progress-bar__circle-text {
+            transition: color 0.3s 0.6s;
+            color: #000000;
+          }
         }
 
         &__bar-inner {
@@ -190,6 +195,11 @@
         &__circle_5 {
           background: #FFC700;
           transition: background-color 0.3s 0.6s;
+
+          .progress-bar__circle-text {
+            transition: color 0.3s 0.6s;
+            color: #000000;
+          }
         }
 
         &__bar-inner {

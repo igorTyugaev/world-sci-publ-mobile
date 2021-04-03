@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    <base href="/landing-test/">-->
+    <meta charset="UTF-8">
+    <!--    <base href="/landing/">-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link href="./media/incons/favicon.ico" rel="shortcut icon">
@@ -14,7 +16,10 @@
     <script>
         (function (w, d, s, l, i) {
             w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
             var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s),
                 dl = l != 'dataLayer' ? '&l=' + l : '';
@@ -32,7 +37,7 @@
                 (t.async = !0),
                 (t.src = 'https://vk.com/js/api/openapi.js?162'),
                 (t.onload = function () {
-                    VK.Retargeting.Init('VK-RTRG-391973-cXaZw'),
+                    VK.Retargeting.Init('VK-RTRG-837729-8F4Pd'),
                         VK.Retargeting.Hit();
                 }),
                 document.head.appendChild(t);
@@ -44,9 +49,9 @@
         !(function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
             n = f.fbq = function () {
-                n.callMethod
-                    ? n.callMethod.apply(n, arguments)
-                    : n.queue.push(arguments);
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) :
+                    n.queue.push(arguments);
             };
             if (!f._fbq) f._fbq = n;
             n.push = n;
@@ -107,15 +112,14 @@
     </script>
     <!-- /Yandex.Metrika counter -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-125087961-1"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125087961-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
+
         gtag('js', new Date());
         gtag('config', 'UA-125087961-1');
     </script>
@@ -214,101 +218,86 @@
     <!-- End for saving cookie -->
 
 </head>
+
 <body>
 
 <!--@import "header.html"-->
 
 <main>
-<!--    @import "consultation.html"-->
+    <!-- @import "consultation.html" -->
 
-<!--    @import "cost.html"-->
+<!--     @import "cost.html"-->
 
-<!--    @import "advantages.html"-->
+<!--     @import "advantages.html"-->
 
     <section id="quiz-0" class="quiz">
-        <!--@import "quiz.html"-->
+        <!-- @import "quiz.html" -->
     </section>
 
-    @import "promo.html"
+<!--     @import "promo.html"-->
 
-    @import "guaranty.html"
+     @import "guaranty.html"
 
-    @import "component.html"
+     @import "component.html"
 
-    @import "stages.html"
+     @import "stages.html"
 
-    @import "profile.html"
+     @import "profile.html"
 
      @import "audit.html"
 
-    @import "team.html"
+     @import "team.html"
 
-    @import "foreign.html"
+     @import "foreign.html"
 
-    @import "reviews.html"
+     @import "reviews.html"
 
-    @import "geography.html"
+     @import "geography.html"
 
 <!--    <section id="quiz-1" class="quiz">-->
-<!--        &lt;!&ndash;@import "quiz.html"&ndash;&gt;-->
+<!--        &lt;!&ndash; @import "quiz.html" &ndash;&gt;-->
 <!--    </section>-->
 
-    @import "faq.html"
+     @import "faq.html"
 
-    @import "footer.html"
+     @import "footer.html"
 </main>
 
-<!--@import "pop-up.html"-->
+ @import "pop-up.html"
 
 <noscript>
-    <img
-            src="https://vk.com/rtrg?p=VK-RTRG-391973-cXaZw"
-            style="position: fixed; left: -999px"
-            alt=""
-    />
+    <img src="https://vk.com/rtrg?p=VK-RTRG-837729-8F4Pd" style="position: fixed; left: -999px" alt="" />
 </noscript>
 <noscript>
-    <img
-            height="1"
-            width="1"
-            style="display: none"
-            src="https://www.facebook.com/tr?id=2365479983546227&ev=PageView&noscript=1"
-    />
+    <img height="1" width="1" style="display: none"
+         src="https://www.facebook.com/tr?id=2365479983546227&ev=PageView&noscript=1" />
 </noscript>
 <noscript>
     <div>
-        <img
-                src="https://mc.yandex.ru/watch/50181778"
-                style="position: absolute; left: -9999px"
-                alt=""
-        />
+        <img src="https://mc.yandex.ru/watch/50181778" style="position: absolute; left: -9999px" alt="" />
     </div>
 </noscript>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NF7Q6BJ"
-            height="0"
-            width="0"
-            style="display: none; visibility: hidden"
-    ></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF7Q6BJ" height="0" width="0"
+            style="display: none; visibility: hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <script>
-    // var csrfToken = '<?=$_SESSION['
-    // csrf - token
-    // ']?>';
+    // var csrfToken = '<?=$_SESSION['csrf-token']?>';
     var csrfToken = 228;
 </script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js"></script>
 <script src="./js/flickity.pkgd.min.js"></script>
+
 <script src="./js/selector.js"></script>
 <script src="./js/pop-up.js"></script>
 <script src="./js/header.js"></script>
 
-
 <script src="./js/advantages.js"></script>
+<script src="./js/promo.js"></script>
 
 <script src="./js/profile.js"></script>
 <script src="./js/stages"></script>
@@ -318,6 +307,8 @@
 <script src="./js/reviews.js"></script>
 <script src="./js/forms.js"></script>
 <script src="./js/quiz.js"></script>
+<script src="./js/dragDrop.js"></script>
+<script src="./js/file_upload.js"></script>
 <script src="./js/float-navbar.js"></script>
 
 <!-- Roistat -->
@@ -326,9 +317,9 @@
         w.roistatProjectId = id;
         w.roistatHost = h;
         var p = d.location.protocol == 'https:' ? 'https://' : 'http://';
-        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie)
-            ? '/dist/module.js'
-            : '/api/site/1.0/' + id + '/init';
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ?
+            '/dist/module.js' :
+            '/api/site/1.0/' + id + '/init';
         var js = d.createElement(s);
         js.charset = 'UTF-8';
         js.async = 1;
@@ -346,4 +337,5 @@
 <!-- /Roistat -->
 
 </body>
+
 </html>

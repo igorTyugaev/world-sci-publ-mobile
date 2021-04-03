@@ -4,12 +4,14 @@
   &__item {
     margin-left: 14px;
     width: 64%;
-    height: 154px;
+    height: 95%;
+    transform: translateY(5%);
   }
 }
 
 .advantages-carousel {
   margin-left: 14px;
+  height: 174px;
 }
 
 .feature-card {

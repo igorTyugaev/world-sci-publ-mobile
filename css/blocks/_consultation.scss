@@ -1,12 +1,12 @@
 .consultation {
   background: $windowBackground;
   position: relative;
-  height: 324px;
+  height: 346px;
   margin-top: 45px;
 
   @include _more-than($bp-xxl-375) {
     margin-top: #{get-vw(45px, $bp-xxl-375)};
-    height: #{get-vw(324px, $bp-xxl-375)};
+    height: #{get-vw(346px, $bp-xxl-375)};
   }
 
   &__content {
@@ -16,6 +16,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 20px;
+  }
+
+  &__btn {
+    width: 60%;
   }
 
   &__text {
@@ -31,6 +36,7 @@
     }
 
     &--subtext {
+      @include font-size(16px);
       display: block;
       font-family: $fontFamilySecondary;
 
@@ -46,9 +52,9 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center bottom;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
   }
 }

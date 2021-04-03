@@ -286,8 +286,8 @@ th {
 
 .container {
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .extended-block:after {
@@ -671,7 +671,7 @@ input {
 }
 
 .progress-bar__inner {
-  margin: 12px 0px 0px 0px;
+  margin: 3px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -690,6 +690,11 @@ input {
   transition: background-color 0.3s 0.6s;
 }
 
+.progress-bar_step-0 .progress-bar__circle_1 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
+}
+
 .progress-bar_step-0 .progress-bar__bar-inner {
   width: 0%;
 }
@@ -702,6 +707,11 @@ input {
 .progress-bar_step-1 .progress-bar__circle_2 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-1 .progress-bar__circle_2 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-1 .progress-bar__bar-inner {
@@ -721,6 +731,11 @@ input {
 .progress-bar_step-2 .progress-bar__circle_3 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-2 .progress-bar__circle_3 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-2 .progress-bar__bar-inner {
@@ -745,6 +760,11 @@ input {
 .progress-bar_step-3 .progress-bar__circle_4 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-3 .progress-bar__circle_4 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-3 .progress-bar__bar-inner {
@@ -774,6 +794,11 @@ input {
 .progress-bar_step-4 .progress-bar__circle_5 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-4 .progress-bar__circle_5 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-4 .progress-bar__bar-inner {
@@ -1141,7 +1166,7 @@ input {
 .consultation {
   background: #F5F5F5;
   position: relative;
-  height: 324px;
+  height: 346px;
   margin-top: 45px;
 }
 
@@ -1152,6 +1177,11 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.consultation__btn {
+  width: 60%;
 }
 
 .consultation__text {
@@ -1163,6 +1193,7 @@ input {
 }
 
 .consultation__text--subtext {
+  font-size: 16px;
   display: block;
   font-family: "HelveticaBold";
   margin: 0;
@@ -1172,9 +1203,9 @@ input {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center bottom;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
@@ -1255,11 +1286,13 @@ input {
 .advantages__item {
   margin-left: 14px;
   width: 64%;
-  height: 154px;
+  height: 95%;
+  transform: translateY(5%);
 }
 
 .advantages-carousel {
   margin-left: 14px;
+  height: 174px;
 }
 
 .feature-card {
@@ -1365,7 +1398,11 @@ input {
 }
 
 .promo {
-  margin: 97px 0px 0px 0px;
+  margin: 100px 0px 0px 0px;
+}
+
+.promo__inner {
+  overflow: hidden;
 }
 
 .promo__title {
@@ -1380,6 +1417,11 @@ input {
   flex-direction: column;
   justify-content: space-between;
   margin: 24px 0px 0px 0px;
+  overflow: hidden;
+}
+
+.promo__carousel {
+  margin-top: 24px;
 }
 
 .promo__footer {
@@ -1395,6 +1437,19 @@ input {
 
 .promo__contract {
   width: 32%;
+}
+
+.promo-carousel {
+  width: 100%;
+  padding-left: 10px;
+  height: 280px;
+}
+
+.promo-carousel__item {
+  width: 85%;
+  height: 90%;
+  margin-left: 10px;
+  transform: translateY(5%);
 }
 
 .manifest {
@@ -1457,11 +1512,17 @@ input {
   right: 0;
   width: inherit;
   height: 100%;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 6px;
 }
 
 .trailer__description {
   font-size: 12px;
   margin: 16px 0px 0px 0px;
+  padding-top: 0px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  padding-left: 21px;
 }
 
 .trailer__form {
@@ -3413,8 +3474,8 @@ input {
   }
 
   .container {
-    padding-left: 5.3333333333vw;
-    padding-right: 5.3333333333vw;
+    padding-left: 2.6666666667vw;
+    padding-right: 2.6666666667vw;
   }
 
   .extended-subtitle:after {
@@ -3533,7 +3594,7 @@ input {
   }
 
   .progress-bar__inner {
-    margin: 3.2vw 0vw 0vw 0vw;
+    margin: 0.8vw 0vw 0vw 0vw;
   }
 
   .float-navbar {
@@ -3622,7 +3683,7 @@ input {
 
   .consultation {
     margin-top: 12vw;
-    height: 86.4vw;
+    height: 92.2666666667vw;
   }
 
   .consultation__text {
@@ -3631,6 +3692,10 @@ input {
 
   .consultation__text {
     margin-bottom: 5.3333333333vw;
+  }
+
+  .consultation__text--subtext {
+    font-size: 4.2666666667vw;
   }
 
   .consultation__text--subtext {
@@ -3740,7 +3805,7 @@ input {
   }
 
   .promo {
-    margin: 25.8666666667vw 0vw 0vw 0vw;
+    margin: 26.6666666667vw 0vw 0vw 0vw;
   }
 
   .promo__title {
@@ -3797,6 +3862,13 @@ input {
 
   .trailer__description {
     margin: 4.2666666667vw 0vw 0vw 0vw;
+  }
+
+  .trailer__description {
+    padding-top: 0vw;
+    padding-right: 1.3333333333vw;
+    padding-bottom: 0vw;
+    padding-left: 5.6vw;
   }
 
   .trailer__form {
@@ -4657,11 +4729,6 @@ input {
     border-radius: 0.78125vw;
   }
 
-  .progress-bar__circle {
-    width: 2.8645833333vw;
-    height: 2.8645833333vw;
-  }
-
   .nav__link {
     border: 0.1302083333vw solid #FFFFFF;
     box-shadow: 0.1302083333vw 0.1302083333vw 0.5208333333vw rgba(0,0,0,0.25);
@@ -4768,11 +4835,6 @@ input {
     border-radius: 3.4729315628vw;
   }
 
-  .progress-bar__circle {
-    width: 2.2471910112vw;
-    height: 2.2471910112vw;
-  }
-
   .nav__link {
     border: 0.102145046vw solid #FFFFFF;
     box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
@@ -4820,11 +4882,6 @@ input {
 }
 
 @media (min-width:1170px) {
-  .progress-bar__circle {
-    width: 1.8803418803vw;
-    height: 1.8803418803vw;
-  }
-
   .nav {
     width: 42vw;
   }

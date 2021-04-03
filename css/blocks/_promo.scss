@@ -1,5 +1,9 @@
 .promo {
-  @include margin(97px);
+  @include margin(100px);
+
+  &__inner {
+    overflow: hidden;
+  }
 
   &__title {
     font-family: $fontFamilySecondary;
@@ -13,10 +17,11 @@
     flex-direction: column;
     justify-content: space-between;
     @include margin(24px);
+    overflow: hidden;
   }
 
-  &__column {
-
+  &__carousel {
+    margin-top: 24px;
   }
 
   &__footer {
@@ -29,6 +34,19 @@
 
   &__contract {
     width: 32%;
+  }
+}
+
+.promo-carousel {
+  width: 100%;
+  padding-left: 10px;
+  height: 280px;
+
+  &__item {
+    width: 85%;
+    height: 90%;
+    margin-left: 10px;
+    transform: translateY(5%);
   }
 }
 
@@ -99,12 +117,16 @@
 
       width: inherit;
       height: 100%;
+
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
     }
   }
 
   &__description {
     @include font-size(12px);
     @include margin(16px);
+    @include padding(0px, 5px, 0px, 21px);
   }
 
   &__form {
