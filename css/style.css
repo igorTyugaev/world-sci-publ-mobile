@@ -1295,6 +1295,17 @@ input {
   height: 174px;
 }
 
+.advantages-carousel .flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 0.3;
+  background: #C4C4C4;
+}
+
+.advantages-carousel .flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
 .feature-card {
   background: #FFFFFF;
   padding: 20px 15px 20px 15px;
@@ -1435,30 +1446,45 @@ input {
   margin-top: 90px;
 }
 
-.promo__contract {
-  width: 32%;
+.promo__form {
+  width: 100%;
 }
 
 .promo-carousel {
   width: 100%;
-  padding-left: 10px;
-  height: 280px;
+  overflow-x: hidden;
+  margin-left: 10px;
 }
 
 .promo-carousel__item {
   width: 85%;
-  height: 90%;
-  margin-left: 10px;
-  transform: translateY(5%);
+  height: 280px;
+  margin: 6px;
+}
+
+.promo-carousel .flickity-page-dots {
+  bottom: 10px;
+  transform: translateX(-10px);
+}
+
+.promo-carousel .flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 0.3;
+  background: #C4C4C4;
+}
+
+.promo-carousel .flickity-page-dots .dot.is-selected {
+  opacity: 1;
 }
 
 .manifest {
   position: relative;
   background: #FFFFFF;
-  padding-top: 12px;
-  padding-right: 5px;
-  padding-bottom: 20px;
-  padding-left: 21px;
+  padding-top: 31px;
+  padding-right: 25px;
+  padding-bottom: 73px;
+  padding-left: 14px;
 }
 
 .manifest--logo {
@@ -1525,20 +1551,13 @@ input {
   padding-left: 21px;
 }
 
-.trailer__form {
-  margin: 10px 0px 0px 0px;
-}
-
 .app-form__input,
 .audit-form__input {
   background: #FFFFFF;
   color: #000000;
   text-align: left;
   font-size: 10px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+  padding: 10px 20px 10px 20px;
   border: 1px solid rgba(0,0,0,0.3);
   border-radius: 6px;
 }
@@ -1550,7 +1569,8 @@ input {
 
 .app-form__title {
   font-family: "HelveticaBold";
-  font-size: 14px;
+  font-size: 16px;
+  margin-top: 24px;
 }
 
 .app-form__inner {
@@ -1568,7 +1588,7 @@ input {
 .app-form__note {
   font-size: 9px;
   margin: 4px 0px 0px 0px;
-  width: 100%;
+  max-width: 90%;
   line-height: 105%;
   color: #BBBBBB;
 }
@@ -3824,10 +3844,10 @@ input {
   }
 
   .manifest {
-    padding-top: 3.2vw;
-    padding-right: 1.3333333333vw;
-    padding-bottom: 5.3333333333vw;
-    padding-left: 5.6vw;
+    padding-top: 8.2666666667vw;
+    padding-right: 6.6666666667vw;
+    padding-bottom: 19.4666666667vw;
+    padding-left: 3.7333333333vw;
   }
 
   .manifest--logo {
@@ -3871,21 +3891,9 @@ input {
     padding-left: 5.6vw;
   }
 
-  .trailer__form {
-    margin: 2.6666666667vw 0vw 0vw 0vw;
-  }
-
   .app-form__input,
   .audit-form__input {
     font-size: 2.6666666667vw;
-  }
-
-  .app-form__input,
-  .audit-form__input {
-    padding-top: 2.6666666667vw;
-    padding-right: 5.3333333333vw;
-    padding-bottom: 2.6666666667vw;
-    padding-left: 5.3333333333vw;
   }
 
   .app-form__input,
@@ -3895,7 +3903,7 @@ input {
   }
 
   .app-form__title {
-    font-size: 3.7333333333vw;
+    font-size: 4.2666666667vw;
   }
 
   .app-form__inner {
@@ -4711,10 +4719,6 @@ input {
 }
 
 @media (min-width:576px) {
-  .manifest__logo {
-    height: 13.8888888889vw;
-  }
-
   .tabs-team__logo {
     height: 13.8888888889vw;
   }
@@ -4841,14 +4845,6 @@ input {
     border-radius: 2.860061287vw;
   }
 
-  .manifest__logo {
-    height: 8.1716036772vw;
-  }
-
-  .app-form__inner {
-    column-gap: 1.6343207354vw;
-  }
-
   .protection__img {
     height: 43.0030643514vw;
   }
@@ -4899,76 +4895,6 @@ input {
 @media (min-width:1400px) {
   .float-navbar--show {
     display: none;
-  }
-}
-
-@media (max-width:979px) {
-  .audit-cart,
-  .card-profile,
-  .card-rating,
-  .card-txt,
-  .extended-block:after,
-  .feature-card,
-  .manifest,
-  .profile-nav,
-  .review-card,
-  .review-slider__body,
-  .tabs-team__tab {
-    border-radius: 0.6128702758vw;
-    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
-  }
-
-  .audit-cart,
-  .card-profile,
-  .card-rating,
-  .card-txt,
-  .extended-block:after,
-  .feature-card,
-  .manifest,
-  .profile-nav,
-  .review-card,
-  .review-slider__body,
-  .tabs-team__tab {
-    border-radius: 0.6128702758vw;
-    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
-  }
-
-  .app-form__input,
-  .audit-form__input {
-    border: 0.102145046vw solid rgba(0,0,0,0.3);
-    border-radius: 0.6128702758vw;
-  }
-}
-
-@media (max-width:576px) {
-  .audit-cart,
-  .card-profile,
-  .card-rating,
-  .card-txt,
-  .extended-block:after,
-  .feature-card,
-  .manifest,
-  .profile-nav,
-  .review-card,
-  .review-slider__body,
-  .tabs-team__tab {
-    border-radius: 1.0416666667vw;
-    box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
-  }
-
-  .audit-cart,
-  .card-profile,
-  .card-rating,
-  .card-txt,
-  .extended-block:after,
-  .feature-card,
-  .manifest,
-  .profile-nav,
-  .review-card,
-  .review-slider__body,
-  .tabs-team__tab {
-    border-radius: 1.0416666667vw;
-    box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
   }
 }
 

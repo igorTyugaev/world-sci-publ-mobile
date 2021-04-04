@@ -75,44 +75,133 @@
         </div>
     </div>
 
-    <div class="trailer__form app-form container">
+    <div class="promo__form app-form container">
         <h3 class="app-form__title">
-            Расскажите о Ваших пожеланиях к журналу и
-            цели<br>
-            публикации, а мы подберём лучшее решение
+            Получите предложение с указанием стоимости и сроков публикации на почту
         </h3>
-        <form novalidate name="26" class="app-form__inner">
+        <form novalidate name="promo" class="app-form__inner">
             <div class="input-wrapper">
-                <input name="phone" class="app-form__input"
-                       placeholder="Введите номер телефона"
-                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                       required
-                       type="text">
+                <input name="email" type="email" class="app-form__input" placeholder="Email"
+                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                       required/>
                 <span class="input-wrapper__error"></span>
             </div>
-            <button class="app-form__submit button button--submit"
-                    data-show-popup="9"
-                    type="submit">
-                Обсудить задачу
+            <button class="app-form__submit button button--submit" data-show-popup="9"
+                    data-formsended="discuss_task_" data-step="1" type="submit">
+                Получить
             </button>
         </form>
         <p class="app-form__note">Нажимая на кнопку, вы даете согласие на
             обработку
             своих персональных данных и соглашаетесь с
-            <button class="app-form__note app-form__note--link"
-                    data-show-popup="500">
+            <button class="app-form__note app-form__note--link" data-show-popup="500">
                 Политикой конфиденциальности
             </button>
         </p>
     </div>
 
     <div class="promo__footer">
-        <button class="promo__contract button button--contract" data-show-popup="100">
+        <button class="promo__contract button button--contract" data-show-popup="100"
+                data-formsended="contract_"
+                data-step="1">
             Прочитать договор
         </button>
     </div>
 
 </section>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore doloribus
+    error, harum maiores molestiae molestias mollitia obcaecati, officia provident quo totam
+    vitae? Aut consequatur debitis deleniti, dicta doloremque fugit id inventore ipsam iusto
+    laudantium, maiores nam nemo nihil omnis provident quam recusandae repellat, repudiandae
+    sapiente vero! A commodi consectetur consequatur cum deserunt, dignissimos doloremque ea
+    eos exercitationem molestiae natus nemo non numquam perferendis porro sapiente sunt
+    tempore temporibus velit vero! Accusantium aliquam animi delectus, dolore dolores esse,
+    ipsa laboriosam laudantium nulla perferendis placeat quae unde voluptas. Earum excepturi
+    in ipsum iure iusto praesentium rem sed tenetur velit voluptatum. Ad commodi consectetur
+    consequatur corporis, dolores eos itaque molestiae nisi, nobis non officia optio
+    perspiciatis quo reiciendis repellendus, sint sit temporibus voluptatum? A alias animi
+    aperiam assumenda atque deleniti deserunt dicta dignissimos distinctio dolores ea earum,
+    eius, eligendi enim eos et eum ex excepturi facilis harum inventore iusto libero magnam
+    nam necessitatibus nisi nostrum odit provident quae quis ratione sed sequi sunt tempore
+    tenetur veritatis voluptatem. Autem beatae dignissimos dolorem, est labore magnam maxime
+    minus natus quia quisquam rerum, sequi temporibus vero? Amet aperiam aspernatur
+    assumenda, consequuntur cumque debitis error excepturi fugiat nihil non quae quia
+    repudiandae, similique tempora, veniam voluptatem voluptatibus. Amet cupiditate facilis
+    impedit ipsum provident quas unde? Accusamus accusantium beatae dicta dolores dolorum,
+    eos eum hic, laboriosam maxime molestias nisi non perferendis quae quidem quod
+    reiciendis soluta tenetur! Aliquid, asperiores iure nostrum rem suscipit vero
+    voluptatibus. Accusantium alias aliquam aliquid aspernatur beatae blanditiis debitis
+    dolorem dolorum eius error est et expedita explicabo fugiat fugit harum illo illum
+    impedit ipsa laboriosam laudantium minus nam nesciunt, nihil non nostrum obcaecati odit
+    quo quos repudiandae rerum saepe sit suscipit tempora temporibus totam voluptas?
+    Accusantium distinctio dolor ea est magnam optio quis rerum. Aliquid doloribus eveniet
+    ipsa mollitia nemo possimus, rerum ullam. Architecto dicta eum exercitationem impedit
+    labore nemo odio quaerat reprehenderit saepe ullam? Amet blanditiis consequuntur cum,
+    delectus, distinctio, ducimus est eum eveniet fugit modi molestiae neque quis quod rem
+    similique temporibus vitae! Accusamus dolore ducimus enim error, impedit iusto
+    laboriosam laborum natus nobis praesentium ullam veritatis voluptates voluptatibus.
+    Aliquam, eum praesentium. Architecto assumenda dolorum, laboriosam magnam placeat quam
+    quo? Ab adipisci amet aperiam asperiores consectetur culpa cupiditate deleniti dicta
+    dignissimos dolorem dolorum, ducimus esse excepturi fugit iusto, laborum laudantium
+    libero minima molestiae nemo nihil odio optio pariatur perferendis quae repellendus
+    soluta suscipit tempora tempore tenetur totam veritatis voluptate voluptates.
+    Accusantium dignissimos eaque iusto nisi placeat rem temporibus! Ad adipisci alias animi
+    assumenda atque aut cupiditate delectus dignissimos, ea expedita facere fugiat id illum
+    magnam molestiae molestias mollitia nam optio perferendis provident quo, totam
+    voluptatem, voluptates voluptatibus voluptatum. Aliquid deserunt doloribus ea eligendi
+    facilis ipsum maxime mollitia nostrum, optio pariatur quasi quisquam quod tempore. Ab
+    animi architecto asperiores atque autem consequuntur corporis culpa debitis delectus
+    distinctio dolore doloremque dolores ducimus earum eum excepturi hic impedit in incidunt
+    ipsam labore magni maxime minima necessitatibus neque, nulla obcaecati quidem, quod rem
+    rerum sint sunt suscipit tempora temporibus voluptate voluptates voluptatum? Animi
+    doloribus error magnam porro qui, rerum sunt? Amet corporis doloribus explicabo labore
+    maxime mollitia pariatur qui quibusdam similique velit! Adipisci at autem cum et,
+    excepturi inventore ipsum maxime nam nostrum nulla quaerat quam quas quibusdam
+    reiciendis rerum sunt voluptatum. Assumenda, corporis dignissimos eveniet labore nam
+    suscipit velit! Assumenda consequatur consequuntur cumque ducimus, eveniet ipsum
+    molestiae, mollitia odio, placeat quasi quo rem veniam. Ab dolorem dolores ducimus eaque
+    expedita facilis id neque, nisi odio perspiciatis quisquam quo quod reprehenderit sint
+    vel? Aspernatur at beatae ex facilis ipsa, nemo nulla officia officiis quo sequi sunt
+    tenetur unde vitae? Ad, architecto beatae consequuntur ducimus ex in iusto labore
+    molestias necessitatibus nesciunt nihil, numquam omnis perspiciatis placeat quaerat quam
+    quasi repudiandae similique sit voluptatem? Alias architecto aut consectetur culpa,
+    delectus, distinctio dolorum earum eos exercitationem expedita facilis harum ipsa ipsum
+    libero mollitia neque perspiciatis praesentium recusandae rerum saepe soluta temporibus
+    unde veniam veritatis voluptatem. Consectetur corporis deserunt eligendi molestias, nisi
+    sit sunt! Adipisci esse est fuga fugiat hic necessitatibus nulla officiis repudiandae
+    velit! Accusamus aspernatur assumenda blanditiis, distinctio doloribus eligendi in
+    laudantium nam nesciunt nostrum numquam quae quam sequi tempore voluptate. Assumenda
+    consequatur consequuntur cum cumque cupiditate delectus eligendi harum id ipsam iste
+    libero quam tempore, voluptas! Consequatur dolor dolorem dolorum omnis quam quibusdam
+    quisquam sapiente ullam unde velit. Adipisci aliquam beatae exercitationem in nobis
+    pariatur, rem. At consequatur consequuntur corporis cumque debitis dicta doloremque
+    ducimus eius eos hic ipsa laudantium nam nisi, obcaecati odit praesentium quae qui rem
+    saepe voluptas. Animi, asperiores assumenda beatae consequatur eos, fuga hic illo
+    impedit iste magni minima necessitatibus neque nobis, non quasi quibusdam reiciendis
+    sapiente similique veritatis voluptate. Alias assumenda atque consectetur dicta ex
+    excepturi exercitationem, explicabo in ipsa nobis quibusdam quisquam, repellat sed ullam
+    voluptate? Ad alias aliquid aperiam commodi deleniti, dignissimos dolorem eius ex hic
+    illo incidunt ipsam ipsum itaque iure laudantium magni modi, nisi numquam odit officiis
+    omnis perspiciatis, placeat provident quas sunt tempore ut veritatis. Ab accusantium,
+    alias at corporis culpa dignissimos distinctio ducimus eum exercitationem id in ipsa
+    iure labore laudantium magni minus modi neque numquam odio pariatur quia ratione
+    reiciendis repellat, reprehenderit rerum, saepe sapiente tenetur unde ut voluptate!
+    Accusantium, ducimus ea eligendi eveniet, ex exercitationem fugiat harum in iure iusto
+    maxime nam necessitatibus numquam officia perspiciatis provident, quam quasi quia
+    quibusdam quo quod recusandae ut velit veritatis vero voluptas voluptates. Accusantium
+    architecto asperiores, assumenda atque aut beatae corporis cumque eius explicabo hic id
+    iure laudantium, libero, magnam magni nemo nesciunt nostrum odio officia perferendis
+    perspiciatis quae quaerat qui recusandae rem repellendus sapiente sit voluptates
+    voluptatibus voluptatum! Architecto dolore doloribus eaque eveniet placeat quis quo
+    saepe voluptates. A aliquid aspernatur assumenda autem beatae deserunt dicta dolorum ea
+    exercitationem fuga hic illo illum impedit inventore ipsa iste laboriosam laborum magnam
+    minima nemo nisi odio perferendis placeat porro quae quam, repellat repellendus sapiente
+    unde vero? Asperiores deleniti dicta, dolorum ducimus exercitationem laboriosam
+    laudantium maxime minus quibusdam, quis ratione recusandae, reiciendis sed velit veniam!
+    Ad asperiores distinctio doloribus fuga neque omnis saepe sunt vel veritatis voluptates.
+</p>
 
 <!-- Мультик -->
 <section id="popup-9" class="pop-up">

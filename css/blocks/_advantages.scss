@@ -12,6 +12,17 @@
 .advantages-carousel {
   margin-left: 14px;
   height: 174px;
+
+  .flickity-page-dots .dot {
+    width: 8px;
+    height: 8px;
+    opacity: .3;
+    background: #C4C4C4;
+  }
+
+  .flickity-page-dots .dot.is-selected {
+    opacity: 1;
+  }
 }
 
 .feature-card {

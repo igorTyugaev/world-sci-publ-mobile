@@ -32,29 +32,49 @@
     margin-top: 90px;
   }
 
+  &__form {
+    width: 100%;
+  }
+
   &__contract {
-    width: 32%;
+
   }
 }
 
 .promo-carousel {
   width: 100%;
-  padding-left: 10px;
-  height: 280px;
+  overflow-x: hidden;
+  margin-left: 10px;
 
   &__item {
     width: 85%;
-    height: 90%;
-    margin-left: 10px;
-    transform: translateY(5%);
+    height: 280px;
+    margin: 6px;
   }
+
+  .flickity-page-dots {
+    bottom: 10px;
+    transform: translateX(-10px);
+  }
+
+  .flickity-page-dots .dot {
+    width: 8px;
+    height: 8px;
+    opacity: .3;
+    background: #C4C4C4;
+  }
+
+  .flickity-page-dots .dot.is-selected {
+    opacity: 1;
+  }
+
 }
 
 .manifest {
   position: relative;
   background: $popupBackground;
   @extend %s-border;
-  @include padding(12px, 5px, 20px, 21px);
+  @include padding(31px, 25px, 73px, 14px);
 
   &--logo {
     @include padding(50px, 16px, 60px, 28px);
@@ -71,14 +91,6 @@
 
     @include _more-than($bp-xxl-375) {
       height: #{get-vw($h-logo, $bp-xxl-375)};
-    }
-
-    @include _more-than($bp-lg-979) {
-      height: #{get-vw($h-logo, $bp-lg-979)};
-    }
-
-    @include _more-than($bp-sm-576) {
-      height: #{get-vw($h-logo, $bp-sm-576)};
     }
   }
 
@@ -128,10 +140,6 @@
     @include margin(16px);
     @include padding(0px, 5px, 0px, 21px);
   }
-
-  &__form {
-    @include margin(10px);
-  }
 }
 
 %tmp-input {
@@ -149,7 +157,7 @@
   text-align: left;
 
   @include font-size(10px);
-  @include padding(10px, 20px, 10px, 20px);
+  padding: 10px 20px 10px 20px;
 
   border: 1px solid $borderColorInput;
   border-radius: 6px;
@@ -158,18 +166,14 @@
     border: #{get-vw(1px, $bp-xxl-375)} solid $borderColorInput;
     border-radius: #{get-vw(6px, $bp-xxl-375)};
   }
-
-  @media (max-width: #{$bp-lg-979}) {
-    border: #{get-vw(1px, $bp-lg-979)} solid $borderColorInput;
-    border-radius: #{get-vw(6px, $bp-lg-979)};
-  }
 }
 
 .app-form {
 
   &__title {
     font-family: $fontFamilySecondary;
-    @include font-size(14px);
+    @include font-size(16px);
+    margin-top: 24px;
   }
 
   &__inner {
@@ -183,14 +187,6 @@
     @include _more-than($bp-xxl-375) {
       column-gap: #{get-vw(16px, $bp-xxl-375)};
     }
-
-    @include _more-than($bp-lg-979) {
-      column-gap: #{get-vw(16px, $bp-lg-979)};
-    }
-
-    @include _more-than($bp-sm-576) {
-
-    }
   }
 
   &__input {
@@ -199,13 +195,12 @@
   }
 
   &__submit {
-
   }
 
   &__note {
     @include font-size(9px);
     @include margin(4px);
-    width: 100%;
+    max-width: 90%;
     line-height: 105%;
 
     color: #BBBBBB;
