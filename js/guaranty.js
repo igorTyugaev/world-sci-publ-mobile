@@ -1,5 +1,5 @@
 (function () {
-    const _carousel = document.querySelector('.promo-carousel');
+    const _carousel = document.querySelector('.guaranty-carousel');
     const flkty = new Flickity(_carousel, {
         // options
         cellAlign: 'left',

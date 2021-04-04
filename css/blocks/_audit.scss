@@ -1,16 +1,56 @@
 .audit {
   @include margin(170px);
 
+  &__wrap {
+  }
+
   &__title {
     font-family: $fontFamilySecondary;
     @include font-size(24px);
+    @include margin(0px, 0px, 22px, 0px);
+  }
+
+  &__desc {
+    font-family: $fontFamilyPrimary;
+    color: $textColorPrimary;
+
+    @include font-size(14px);
+    @include padding(20px, 20px, 20px, 20px);
+    line-height: 120%
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include padding(0px, 20px, 0px, 20px);
+  }
+
+  &__email {
+    flex: 2;
+  }
+
+  &__submit {
+    flex: 1;
+    @include margin(0px, 0px, 0px, 20px);
+    width: 100%;
+  }
+
+  &__btn {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+    width: 100%;
+  }
+
+  &__header {
   }
 
   &__subtitle {
     font-family: $fontFamilyPrimary;
-    color: #000000;
+    color: $textColorSecondary;
 
-    @include font-size(14px);
+    @include font-size(18px);
     @include padding(21px, 37px, 21px, 0px);
     line-height: 120%
   }
@@ -19,14 +59,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include margin(22px);
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
   }
 
   &__main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    @include padding(20px, 0px, 20px, 0px);
+    @include padding(0px, 0px, 20px, 0px);
+    background: $popupBackground;
+    @extend %s-border;
   }
 
   &__content {
@@ -36,7 +80,7 @@
   }
 
   &__items {
-    width: 100%;
+    width: 38.4689922481%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,6 +92,7 @@
   }
 
   &__form {
+    width: 100%;
   }
 
   &__instruction {
@@ -65,6 +110,8 @@
       line-height: 200%;
     }
   }
+
+
 }
 
 .audit-cart {
@@ -116,15 +163,19 @@
 
 .audit-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
 
   &__inputs {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 45%;
+
+    &--file {
+      width: 55%;
+      padding: 0 25px;
+    }
   }
 
   &__input-wrapper {
@@ -135,6 +186,7 @@
 
   &__input {
     @extend %tmp-input;
+    cursor: text;
 
     &:focus {
       border: 2px solid $colorAccent;
@@ -152,35 +204,200 @@
 }
 
 .uploader {
+  width: 100%;
+
+  &__input-file {
+    display: none;
+  }
+
+  &__inner {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px dashed #C4C4C4;
+    padding: 2em;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #CBCBCB;
+      border: 2px dashed #FFFFFF;
+    }
+
+    &--drag {
+      background-color: #CBCBCB;
+      border: 2px dashed #FFFFFF;
+    }
+  }
+
+  &__inner-done {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    text-align: center;
+    background-color: $colorAccent;
+
+    .uploader__text {
+      display: block;
+      color: $textColorSecondary;
+    }
+  }
+
+  &__text {
+    @include margin(10px, 0px, 10px, 0px);
+    width: 100%;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__img {
+    position: relative;
+    width: 54%;
+  }
+
+  &__cloud {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: center;
+    height: 50%;
+  }
+
+  &__done {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 18%;
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: center;
+    height: 50%;
+  }
+
+  #file-progress {
+    display: none;
+    margin: 1em auto;
+    width: 100%;
+  }
+
+  #file-upload-form {
+    margin: auto;
+    width: 40%;
+  }
+
+  progress {
+    appearance: none;
+    background: #eee;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    height: 30px;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background: -webkit-linear-gradient(-45deg,
+            transparent 33%,
+            rgba(0, 0, 0, .2) 33%,
+            rgba(0, 0, 0, .2) 66%,
+            transparent 66%),
+    -webkit-linear-gradient(right,
+                    #005f95,
+                    #07294d);
+    background: linear-gradient(-45deg,
+            transparent 33%,
+            rgba(0, 0, 0, .2) 33%,
+            rgba(0, 0, 0, .2) 66%,
+            transparent 66%),
+    linear-gradient(right,
+                    #005f95,
+                    #07294d);
+    background-size: 60px 30px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+  }
+
+  progress[value]::-moz-progress-bar {
+    background: -moz-linear-gradient(-45deg,
+            transparent 33%,
+            rgba(0, 0, 0, .2) 33%,
+            rgba(0, 0, 0, .2) 66%,
+            transparent 66%),
+    -moz-linear-gradient(right,
+                    #005f95,
+                    #07294d);
+    background: linear-gradient(-45deg,
+            transparent 33%,
+            rgba(0, 0, 0, .2) 33%,
+            rgba(0, 0, 0, .2) 66%,
+            transparent 66%),
+    linear-gradient(right,
+                    #005f95,
+                    #07294d);
+    background-size: 60px 30px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.file-cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  @include margin(22px, 0px, 0px, 0px);
+  width: 100%;
 
-  background: rgba(21, 42, 79, 0.98);
-  height: 65%;
+  &__item {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 151px;
+    @include padding(4px, 4px, 4px, 4px);
 
-  border-radius: 6px;
-  padding: 15px 20px;
+    @include _more-than($bp-xxl-375) {
+      height: #{get-vw(151px, $bp-xxl-375)};
+    }
 
+    background: $popupBackground;
 
-  &__choose {
-    width: 30%;
-    background-color: black;
-    cursor: pointer;
+    &:hover {
+      background: #CBCBCB;
+    }
+
+    @extend %s-border;
   }
 
   &__img {
     object-fit: contain;
-    height: 100%;
-    width: 100%;
-    padding: 12%;
+    object-position: center;
   }
 
-  &__text {
-    width: 70%;
+  &__title {
+    font-family: $fontFamilyPrimary;
     @include font-size(12px);
+    @include padding(0px, 12px, 0px, 12px);
+    line-height: 110%;
     text-align: center;
-    color: $textColorSecondary;
-    padding: 2%;
+    color: #383838;
   }
 }

@@ -24,6 +24,20 @@
 
   }
 
+  &__subheader {
+    background: $subtitleBackground;
+    width: 100%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    @include padding(14px, 18px, 14px, 18px);
+  }
+
+  &__subtitle {
+    font-family: $fontFamilySecondary;
+    @include font-size(16px);
+    color: #FFFEFE;
+  }
+
   &__footer {
     @include padding(24px, 0px, 12px, 0px);
   }
@@ -43,16 +57,17 @@
 
   &__slider {
     position: relative;
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 3px;
+    margin-top: 6px;
   }
 
   &__nav-slider {
-
+    margin-top: 6px;
   }
 }
 
 .p-slider {
-  //min-height: 40vh;
-
   &__img-wrapper {
     overflow: hidden;
     height: 100%;
@@ -62,14 +77,6 @@
 
     @include _more-than($bp-xxl-375) {
       border-radius: #{get-vw(6px, $bp-xxl-375)};
-    }
-
-    @include _more-than($bp-lg-979) {
-      border-radius: #{get-vw(6px, $bp-lg-979)};
-    }
-
-    @include _more-than($bp-md-768) {
-      border-radius: #{get-vw(6px, $bp-md-768)};
     }
   }
 
@@ -113,7 +120,7 @@
 
   &__title {
     font-family: $fontFamilySecondary;
-    @include font-size(24px);
+    @include font-size(16px);
     color: #FFFEFE;
   }
 

@@ -18,7 +18,7 @@
 
   &__inner {
     position: relative;
-    @include margin(34px);
+    @include margin(18px);
   }
 
   &__slider {
@@ -30,6 +30,17 @@
     left: 0;
     transform: translate(5%, 0);
     height: 80%;
+  }
+}
+
+.team-carousel {
+  width: 100%;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -87,23 +98,6 @@
     }
   }
 
-  &__body {
-    width: 100%;
-    @include margin(-5px);
-  }
-
-  &__item {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    max-height: 430px;
-
-    &--show {
-      display: flex;
-    }
-  }
-
   &__column {
     display: flex;
     width: 100%;
@@ -113,6 +107,7 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    height: 50%;
   }
 
   &__inner {
@@ -120,7 +115,7 @@
     align-self: flex-end;
     background-color: $popupBackground;
     box-shadow: 1px 1px 4px $colorShadow;
-    @include padding(68px, 27px, 58px, 27px);
+    @include padding(12px, 12px, 20px, 12px);
   }
 
   &__text {
