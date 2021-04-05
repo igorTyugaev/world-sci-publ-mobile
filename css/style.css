@@ -644,6 +644,14 @@ input {
   margin-top: 20px;
 }
 
+.progress-bar {
+  width: 100%;
+}
+
+.progress-bar--overflow {
+  width: 190%;
+}
+
 .progress-bar__bar {
   top: 50%;
   transform: translateY(-50%);
@@ -1886,15 +1894,10 @@ input {
   margin: 150px 0px 0px 0px;
 }
 
-.stages__wrap {
-  display: flex;
-  flex-direction: column;
-}
-
 .stages__title {
-  font-family: #FFFFFF;
-  color: #000000;
+  font-family: "HelveticaBold";
   font-size: 24px;
+  color: #000000;
 }
 
 .stages__content {
@@ -1907,14 +1910,163 @@ input {
   position: relative;
 }
 
+.stages__carousel-counter {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "HelveticaBold";
+  font-size: 18px;
+  color: #161616;
+}
+
 .stages-carousel {
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.stages-carousel__item {
+  width: 100%;
+  height: 745px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.stages-carousel__inner {
+  height: 100%;
 }
 
 .stages-carousel__nav {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.stages-carousel .flickity-page-dots {
+  bottom: 15px;
+}
+
+.stages-carousel .flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 0.3;
+  background: #C4C4C4;
+}
+
+.stages-carousel .flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
+.stages-carousel .flickity-prev-next-button {
+  top: 6%;
+  width: 30px;
+  height: 43px;
+  border-radius: 20px;
+}
+
+.stages-carousel .flickity-prev-next-button.previous {
+  left: 8%;
+}
+
+.stages-carousel .flickity-prev-next-button.next {
+  right: 8%;
+}
+
+.stages-carousel .flickity-button:disabled {
+  opacity: 0.5;
+}
+
+.stages-carousel .flickity-button {
+  background: #F0F0F0;
+}
+
+.stages-carousel .flickity-button:hover {
+  background: #F0F0F0;
+}
+
+.stages-carousel .flickity-button-icon {
+  fill: #000000;
+}
+
+.stages-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding-top: 72px;
+  padding-right: 10px;
+  padding-bottom: 36px;
+  padding-left: 10px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  border-radius: 6px;
+}
+
+.stages-card__title {
+  font-family: #FFFFFF;
+  color: #000000;
+  font-size: 24px;
+}
+
+.stages-card__body {
+  flex: 1;
+}
+
+.stages-card__text {
+  font-family: "Helvetica";
+  color: #000000;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.stages-card__example-link {
+  font-family: "Helvetica";
+  font-size: 14px;
+  text-align: left;
+  align-items: flex-start;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  margin-top: 12px;
+  color: #31A3C7;
+}
+
+.stages-card__submit {
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+}
+
+.stepper__header {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+
+.stepper__title {
+  background: #001437;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-family: "Helvetica";
+  font-size: 18px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  color: #FFFFFF;
+}
+
+.stepper__progress {
+  overflow-x: scroll;
+  padding-top: 18px;
+  padding-right: 10px;
+  padding-bottom: 18px;
+  padding-left: 10px;
 }
 
 .profile {
@@ -4521,6 +4673,68 @@ input {
 
   .stages__title {
     font-size: 6.4vw;
+  }
+
+  .stages__carousel-counter {
+    font-size: 4.8vw;
+  }
+
+  .stages-carousel__item {
+    padding-top: 2.6666666667vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 2.6666666667vw;
+    padding-left: 2.6666666667vw;
+  }
+
+  .stages-card {
+    padding-top: 19.2vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 9.6vw;
+    padding-left: 2.6666666667vw;
+  }
+
+  .stages-card__title {
+    font-size: 6.4vw;
+  }
+
+  .stages-card__text {
+    font-size: 3.7333333333vw;
+  }
+
+  .stages-card__example-link {
+    font-size: 3.7333333333vw;
+  }
+
+  .stages-card__submit {
+    padding-top: 3.2vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 3.2vw;
+    padding-left: 2.6666666667vw;
+  }
+
+  .stepper__header {
+    padding-top: 0vw;
+    padding-right: 0vw;
+    padding-bottom: 0vw;
+    padding-left: 2.6666666667vw;
+  }
+
+  .stepper__title {
+    font-size: 4.8vw;
+  }
+
+  .stepper__title {
+    padding-top: 3.2vw;
+    padding-right: 3.2vw;
+    padding-bottom: 3.2vw;
+    padding-left: 3.2vw;
+  }
+
+  .stepper__progress {
+    padding-top: 4.8vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 4.8vw;
+    padding-left: 2.6666666667vw;
   }
 
   .profile {

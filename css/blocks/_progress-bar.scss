@@ -1,4 +1,10 @@
 .progress-bar {
+  width: 100%;
+
+  &--overflow {
+    width: 190%;
+  }
+
 
   &__bar {
     top: 50%;
