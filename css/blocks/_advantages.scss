@@ -2,16 +2,24 @@
   @include margin(30px);
 
   &__item {
-    margin-left: 14px;
     width: 64%;
-    height: 95%;
-    transform: translateY(5%);
+    height: 100%;
+    @include padding(10px, 10px, 10px, 10px);
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
   }
 }
 
 .advantages-carousel {
-  margin-left: 14px;
-  height: 174px;
+
+  height: 182px;
+
+  .flickity-page-dots {
+    bottom: -15px;
+  }
 
   .flickity-page-dots .dot {
     width: 8px;
@@ -28,7 +36,7 @@
 .feature-card {
   background: $popupBackground;
   @extend %s-border;
-  padding: 20px 15px 20px 15px;
+  padding: 20px 15px 30px 15px;
 
   &__title {
     font-family: $fontFamilySecondary;

@@ -5,7 +5,6 @@
         cellAlign: 'left',
         prevNextButtons: false,
         autoPlay: 5000,
-        wrapAround: true,
-        contain: false
+        wrapAround: true
     });
 })();
