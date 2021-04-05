@@ -12,6 +12,11 @@
     @include margin(23px);
   }
 
+  &__sign {
+    width: 80%;
+    margin: 18px auto;
+  }
+
   &__background {
     position: absolute;
     left: 0;
@@ -64,6 +69,9 @@
 
   &__nav-slider {
     margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -111,7 +119,7 @@
   width: 100%;
   @extend %s-border;
   background-color: $popupBackground;
-  @include padding(14px, 0px, 0px, 0px);
+  @include padding(10px, 10px, 10px, 10px);
 
   &__header {
     background: #191847;
@@ -125,7 +133,13 @@
   }
 
   &__body {
-    @include padding(12px, 18px, 6px, 18px);
+    //@include padding(12px, 18px, 6px, 18px);
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -157,27 +171,63 @@
 
   &__item-title {
     font-family: $fontFamilyPrimary;
-    @include font-size(14px);
+    @include font-size(10px);
     @include margin(0px, 0px, 0px, 15px);
   }
 
   &__item-inner {
     max-height: 0;
-    @include padding(0px, 0px, 0px, 22px);
-    @include margin(0px, 0px, 15px, 12px);
+    @include padding(0px, 0px, 0px, 10px);
+    @include margin(0px, 0px, 6px, 12px);
     overflow: hidden;
     border-left: 2px solid #E1F1FE;
     transition: max-height 0.3s ease-out;
 
     ol > li {
-      padding: 8px 0;
+      padding: 4px 0;
       font-family: $fontFamilyPrimary;
-      @include font-size(15px);
+      @include font-size(10px);
       color: #9B9B9B;
     }
   }
 
   &__item-text {
 
+  }
+}
+
+.nav-hint {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 50%;
+
+  &__message {
+
+  }
+
+  &__human {
+    object-fit: contain;
+    object-position: right;
+    align-self: flex-end;
+    width: 50%;
+  }
+
+  &__arrow {
+    object-fit: contain;
+    object-position: top;
+    transform: translateY(-43%);
+  }
+
+  &__text {
+    font-family: $fontFamilyPrimary;
+    @include font-size(10px);
+    color: #000000;
+
+    background: #E1F1FE;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    @include padding(10px, 10px, 10px, 10px);
   }
 }
