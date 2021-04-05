@@ -3118,7 +3118,7 @@ input {
 }
 
 .geography {
-  margin: 140px 0px 0px 0px;
+  margin: 32px 0px 0px 0px;
 }
 
 .geography__title {
@@ -3200,10 +3200,10 @@ input {
 
 .footer {
   position: relative;
-  margin: 160px 0px 0px 0px;
+  margin: 120px 0px 0px 0px;
   padding-top: 16px;
   padding-right: 0px;
-  padding-bottom: 16px;
+  padding-bottom: 46px;
   padding-left: 0px;
   background: #001437;
 }
@@ -3288,7 +3288,8 @@ input {
 .social {
   display: flex;
   flex-direction: row-reverse;
-  width: 50%;
+  justify-content: space-between;
+  width: 68%;
 }
 
 .social__link {
@@ -4873,7 +4874,7 @@ input {
   }
 
   .geography {
-    margin: 37.3333333333vw 0vw 0vw 0vw;
+    margin: 8.5333333333vw 0vw 0vw 0vw;
   }
 
   .geography__title {
@@ -4923,13 +4924,13 @@ input {
   }
 
   .footer {
-    margin: 42.6666666667vw 0vw 0vw 0vw;
+    margin: 32vw 0vw 0vw 0vw;
   }
 
   .footer {
     padding-top: 4.2666666667vw;
     padding-right: 0vw;
-    padding-bottom: 4.2666666667vw;
+    padding-bottom: 12.2666666667vw;
     padding-left: 0vw;
   }
 

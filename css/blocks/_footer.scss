@@ -1,7 +1,7 @@
 .footer {
   position: relative;
-  @include margin(160px);
-  @include padding(16px, 0px, 16px, 0px);
+  @include margin(120px);
+  @include padding(16px, 0px, 46px, 0px);
   background: #001437;
 
   &__wrap {
@@ -84,8 +84,9 @@
 .social {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
 
-  width: 50%;
+  width: 68%;
 
   &__link {
     display: block;
