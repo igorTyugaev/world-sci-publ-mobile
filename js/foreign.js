@@ -1,5 +1,5 @@
 (function () {
-    const _carousel = document.querySelector('.reviews-carousel');
+    const _carousel = document.querySelector('.foreign-carousel');
     const flkty = new Flickity(_carousel, {
         // options
         cellAlign: 'left',

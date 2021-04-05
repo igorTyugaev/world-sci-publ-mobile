@@ -83,108 +83,6 @@
   }
 }
 
-.review {
-  display: none;
-
-  &--show {
-    display: block;
-  }
-
-  &__header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  &__title {
-    margin-left: 20px;
-  }
-
-  &__avatar {
-    width: 12.5%;
-
-    &-img {
-      border-radius: 50%;
-      overflow: hidden;
-      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
-
-      display: block;
-      width: 100%;
-      object-position: center;
-      object-fit: cover;
-    }
-  }
-
-  &__name {
-    display: block;
-    font-family: $fontFamilySecondary;
-    @include font-size(18px);
-  }
-
-  &__post {
-    display: block;
-    font-family: $fontFamilySecondary;
-    @include font-size(18px);
-  }
-
-  &__quote {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    @include margin(20px);
-
-    color: #000000;
-  }
-
-  &__text {
-    font-family: $fontFamilyPrimary;
-    @include font-size(14px);
-
-    @include _more-than($bp-md-768) {
-      @include font-size(16px);
-    }
-
-    &:not(:first-child) {
-      @include padding(20px);
-    }
-  }
-
-  &__profile-link {
-    font-family: $fontFamilyPrimary;
-    @include font-size(14px);
-    text-decoration-line: underline;
-
-    color: #31A3C7;
-  }
-}
-
-.review-slider {
-
-  &__header {
-    background-color: $subtitleBackground;
-  }
-
-  &__body {
-    width: 100%;
-    background: $popupBackground;
-    @extend %s-border;
-  }
-
-  &__title {
-    font-family: $fontFamilyPrimary;
-    @include font-size(14px);
-    color: #FFFFFF;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
 .review-card {
   background: $popupBackground;
   @extend %s-border;
@@ -300,5 +198,127 @@
     @include _more-than($bp-md-768) {
       @include font-size(14px);
     }
+  }
+}
+
+.reviews-carousel {
+  width: 100%;
+
+  &__item {
+    padding: 10px;
+    width: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    width: 100%;
+    background: $popupBackground;
+    @extend %s-border;
+  }
+
+  &__header {
+    background-color: $subtitleBackground;
+  }
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    @include font-size(14px);
+    @include padding(12px, 54px, 12px, 12px);
+    color: #FFFFFF;
+  }
+
+  .flickity-page-dots {
+    bottom: 10px;
+    transform: translateX(-10px);
+  }
+
+  .flickity-page-dots .dot {
+    width: 8px;
+    height: 8px;
+    opacity: .3;
+    background: #C4C4C4;
+  }
+
+  .flickity-page-dots .dot.is-selected {
+    opacity: 1;
+  }
+}
+
+.review {
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include padding(10px, 10px, 10px, 10px);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @include padding(10px, 10px, 10px, 10px);
+
+    color: #000000;
+  }
+
+
+  &__title {
+    margin-left: 20px;
+  }
+
+  &__avatar {
+    width: 12.5%;
+
+    &-img {
+      border-radius: 50%;
+      overflow: hidden;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+      display: block;
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    display: block;
+    font-family: $fontFamilySecondary;
+    @include font-size(18px);
+  }
+
+  &__post {
+    display: block;
+    font-family: $fontFamilySecondary;
+    @include font-size(18px);
+  }
+
+  &__text {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+
+    @include _more-than($bp-md-768) {
+      @include font-size(16px);
+    }
+
+    &:not(:first-child) {
+      @include padding(20px);
+    }
+  }
+
+  &__profile-link {
+    font-family: $fontFamilyPrimary;
+    text-decoration-line: underline;
+    color: #000000;
+    text-align: left;
+    align-self: flex-start;
+    @include font-size(14px);
+    @include padding(15px, 10px, 35px, 10px);
   }
 }

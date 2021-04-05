@@ -19,7 +19,7 @@
 .manifest,
 .profile-nav,
 .review-card,
-.review-slider__body,
+.reviews-carousel__inner,
 .stages-slider__item,
 .tabs-team__tab {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
@@ -45,7 +45,7 @@
 .manifest,
 .profile-nav,
 .review-card,
-.review-slider__body,
+.reviews-carousel__inner,
 .stages-slider__item,
 .tabs-team__tab {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
@@ -2589,15 +2589,13 @@ input {
 }
 
 .foreign {
-  margin: 160px 0px 0px 0px;
+  margin: 100px 0px 0px 0px;
 }
 
 .foreign__title {
+  font-family: "HelveticaBold";
   font-size: 24px;
   padding: 12px;
-  font-family: "HelveticaBold";
-  line-height: 120%;
-  text-align: left;
   color: #161616;
 }
 
@@ -2608,10 +2606,35 @@ input {
 }
 
 .foreign__column {
-  width: 23.56%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.foreign__column--half {
+  width: 50%;
+}
+
+.foreign__column--half+.foreign__column--half {
+  margin-left: 10px;
+}
+
+.foreign__footer {
+  width: 100%;
+  background: #001437;
+  text-align: center;
+  padding-top: 36px;
+  padding-right: 0px;
+  padding-bottom: 36px;
+  padding-left: 0px;
+  margin-top: 160px;
+}
+
+.foreign__footer-title {
+  font-family: "HelveticaBold";
+  color: #FFFFFF;
+  font-size: 24px;
 }
 
 .card-txt {
@@ -2625,18 +2648,18 @@ input {
 
 .card-txt__title {
   font-family: "HelveticaBold";
-  font-size: 48px;
+  font-size: 36px;
   text-align: left;
 }
 
 .card-txt__text {
   font-family: "HelveticaBold";
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
 }
 
 .card-txt+.card-txt {
-  margin: 24px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .card-profile {
@@ -2648,17 +2671,15 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 28px;
-  padding-right: 28px;
-  padding-bottom: 28px;
-  padding-left: 28px;
+  padding-top: 10px;
+  padding-right: 8px;
+  padding-bottom: 10px;
+  padding-left: 8px;
   border-bottom: 2px solid #EDEDED;
-  height: 73%;
 }
 
 .card-profile__logo {
   align-self: center;
-  margin: 12px 0px 0px 0px;
   width: 54%;
 }
 
@@ -2678,14 +2699,10 @@ input {
   font-size: 14px;
 }
 
-.card-profile__about {
-  margin: 12px 0px 0px 0px;
-}
-
 .card-profile__option {
   font-family: "Helvetica";
   margin: 12px 0px 0px 0px;
-  font-size: 14px;
+  font-size: 12px;
   padding-top: 3px;
   padding-right: 22px;
   padding-bottom: 3px;
@@ -2699,13 +2716,12 @@ input {
 
 .card-profile__body {
   display: flex;
-  height: 27%;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 15px;
-  padding-right: 28px;
-  padding-bottom: 20px;
-  padding-left: 28px;
+  padding-top: 12px;
+  padding-right: 18px;
+  padding-bottom: 12px;
+  padding-left: 18px;
 }
 
 .card-profile__rating {
@@ -2757,7 +2773,7 @@ input {
 .card-rating__title {
   font-family: "HelveticaBold";
   color: #FFFFFF;
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .card-rating__stars {
@@ -2767,7 +2783,7 @@ input {
 
 .card-rating__stars-img {
   display: block;
-  width: 70%;
+  width: 50%;
   object-fit: contain;
   margin: 0 auto;
 }
@@ -2775,7 +2791,7 @@ input {
 .card-rating__text {
   font-family: "HelveticaBold";
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 14px;
   margin: 12px 0px 0px 0px;
   text-transform: lowercase;
 }
@@ -2786,6 +2802,21 @@ input {
 
 .card-rating--without .card-rating__stars {
   display: none;
+}
+
+.foreign-carousel {
+  width: 100%;
+}
+
+.foreign-carousel__item {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.foreign-carousel__item--half {
+  flex-direction: row;
 }
 
 .reviews {
@@ -2857,100 +2888,6 @@ input {
 
 .r-cards__item {
   width: 47.5149105368%;
-}
-
-.review {
-  display: none;
-}
-
-.review--show {
-  display: block;
-}
-
-.review__header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.review__title {
-  margin-left: 20px;
-}
-
-.review__avatar {
-  width: 12.5%;
-}
-
-.review__avatar-img {
-  border-radius: 50%;
-  overflow: hidden;
-  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.25));
-  display: block;
-  width: 100%;
-  object-position: center;
-  object-fit: cover;
-}
-
-.review__name {
-  display: block;
-  font-family: "HelveticaBold";
-  font-size: 18px;
-}
-
-.review__post {
-  display: block;
-  font-family: "HelveticaBold";
-  font-size: 18px;
-}
-
-.review__quote {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 20px 0px 0px 0px;
-  color: #000000;
-}
-
-.review__text {
-  font-family: "Helvetica";
-  font-size: 14px;
-}
-
-.review__text:not(:first-child) {
-  padding-top: 20px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-}
-
-.review__profile-link {
-  font-family: "Helvetica";
-  font-size: 14px;
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-  color: #31A3C7;
-}
-
-.review-slider__header {
-  background-color: #001437;
-}
-
-.review-slider__body {
-  width: 100%;
-  background: #FFFFFF;
-}
-
-.review-slider__title {
-  font-family: "Helvetica";
-  font-size: 14px;
-  color: #FFFFFF;
-}
-
-.review-slider__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .review-card {
@@ -3052,6 +2989,132 @@ input {
   text-align: center;
   font-family: "HelveticaBold";
   font-size: 9px;
+}
+
+.reviews-carousel {
+  width: 100%;
+}
+
+.reviews-carousel__item {
+  padding: 10px;
+  width: 100%;
+}
+
+.reviews-carousel__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+.reviews-carousel__header {
+  background-color: #001437;
+}
+
+.reviews-carousel__title {
+  font-family: "HelveticaBold";
+  font-size: 14px;
+  padding-top: 12px;
+  padding-right: 54px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  color: #FFFFFF;
+}
+
+.reviews-carousel .flickity-page-dots {
+  bottom: 10px;
+  transform: translateX(-10px);
+}
+
+.reviews-carousel .flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 0.3;
+  background: #C4C4C4;
+}
+
+.reviews-carousel .flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
+.review__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.review__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  color: #000000;
+}
+
+.review__title {
+  margin-left: 20px;
+}
+
+.review__avatar {
+  width: 12.5%;
+}
+
+.review__avatar-img {
+  border-radius: 50%;
+  overflow: hidden;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.25));
+  display: block;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.review__name {
+  display: block;
+  font-family: "HelveticaBold";
+  font-size: 18px;
+}
+
+.review__post {
+  display: block;
+  font-family: "HelveticaBold";
+  font-size: 18px;
+}
+
+.review__text {
+  font-family: "Helvetica";
+  font-size: 14px;
+}
+
+.review__text:not(:first-child) {
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.review__profile-link {
+  font-family: "Helvetica";
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #000000;
+  text-align: left;
+  align-self: flex-start;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 35px;
+  padding-left: 10px;
 }
 
 .geography {
@@ -3736,7 +3799,7 @@ input {
   .manifest,
   .profile-nav,
   .review-card,
-  .review-slider__body,
+  .reviews-carousel__inner,
   .stages-slider__item,
   .tabs-team__tab {
     border-radius: 1.6vw;
@@ -3754,7 +3817,7 @@ input {
   .manifest,
   .profile-nav,
   .review-card,
-  .review-slider__body,
+  .reviews-carousel__inner,
   .stages-slider__item,
   .tabs-team__tab {
     border-radius: 1.6vw;
@@ -4588,11 +4651,22 @@ input {
   }
 
   .foreign {
-    margin: 42.6666666667vw 0vw 0vw 0vw;
+    margin: 26.6666666667vw 0vw 0vw 0vw;
   }
 
-  .foreign__title {
+  .foreign__footer {
+    padding-top: 9.6vw;
+    padding-right: 0vw;
+    padding-bottom: 9.6vw;
+    padding-left: 0vw;
+  }
+
+  .foreign__footer-title {
     font-size: 6.4vw;
+  }
+
+  .foreign__footer {
+    margin-top: 42.6666666667vw;
   }
 
   .card-txt {
@@ -4603,26 +4677,22 @@ input {
   }
 
   .card-txt__title {
-    font-size: 12.8vw;
+    font-size: 9.6vw;
   }
 
   .card-txt__text {
-    font-size: 4.8vw;
+    font-size: 3.7333333333vw;
   }
 
   .card-txt+.card-txt {
-    margin: 6.4vw 0vw 0vw 0vw;
+    margin: 2.6666666667vw 0vw 0vw 0vw;
   }
 
   .card-profile__header {
-    padding-top: 7.4666666667vw;
-    padding-right: 7.4666666667vw;
-    padding-bottom: 7.4666666667vw;
-    padding-left: 7.4666666667vw;
-  }
-
-  .card-profile__logo {
-    margin: 3.2vw 0vw 0vw 0vw;
+    padding-top: 2.6666666667vw;
+    padding-right: 2.1333333333vw;
+    padding-bottom: 2.6666666667vw;
+    padding-left: 2.1333333333vw;
   }
 
   .card-profile__title {
@@ -4633,16 +4703,12 @@ input {
     font-size: 3.7333333333vw;
   }
 
-  .card-profile__about {
-    margin: 3.2vw 0vw 0vw 0vw;
-  }
-
   .card-profile__option {
     margin: 3.2vw 0vw 0vw 0vw;
   }
 
   .card-profile__option {
-    font-size: 3.7333333333vw;
+    font-size: 3.2vw;
   }
 
   .card-profile__option {
@@ -4657,10 +4723,10 @@ input {
   }
 
   .card-profile__body {
-    padding-top: 4vw;
-    padding-right: 7.4666666667vw;
-    padding-bottom: 5.3333333333vw;
-    padding-left: 7.4666666667vw;
+    padding-top: 3.2vw;
+    padding-right: 4.8vw;
+    padding-bottom: 3.2vw;
+    padding-left: 4.8vw;
   }
 
   .card-profile__country {
@@ -4679,11 +4745,11 @@ input {
   }
 
   .card-rating__title {
-    font-size: 12.8vw;
+    font-size: 9.6vw;
   }
 
   .card-rating__text {
-    font-size: 4.8vw;
+    font-size: 3.7333333333vw;
   }
 
   .card-rating__text {
@@ -4708,37 +4774,6 @@ input {
 
   .reviews__cards {
     margin: 6.4vw 0vw 0vw 0vw;
-  }
-
-  .review__name {
-    font-size: 4.8vw;
-  }
-
-  .review__post {
-    font-size: 4.8vw;
-  }
-
-  .review__quote {
-    margin: 5.3333333333vw 0vw 0vw 0vw;
-  }
-
-  .review__text {
-    font-size: 3.7333333333vw;
-  }
-
-  .review__text:not(:first-child) {
-    padding-top: 5.3333333333vw;
-    padding-right: 0vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .review__profile-link {
-    font-size: 3.7333333333vw;
-  }
-
-  .review-slider__title {
-    font-size: 3.7333333333vw;
   }
 
   .review-card__header {
@@ -4780,6 +4815,61 @@ input {
 
   .review-card__index {
     font-size: 2.4vw;
+  }
+
+  .reviews-carousel__title {
+    font-size: 3.7333333333vw;
+  }
+
+  .reviews-carousel__title {
+    padding-top: 3.2vw;
+    padding-right: 14.4vw;
+    padding-bottom: 3.2vw;
+    padding-left: 3.2vw;
+  }
+
+  .review__header {
+    padding-top: 2.6666666667vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 2.6666666667vw;
+    padding-left: 2.6666666667vw;
+  }
+
+  .review__body {
+    padding-top: 2.6666666667vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 2.6666666667vw;
+    padding-left: 2.6666666667vw;
+  }
+
+  .review__name {
+    font-size: 4.8vw;
+  }
+
+  .review__post {
+    font-size: 4.8vw;
+  }
+
+  .review__text {
+    font-size: 3.7333333333vw;
+  }
+
+  .review__text:not(:first-child) {
+    padding-top: 5.3333333333vw;
+    padding-right: 0vw;
+    padding-bottom: 0vw;
+    padding-left: 0vw;
+  }
+
+  .review__profile-link {
+    font-size: 3.7333333333vw;
+  }
+
+  .review__profile-link {
+    padding-top: 4vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 9.3333333333vw;
+    padding-left: 2.6666666667vw;
   }
 
   .geography {
@@ -5079,10 +5169,6 @@ input {
     margin: 20px 0px 0px 0px;
   }
 
-  .review__text {
-    font-size: 16px;
-  }
-
   .review-card__name {
     font-size: 18px;
   }
@@ -5105,15 +5191,15 @@ input {
   .review-card__index {
     font-size: 14px;
   }
+
+  .review__text {
+    font-size: 16px;
+  }
 }
 
 @media (min-width:768px) and (min-width:375px) {
   .r-cards__item:not(:first-child) {
     margin: 5.3333333333vw 0vw 0vw 0vw;
-  }
-
-  .review__text {
-    font-size: 4.2666666667vw;
   }
 
   .review-card__name {
@@ -5137,6 +5223,10 @@ input {
 
   .review-card__index {
     font-size: 3.7333333333vw;
+  }
+
+  .review__text {
+    font-size: 4.2666666667vw;
   }
 }
 

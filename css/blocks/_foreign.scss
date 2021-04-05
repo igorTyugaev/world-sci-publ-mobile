@@ -1,20 +1,10 @@
 .foreign {
-  @include margin(160px);
-
-  &__wrap {
-
-  }
-
-  &__content {
-
-  }
+  @include margin(100px);
 
   &__title {
-    @include font-size(24px);
-    padding: 12px;
     font-family: $fontFamilySecondary;
-    line-height: 120%;
-    text-align: left;
+    font-size: 24px;
+    padding: 12px;
     color: #161616;
   }
 
@@ -25,14 +15,35 @@
   }
 
   &__column {
-    width: 23.56%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &--half {
+      width: 50%;
+      & + & {
+        margin-left: 10px;
+      }
+    }
   }
 
-  &__card {
+  &__footer {
+    width: 100%;
+    background: #001437;
+    text-align: center;
+    @include padding(36px, 0px, 36px, 0px);
+    margin-top: 160px;
 
+    &-title {
+      font-family: $fontFamilySecondary;
+      color: $textColorSecondary;
+      @include font-size(24px);
+    }
+
+    @include _more-than($bp-xxl-375) {
+      margin-top: #{get-vw(160px, $bp-xxl-375)};
+    }
   }
 }
 
@@ -44,18 +55,18 @@
 
   &__title {
     font-family: $fontFamilySecondary;
-    @include font-size(48px);
+    @include font-size(36px);
     text-align: left;
   }
 
   &__text {
     font-family: $fontFamilySecondary;
-    @include font-size(18px);
+    @include font-size(14px);
     text-align: left;
   }
 
   & + & {
-    @include margin(24px);
+    @include margin(10px);
   }
 }
 
@@ -69,15 +80,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include padding(28px, 28px, 28px, 28px);
+    @include padding(10px, 8px, 10px, 8px);
     border-bottom: 2px solid #EDEDED;
-    height: 73%;
   }
 
 
   &__logo {
     align-self: center;
-    @include margin(12px);
     width: 54%;
 
     &-img {
@@ -100,13 +109,12 @@
   }
 
   &__about {
-    @include margin(12px);
   }
 
   &__option {
     font-family: $fontFamilyPrimary;
     @include margin(12px);
-    @include font-size(14px);
+    @include font-size(12px);
     @include padding(3px, 22px, 3px, 7px);
     background: #E9E9E9;
 
@@ -118,10 +126,9 @@
 
   &__body {
     display: flex;
-    height: 27%;
     flex-direction: column;
     justify-content: space-between;
-    @include padding(15px, 28px, 20px, 28px);
+    @include padding(12px, 18px, 12px, 18px);
 
   }
 
@@ -175,8 +182,7 @@
   &__title {
     font-family: $fontFamilySecondary;
     color: $textColorSecondary;
-    @include font-size(48px);
-    //@include margin(43px);
+    @include font-size(36px);
   }
 
   &__stars {
@@ -185,7 +191,7 @@
 
     &-img {
       display: block;
-      width: 70%;
+      width: 50%;
       object-fit: contain;
       margin: 0 auto;
     }
@@ -194,7 +200,7 @@
   &__text {
     font-family: $fontFamilySecondary;
     color: $textColorSecondary;
-    @include font-size(18px);
+    @include font-size(14px);
     @include margin(12px);
     text-transform: lowercase;
   }
@@ -204,6 +210,21 @@
 
     .card-rating__stars {
       display: none;
+    }
+  }
+}
+
+.foreign-carousel {
+  width: 100%;
+
+  &__item {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &--half {
+      flex-direction: row;
     }
   }
 }
