@@ -31,12 +31,12 @@
 
     &:hover {
       color: $textColorSecondary;
-      background: #177840;
+      opacity: .8;
     }
 
     &:active {
       color: $textColorSecondary;
-      background: #0F5C30;
+      opacity: .8;
     }
 
   }
@@ -113,7 +113,7 @@
     height: 2px;
     background-color: #000000;
     border: none;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.4s;
   }
 
   &:before {
@@ -127,10 +127,11 @@
     height: 2px;
     background-color: #000000;
     border: none;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.4s;
   }
 
   &-active:after {
+    background-color: #FFFFFF;
     transform: rotate(-45deg);
     margin-top: 0;
   }
@@ -140,6 +141,7 @@
   }
 
   &-active:before {
+    background-color: #FFFFFF;
     transform: rotate(45deg);
     margin-top: 0;
   }

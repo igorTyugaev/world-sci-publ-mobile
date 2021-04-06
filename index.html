@@ -222,861 +222,122 @@
 
 <body>
 
-@import "header.html"
+<header class="header container" id="header">
+
+    <div class="header__menu menu">
+
+        <div class="menu__burger" id="navToggle">
+            <div class="burger" id="navBurger"></div>
+            <p class="menu__title">
+                МЕНЮ
+            </p>
+        </div>
+
+        <nav class="header__nav nav" id="navBar">
+
+            <div class="nav__header">
+                <img loading="lazy" class="nav__header-logo"
+                     src="./media/logo-white.svg"
+                     alt="logo">
+            </div>
+
+            <div class="nav__links">
+                <button class="nav__link" data-show-popup="1000">
+                    Активировать промокод
+                </button>
+                <button class="nav__link" data-scroll="#works">Личный кабинет</button>
+                <button class="nav__link" data-scroll="#team-section">
+                    Блог “Кафедра WSP”
+                </button>
+                <button class="nav__link" data-scroll="#faq-section">F.A.Q.</button>
+                <button class="nav__link" data-scroll="#footer-section">Контакты</button>
+                <button class="nav__link" data-scroll="#footer-section">Соцсети</button>
+                <button class="nav__link nav__link--special" data-show-popup="1">
+                    Оставить заявку
+                </button>
+            </div>
+
+            <div class="nav__footer">
+                <img loading="lazy" class="nav__logo" src="./media/logo_footer.svg" alt="logo">
+                <p class="nav__date">2021 г.</p>
+            </div>
+
+        </nav>
+
+    </div>
+
+    <a class="header__call" href="tel:+74951277926">
+        <span class="header__call-text">RU | ENG</span>
+        <span class="header__call-text">+7 (495) 127 - 79 - 26</span>
+    </a>
+
+    <img src="./media/logo.svg" alt="logo" class="header__logo">
+
+</header>
+
 
 <main>
-    @import "consultation.html"
+<section class="consultation scroll-indicator" id="consultation">
 
-    @import "cost.html"
-
-    @import "advantages.html"
-
-    <!--    <section id="quiz-0" class="quiz">-->
-    <!--        &lt;!&ndash; @import "quiz.html" &ndash;&gt;-->
-    <!--    </section>-->
-
-    @import "promo.html"
-
-    @import "guaranty.html"
-
-    @import "component.html"
-
-<section class="stages" id="stages">
-    <div class="stages__header container">
-        <h2 class="stages__title">
-            Процесс публикации полностью прозрачен для <br>
-            Автора: каждый этап работы отражается <br>
-            в личном кабинете
-        </h2>
+    <div class="consultation__content container">
+        <p class="consultation__text">
+                <span class="consultation__text consultation__text--subtext">
+                    World Sci Publ
+                </span>
+            Сервис подготовки и продвижения научных статей в проверенные журналы из баз
+            данных Scopus и Web of Science
+        </p>
+        <button class="button consultation__btn" data-show-popup="21"
+                data-step="1"
+                data-formsended="find_cost_">
+            Узнать стоимость
+        </button>
     </div>
 
-    <div class="stages__steps stepper">
-        <div class="stepper__header">
-            <h3 class="stepper__title">
-                Этапы публикации:
-            </h3>
-        </div>
+    <img loading="lazy" class="consultation__bg"
+         src="media/component/group_photo.jpg"
+         srcset="./media/component/group_photo@2x.jpg, 2x"
+         alt="group_photo">
 
-        <div class="stepper__progress">
-            <div class="progress-bar progress-bar--overflow">
-                <div class="progress-bar_step-0 steps">
-                    <div class="progress-bar__inner ">
-                        <div class="progress-bar__bar">
-                            <div class="progress-bar__bar-inner"></div>
-                        </div>
-
-                        <div class="progress-bar__circle progress-bar__circle_1">
-                            <span class="progress-bar__circle-text">1</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_2">
-                            <span class="progress-bar__circle-text">2</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_3">
-                            <span class="progress-bar__circle-text">3</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_4">
-                            <span class="progress-bar__circle-text">4</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_5">
-                            <span class="progress-bar__circle-text">5</span>
-                        </div>
-
-                        <div class="progress-bar__circle progress-bar__circle_6">
-                            <span class="progress-bar__circle-text">6</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_7">
-                            <span class="progress-bar__circle-text">7</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_8">
-                            <span class="progress-bar__circle-text">8</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_9">
-                            <span class="progress-bar__circle-text">9</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_10">
-                            <span class="progress-bar__circle-text">10</span>
-                        </div>
-                        <div class="progress-bar__circle progress-bar__circle_11">
-                            <span class="progress-bar__circle-text">11</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="stages__carousel">
-        <h4 class="stages__carousel-counter">3/11</h4>
-        <div class="stages-carousel">
-            <!--                        Пример технического аудита-->
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Технический аудит
-                    </h3>
-
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            После завершения работы над исследованием необходимо
-                            провести технический аудит c помощью установленных
-                            регламентов и спецализированной программы, что позволит
-                            определить соответствие следующим требованиям к
-                            публикации: уникальность текста; структура IMRAD и объём
-                            разделов; список литературы и другие технические
-                            аспекты.
-                        </p>
-                        <p class="stages-card__text">
-                            Аудит позволит заранее определить необходимые доработки
-                            и их последовательность, чтобы избежать лишней траты
-                            времени, сил и средств.
-                        </p>
-                        <p class="stages-card__text">
-                            Например, не осуществив процедуру аудита, можно
-                            перевести статью, отредактировать, отправить в журнал, а
-                            потом получить отказ из - за низкой уникальности текста
-                            или недостаточного количества ключевых слов.
-                        </p>
-                        <p class="stages-card__text">
-                            Оплату за произведённые работы (если делать их отдельно
-                            и стараться сэкономить) никто не вернет, а исправления
-                            вряд ли уже будут внесены.
-                        </p>
-
-                        <!-- Пример технического аудита -->
-                        <button class="stages-card__example-link" data-show-popup="200"
-                                data-formsended="step_1_2_"
-                                data-step="1">
-                            Посмотреть пример технического аудита
-                        </button>
-                    </div>
-
-                    <button class="stages-card__submit button"
-                            type="button"
-                            data-show-popup="15"
-                            data-formsended="step_1_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-
-                </div>
-            </div>
-            <!--                        Договор о сотрудничестве с World Sci Publ-->
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Заключение договора
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            После успешного прохождения технического аудита,
-                            формирования списка работ и согласования их стоимости,
-                            мы заключаем с Автором договор.
-                        </p>
-                        <p class="stages-card__text">
-                            <b>Доверяя нам свой труд, Вы можете быть уверены в
-                                следующем:</b>
-                        </p>
-                        <p class="stages-card__text">
-                            — будет заключен договор, несущий реальную юридическую
-                            силу; <br>
-                            — Ваша рукопись будет доработана до необходимого уровня
-                            ведущими англоязычными специалистами; <br>
-                            — подобранный журнал будет соответствовать необходимым
-                            требованиям; <br>
-                            — статье не будет отказано в публикации по причине
-                            недостаточного уровня английского языка или качества
-                            исполнения проведённых доработок; <br>
-                            — журнал будет согласован с Вами перед публикацией и
-                            проверен на предмет ведения хищнической деятельности, а
-                            также актуальную индексацию в выбранной базе; <br>
-                            — на протяжении всего процесса публикации Вас будет
-                            сопровождать ответственный специалист, оповещая о каждом
-                            этапе работы и подгружая в личный кабинет всю
-                            сопутствующую информацию; <br>
-                            — Ваша публикация будет соответствовать всем
-                            международным стандартам
-                            в рамках научной этики.
-                        </p>
-
-                        <button class="stages-card__example-link" data-show-popup="201"
-                                data-formsended="step_2_2_"
-                                data-step="1">
-                            Посмотреть пример
-                        </button>
-                    </div>
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_2_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Перевод на академический английский язык
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            Следующим шагом будет перевод на академический
-                            английский язык с соблюдением интенции Автора.
-                        </p>
-                        <p class="stages-card__text">
-                            Сертифицированный специалист компании WorldSciPubl
-                            осуществит перевод в соответствии с канонами
-                            академического английского языка, именно британской
-                            версии, ведь американский вариант часто не принимается
-                            редакторами, что ведёт в дальнейшем к возврату рукописи.
-                        </p>
-                        <p class="stages-card__text">
-                            Мы полностью отвечаем за процесс публикации, а успех
-                            следующих этапов зависит от перевода в том числе. Мы
-                            заботимся о том, чтобы он был качественный, так как без
-                            “правильного” перевода публикация в журнале, который
-                            дорожит своей репутацией и ответственно относится к
-                            этапу рецензирования, невозможна.
-                        </p>
-
-                    </div>
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_3_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-            <!--                        Пример предварительной экспертной оценки-->
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Предварительная экспертная оценка действующим
-                        рецензентом международного журнала
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            Действующий рецензент проводит предварительную
-                            экспертную оценку рукописи (pre-submission peer
-                            review).
-                        </p>
-                        <p class="stages-card__text">
-                            Экспертная оценка от англоязычного специалиста позволяет
-                            точно определить степень соответствия статьи уровню
-                            журнала, в котором необходима публикация. Даёт
-                            возможность получить от действующего рецензента,
-                            специализирующегося в Вашей научной области, ценные
-                            рекомендации по научной составляющей статьи,
-                            правильности подачи материала и многим другим пунктам.
-                            Все это позволяет заранее внести исправления и повысить
-                            качество статьи, что значительно снизит вероятность
-                            отказа и, таким образом, сократит время публикации.
-                        </p>
-                        <button class="stages-card__example-link" data-show-popup="202"
-                                data-formsended="step_4_2_"
-                                data-step="1">
-                            Посмотреть пример
-                        </button>
-                    </div>
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_4_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Таргетированный подбор журнала
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            После предварительной экспертной оценки необходимо
-                            правильно подобрать журнал и проверить его на предмет
-                            ведения хищнической деятельности.
-                        </p>
-                        <p class="stages-card__text">
-                            Осуществляем подборку из 5 таргетированных журналов
-                            закрытого доступа (бесплатные журналы без
-                            публикационного взноса) по необходимым для Вас
-                            характеристикам (рейтинг журнала, направление и срок
-                            публикации). Рецензент предлагает журналы,
-                            соответствующие оговоренным показателям. Мы, со своей
-                            стороны, гарантируем, что данные издания не будут
-                            хищнические. После рецензента мы дополнительно проверяем
-                            подобранные журналы согласно своим внутренним
-                            регламентам.
-                        </p>
-                        <p class="stages-card__text">
-                            Очень важно правильно подобрать журнал, максимально
-                            соответствующий тематике Вашего исследования, что также
-                            увеличивает вероятность успешного принятия. Даже статье
-                            самого высокого качества будет отказано в публикации,
-                            если издание было подобрано не верно.
-                        </p>
-                    </div>
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_5_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-            <!--                        Пример научного редактирования-->
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Научное редактирование
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            Следующий обязательный этап - научное редактирование
-                            статьи (scientific editing), в ходе которого каждый из
-                            разделов редактируется действующим англоязычным ученым,
-                            специализирующимся в научной области Автора
-                            исследования.
-                        </p>
-                        <p class="stages-card__text">
-                            Данный этап подразумевает исправление ошибок в
-                            терминологии, проверку научной достоверности и фактов
-                            представленных в материале, сведений, точности расчетов,
-                            формул и терминов с адаптацией под англоязычную
-                            аудиторию. При таком подходе статья будет наиболее
-                            понятна для редакторов, рецензентов и читателей и, с
-                            большей долей вероятности, пройдет этап предварительного
-                            рецензирования в журнале.
-                        </p>
-                        <p class="stages-card__text">
-                            Более тысячи успешных публикаций позволили нам понять,
-                            что для принятия статьи в авторитетный журнал
-                            недостаточно редактуры на русском языке, перевода и
-                            вычитки. Один из наших примеров показывает, что в статье
-                            может быть более тысячи исправлений, уточнений и
-                            комментариев от специалиста.
-                        </p>
-
-                        <button class="stages-card__example-link" data-show-popup="203"
-                                data-formsended="step_6_2_"
-                                data-step="1">
-                            Посмотреть пример
-                        </button>
-                    </div>
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_6_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Вычитка носителем языка
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            После внесения всех необходимых изменений и научного
-                            редактирования обязательно производим финальную языковую
-                            доработку, то есть дополнительную вычитку статьи
-                            лингвистом-носителем языка (proofreading). Данные работы
-                            необходимы, чтобы сохранить аутентичность перевода,
-                            исключить любого рода ошибки в тексте, повысить “научное
-                            звучание” рукописи за счёт грамотно расставленных
-                            языковых акцентов.
-                        </p>
-                    </div>
-
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_7_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-            <!--                        Пример сертификата о редактировании-->
-            <!--                        Пример  сопроводительного письма-->
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Финальная подготовка к отправке в журнал
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            Данный этап включает в себя 3 ключевых действия :
-                        </p>
-                        <p class="stages-card__text">
-                            <b>1. Оформление статьи по требованиям журнала (journal
-                                guideline).</b><br>
-                            Производим форматирование
-                            рукописи по
-                            требованиям выбранного журнала.
-                            У каждого журнала свои требования к оформлению, без
-                            должного формата рукопись не будет принята к
-                            рассмотрению.
-                        </p>
-
-                        <p class="stages-card__text">
-                            <b>2. Подготовка сертификата о языковом редактировании
-                                (editorial certificate).</b><br>
-                            Подтверждаем качество доработок сертификатом о
-                            редактировании.
-                        </p>
-                        <button class="stages-card__example-link" data-show-popup="204"
-                                data-formsended="step_8_2_"
-                                data-step="1">
-                            Посмотреть пример
-                        </button>
-
-                        <p class="stages-card__text">
-                            <b>3. Подача в журнал осуществляется вместе с
-                                сопроводительным письмом (cover letter),</b> в
-                            котором
-                            раскрывается актуальность и польза исследования,
-                            предлагаются рецензенты, которые должны соответствовать
-                            необходимым требованиям, указывается отсутствие
-                            конфликта интересов у Авторов.
-                        </p>
-
-                        <button class="stages-card__example-link" data-show-popup="205"
-                                data-formsended="step_8_3_"
-                                data-step="1">
-                            Посмотреть пример
-                        </button>
-                    </div>
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_8_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Подача в журнал
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            На данном этапе осуществляется подача рукописи в журнал
-                            (journal submission) через платформы выбранных изданий,
-                            с заполнением формы онлайн – сабмита.
-                            У каждого журнала свои особенности при подаче статьи.
-                        </p>
-                        <p class="stages-card__text">
-                            Мы учитываем все требования издания к формату рукописи
-                            для принятия на рецензирование. В комплексе с
-                            предыдущими этапами, сопроводительным письмом и
-                            сертификатом о редактировании (особенно, если данный
-                            сертификат пользуется авторитетом и доверием
-                            издательства) повышают возможность принятия статьи на
-                            рецензирование с первой подачи.
-                        </p>
-                    </div>
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_9_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Сопровождение на этапах рецензирования
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            После отправки статьи в журнал может быть сразу получен
-                            ответ о её успешном принятии на рецензирование. Как
-                            правило, в 8 из 10 случаев рецензенты оставляют
-                            небольшие замечания. Наши специалисты внесут
-                            корректировки, исходя из комментариев рецензента.
-                        </p>
-                        <p class="stages-card__text">
-                            Доработки, в свою очередь, делятся на два типа: <br>
-                            1. Незначительные изменения (minor revision); <br>
-                            2. Значительные изменения (major revision). <br>
-                        </p>
-                        <p class="stages-card__text">
-                            WorldSciPubl оказывает сопровождение на этапах
-                            предварительного рецензирования редактором журнала и
-                            рецензирования независимыми рецензентами-экспертами до
-                            успешного результата.
-                            Здесь мы работаем с возможными отказами или возвратами
-                            на доработку, далее, по необходимости, заново подаем
-                            статью с внесёнными корректировками.
-                        </p>
-                    </div>
-
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_10_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-            <!-- Пример финальной версии статьи перед подачей в журнал и
-            изначальный вид.-->
-            <div class="stages-carousel__item">
-                <div class="stages-carousel__inner stages-card">
-                    <h3 class="stages-card__title">
-                        Публикация и индексация статьи
-                    </h3>
-                    <div class="stages-card__body">
-                        <p class="stages-card__text">
-                            И, наконец, этап принятия статьи, получение официальной
-                            справки от журнала и ожидание публикации с последующей
-                            индексацией в базе данных.
-                        </p>
-                        <p class="stages-card__text">
-                            К сожалению, у многих ученых из стран СНГ в скором
-                            времени не получится преодолеть языковой барьер, и они
-                            будут вынуждены обращаться за помощью к специалистам. За
-                            счет оптимизации и целостности процессов мы можем
-                            контролировать качество и давать гарантии клиентам, не
-                            нарушая научную этику. Вам не нужно беспокоиться о
-                            процессе публикации, так как мы уведомляем Автора о
-                            каждом шаге, ведем переписку с издательством,
-                            предоставляем всю документацию и сопроводительную
-                            отчетность вплоть до успешной публикации с последующей
-                            индексацией.
-                        </p>
-                        <p class="stages-card__text">
-                            <b>WorldSciPubl работает только с рецензируемыми
-                                изданиями,
-                                сохраняющими свой статус в базе не первый год, а
-                                также
-                                выдерживающими установленные регламенты, что даёт
-                                нам
-                                уверенность в выходе статьи и её успешной
-                                индексации.</b>
-                        </p>
-
-                        <button class="stages-card__example-link" data-show-popup="206"
-                                data-formsended="step_11_2_"
-                                data-step="1">
-                            Открыть пример финальной версии статьи
-                        </button>
-                    </div>
-
-                    <button type="button" class="stages-card__submit button"
-                            data-show-popup="15"
-                            data-formsended="step_11_1_" data-step="1">
-                        Отправить заявку на публикацию
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 
-<section id="popup-200" class="pop-up pdf-reader">
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1djZm7FK6MSEs2uvf9RO8FlQm53HP22TJ/preview"
-                width="700" height="500"
-                style="border: none"></iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">Пример технического аудита</h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="155" data-step="2">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1djZm7FK6MSEs2uvf9RO8FlQm53HP22TJ&export=download"
-               target="_blank" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt=""/>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Пример технического аудита -->
-
-<section id="popup-201" class="pop-up pdf-reader">
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1lsS4x17tt1xZep4yBPbFOfCZ2YnWnQpu/preview"
-                width="700" height="500"
-                style="border: none"></iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">
-                Договор о сотрудничестве с World Sci Publ
-            </h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="155" data-step="2">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1lsS4x17tt1xZep4yBPbFOfCZ2YnWnQpu&export=download"
-               target="_blank" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt=""/>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Договор о сотрудничестве с World Sci Publ -->
-
-<section id="popup-202" class="pop-up pdf-reader">
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1yJMEpbTCqqu7kJmzuz3JQVVHjW0Gcv1-/preview"
-                width="700" height="500"
-                style="border: none"></iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">
-                Пример предварительной экспертной оценки
-            </h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="155" data-step="2">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1yJMEpbTCqqu7kJmzuz3JQVVHjW0Gcv1-&export=download"
-               target="_blank" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt=""/>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Пример предварительной экспертной оценки -->
-
-<section id="popup-203" class="pop-up pdf-reader">
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1pqEmIpPLWBEhOjG6Z8YFTT6q_ERx0iL7/preview"
-                width="700" height="500"
-                style="border: none"></iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">Пример научного редактирования</h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="155" data-step="2">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1pqEmIpPLWBEhOjG6Z8YFTT6q_ERx0iL7&export=download"
-               target="_blank" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt=""/>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Пример научного редактирования -->
-
-<section id="popup-204" class="pop-up pdf-reader">
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1QP-ZloUgdMxDXPfIgN5ut9rnw4QEQ6W4/preview"
-                width="700" height="500"
-                style="border: none"></iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">
-                Пример сертификата о редактировании
-            </h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="155" data-step="2">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1QP-ZloUgdMxDXPfIgN5ut9rnw4QEQ6W4&export=download"
-               target="_blank" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt=""/>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Пример сертификата о редактировании -->
-
-<section id="popup-205" class="pop-up pdf-reader">
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw/preview"
-                width="700" height="500"
-                style="border: none"></iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">Пример сопроводительного письма</h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="155" data-step="2">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw&export=download"
-               target="_blank" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt=""/>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Пример сопроводительного письма -->
-
-<section id="popup-206" class="pop-up pdf-reader">
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1eJf04ioy7zhJkao60TA6KjFmvIKCivFH/preview"
-                width="700" height="500"
-                style="border: none"></iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">
-                Пример финальной версии статьи перед подачей
-                <br/>
-                в журнал и изначальный вид
-            </h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="155" data-step="2">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1CTeqnH7N6fKXG0yr5CDYYRyonbUIvsiv&export=download"
-               target="_blank" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt=""/>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Пример финальной версии статьи перед подачей в
-журнал и изначальный вид -->
-
-
-<!-- Этапы -->
-<section id="popup-15" class="pop-up">
+<!-- Первый экран -->
+<!-- Из меню "Активировать промокод" -->
+<section id="popup-1000" class="pop-up">
     <div class="pop-up__poster">
         <div class="pop-up__labels">
             <span class="pop-up__label">Быкова Альбина</span>
             <span class="pop-up__label">Специалист World Sci Publ</span>
         </div>
+
         <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
              alt="pop-up__logo"/>
-        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-15@2x.jpg, 2x"
-             src="media/pop-up/photo-15.jpg" alt="photo-15"/>
+
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-1@2x.jpg, 2x"
+             src="./media/pop-up/photo-1.jpg" srcset="./media/pop-up/photo-1@2x.jpg, 2x"
+             alt="photo-1"/>
     </div>
 
     <div class="pop-up__main">
         <div class="pop-up__inner pop-up__inner--narrow">
             <div class="pop-up__narrow">
                 <h3 class="pop-up__title">
-                    Укажите e-mail, на который направить комплектацию тарифов с указанием
-                    стоимости и сроков
-                    публикации
-                    в журналах из баз Scopus / Web of Science
+                    Необходима публикация<br>
+                    в Scopus/Web of Science?
                 </h3>
 
                 <p class="pop-up__desc">
-                    Письмо поступит на указанный эл.адрес<br>
-                    в течение 15 минут.
+                    Мы перезвоним Вам,<br>
+                    чтобы подобрать лучшее решение
                 </p>
 
-                <form class="pop-up__form" novalidate name="15" action="/">
+                <form novalidate id="activate_promo_code_" name="activate_promo_code_"
+                      action="/"
+                      enctype="multipart/form-data">
                     <div class="pop-up__inputs">
                         <div class="input-wrapper">
                             <input name="name" type="text" class="pop-up__input"
-                                   placeholder="Имя" required/>
+                                   placeholder="ФИО" required/>
                             <span class="input-wrapper__error"></span>
                         </div>
 
@@ -1087,17 +348,23 @@
                                    required/>
                             <span class="input-wrapper__error"></span>
                         </div>
+
+                        <div class="input-wrapper">
+                            <input name="coupon" class="pop-up__input"
+                                   placeholder="Промокод" required/>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
 
-                    <button class="pop-up__button" type="submit" data-show-popup="16"
+                    <button type="submit" class="pop-up__button" data-show-popup="2"
                             data-step="2">
-                        Получить комплектацию тарифов
+                        Перейти к обсуждению
                     </button>
                 </form>
 
                 <p class="pop-up__super-desc">
                     Нажимая на кнопку, вы даете согласие на обработку своих
-                    персональных данных <br> и соглашаетесь с
+                    персональных данных и соглашаетесь с
                     <button class="pop-up__super-desc pop-up__super-desc--link"
                             data-show-popup="500">
                         Политикой конфиденциальности
@@ -1111,9 +378,9 @@
         <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
     </div>
 </section>
-<!--ФИО, Тел.-->
+<!--ФИО, Тел., Промо-->
 
-<section id="popup-16" class="pop-up">
+<section id="popup-1" class="pop-up">
     <div class="pop-up__poster">
         <div class="pop-up__labels">
             <span class="pop-up__label">Быкова Альбина</span>
@@ -1121,30 +388,84 @@
         </div>
         <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
              alt="pop-up__logo"/>
-        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-16@2x.jpg, 2x"
-             src="media/pop-up/photo-16.jpg" alt="photo-16"/>
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-1@2x.jpg, 2x"
+             src="./media/pop-up/photo-1.jpg" srcset="./media/pop-up/photo-1@2x.jpg, 2x"
+             alt="photo-1"/>
     </div>
 
     <div class="pop-up__main">
-        <div class="pop-up__inner popup-2">
-            <div class="pop-up__narrow">
-                <div class="pop-up__header">
-                    <h3 class="parea__title">
-                        Комплектация тарифов отправлена на указанную Вами почту
-                        <img src="./media/logo.svg" alt="logo" class="parea__logo">
-                    </h3>
+        <div class="pop-up__inner">
+            <h3 class="pop-up__title">
+                Укажите e-mail, на который направить комплектацию тарифов с указанием
+                стоимости и сроков публикации
+                в журналах из баз Scopus / Web of Science
+            </h3>
+
+            <p class="pop-up__desc">
+                Письмо поступит на указанный эл.адрес в течение 15 минут.
+            </p>
+
+            <form class="pop-up__form" novalidate name="1" action="/">
+                <div class="pop-up__inputs">
+                    <div class="input-wrapper">
+                        <input name="name" type="text" class="pop-up__input"
+                               placeholder="Имя" required/>
+                        <span class="input-wrapper__error"></span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input name="email" type="email" class="pop-up__input"
+                               placeholder="Email"
+                               pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                               required/>
+                        <span class="input-wrapper__error"></span>
+                    </div>
                 </div>
 
-                <div class="pop-up__file">
-                    <div class="card-file">
-                        <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
-                        <span class="card-file__title">
+                <button type="submit" class="pop-up__button" data-show-popup="2"
+                        data-step="2">
+                    Получить комплектацию тарифов
+                </button>
+            </form>
+
+            <p class="pop-up__super-desc">
+                Нажимая на кнопку, вы даете согласие на обработку своих
+                персональных данных и соглашаетесь с
+                <button class="pop-up__super-desc pop-up__super-desc--link"
+                        data-show-popup="500">
+                    Политикой конфиденциальности
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+<!--ФИО, Тел.-->
+
+<section id="popup-2" class="pop-up">
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-2">
+            <div class="pop-up__header">
+                <h3 class="parea__title">
+                    Комплектация тарифов отправлена на указанную Вами почту
+                    <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                </h3>
+            </div>
+
+            <div class="card-file">
+                <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
+                <span class="card-file__title">
                             Статья<br>
                             “Финансовая безопасность
                             при публикации научных статей”
                         </span>
-                    </div>
-                </div>
+                </a>
+            </div>
+
+            <div class="pop-up__file">
 
                 <p class="popup-2__description">
                     Узнайте, как обезопасить себя от финансовых потерь при публикации
@@ -1185,82 +506,30 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="pop-up__close">
-        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-    </div>
-</section>
-<!--Хорошего дня-->
-
-<!-- Этапы -->
-<section id="popup-155" class="pop-up">
-    <div class="pop-up__poster">
-        <div class="pop-up__labels">
-            <span class="pop-up__label">Быкова Альбина</span>
-            <span class="pop-up__label">Специалист World Sci Publ</span>
-        </div>
-        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
-             alt="pop-up__logo"/>
-        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-15@2x.jpg, 2x"
-             src="media/pop-up/photo-15.jpg" alt="photo-15"/>
-    </div>
-
-    <div class="pop-up__main">
-        <div class="pop-up__inner pop-up__inner--narrow">
-            <div class="pop-up__narrow">
-                <h3 class="pop-up__title">
-                    Укажите e-mail, на который направить комплектацию тарифов с указанием
-                    стоимости и сроков
-                    публикации
-                    в журналах из баз Scopus / Web of Science
-                </h3>
-
-                <p class="pop-up__desc">
-                    Письмо поступит на указанный эл.адрес<br>
-                    в течение 15 минут.
-                </p>
-
-                <form class="pop-up__form" novalidate name="15" action="/">
-                    <div class="pop-up__inputs">
-                        <div class="input-wrapper">
-                            <input name="name" type="text" class="pop-up__input"
-                                   placeholder="Имя" required/>
-                            <span class="input-wrapper__error"></span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <input name="email" type="email" class="pop-up__input"
-                                   placeholder="Email"
-                                   pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                   required/>
-                            <span class="input-wrapper__error"></span>
-                        </div>
-                    </div>
-
-                    <button class="pop-up__button" type="submit"
-                            data-show-popup="finished-3" data-step="3">
-                        Получить комплектацию тарифов
-                    </button>
-                </form>
-
-                <p class="pop-up__super-desc">
-                    Нажимая на кнопку, вы даете согласие на обработку своих
-                    персональных данных <br> и соглашаетесь с
-                    <button class="pop-up__super-desc pop-up__super-desc--link"
-                            data-show-popup="500">
-                        Политикой конфиденциальности
-                    </button>
-                </p>
-            </div>
+        <div class="pop-up__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
         </div>
     </div>
-
-    <div class="pop-up__close">
-        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
-    </div>
 </section>
-<!--ФИО, Тел.-->
+<!-- Email -->
+
+    @import "cost.html"
+
+    @import "advantages.html"
+
+<!--    <section id="quiz-0" class="quiz">-->
+<!--        &lt;!&ndash; @import "quiz.html" &ndash;&gt;-->
+<!--    </section>-->
+
+    @import "promo.html"
+
+    @import "guaranty.html"
+
+    @import "component.html"
+
+    @import "stages.html"
+
     @import "profile.html"
 
     @import "audit.html"
@@ -1356,7 +625,987 @@
     @import "footer.html"
 </main>
 
-@import "pop-up.html"
+<!--data-show-popup="2"-->
+
+<!-- Quiz -->
+<section id="popup-7" class="pop-up">
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова София</span>
+            <span class="pop-up__label">Ведущий специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
+             alt="pop-up__logo"/>
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-7@2x.jpg, 2x"
+             src="media/pop-up/photo-7.jpg" alt="photo-7"/>
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Укажите e-mail, на который направить комплектацию тарифов с указанием
+                    стоимости и сроков публикации
+                    в журналах из баз Scopus / Web of Science
+                </h3>
+
+                <p class="pop-up__desc">
+                    Письмо поступит на указанный эл.адрес в течение 15 минут.
+                </p>
+
+                <form class="pop-up__form" novalidate name="7" data-popup="7" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="Имя" required/>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="email" type="email" class="pop-up__input"
+                                   placeholder="Email"
+                                   pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                   required/>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button class="pop-up__button" type="submit" data-step="2"
+                            data-show-popup="8">
+                        Получить комплектацию тарифов
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих персональных
+                    данных <br>
+                    и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class=""/>
+    </div>
+</section>
+<!--ФИО, Тел.-->
+
+<section id="popup-8" class="pop-up">
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова София</span>
+            <span class="pop-up__label">Ведущий специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
+             alt="pop-up__logo"/>
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-8@2x.jpg, 2x"
+             src="media/pop-up/photo-8.jpg" alt="photo-8"/>
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-2">
+            <div class="pop-up__narrow">
+                <div class="pop-up__header">
+                    <h3 class="parea__title">
+                        Комплектация тарифов отправлена на указанную Вами почту
+                        <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                    </h3>
+                </div>
+
+                <div class="pop-up__file">
+                    <div class="card-file">
+                        <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
+                        <span class="card-file__title">
+                            Статья<br>
+                            “Финансовая безопасность
+                            при публикации научных статей”
+                        </span>
+                    </div>
+                </div>
+
+                <p class="popup-2__description">
+                    Узнайте, как обезопасить себя от финансовых потерь при публикации
+                    научной статьи.
+                </p>
+
+                <p class="pop-up__desc">
+                    Укажите,пожалуйста, контактный номер телефона с WhatsApp,
+                    статья поступит в течение 15 минут.
+                </p>
+
+                <div class="popup-2__form">
+                    <form novalidate name="2" action="/">
+                        <div class="pop-up__inputs">
+                            <div class="input-wrapper">
+                                <input name="phone" type="tel" class="pop-up__input"
+                                       placeholder="Введите номер телефона"
+                                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                       required/>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="pop-up__button"
+                                data-show-popup="file_upload" data-step="3">
+                            Получить статью
+                        </button>
+                    </form>
+
+                    <p class="pop-up__super-desc">
+                        Нажимая на кнопку, вы даете согласие на обработку своих
+                        персональных данных и соглашаетесь с
+                        <button class="pop-up__super-desc pop-up__super-desc--link"
+                                data-show-popup="500">
+                            Политикой конфиденциальности
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+<!-- Хорошего дня -->
+
+
+<!--Технический аудит-->
+<section id="popup-20" class="pop-up">
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова Мария</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
+             alt="pop-up__logo"/>
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-20@2x.jpg, 2x"
+             src="media/pop-up/photo-20.jpg" alt="photo-20"/>
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-4">
+            <h3 class="pop-up__title">
+                Спасибо, в течение часа Вам будет направлено приветственное
+                письмо от ответственного специалиста. Пожалуйста, ознакомьтесь.
+            </h3>
+
+            <h3 class="pop-up__title">Хорошего дня!</h3>
+
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img"/>
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img"/>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img"/>
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img"/>
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img"/>
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img"/>
+                </a>
+            </div>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+<!-- Хорошего дня после отправки-->
+
+<section id="popup-19" class="pop-up">
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Новикова Мария</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
+             alt="pop-up__logo"/>
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-19@2x.jpg, 2x"
+             src="media/pop-up/photo-19.jpg" alt="photo-19"/>
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Укажите e-mail, на который направить комплектацию тарифов с указанием
+                    стоимости и сроков публикации
+                    в журналах из баз Scopus / Web of Science
+                </h3>
+
+                <p class="pop-up__desc">
+                    Письмо поступит на указанный эл.адрес<br>
+                    в течение 15 минут.
+                </p>
+
+                <form novalidate name="19" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required/>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="tel" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required/>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button class="pop-up__button" type="submit" data-show-popup="20">
+                        Перейти к обсуждению
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+<!--ФИО, Тел.-->
+
+
+<!-- Работаем с зарубежными экспертами -->
+<section id="popup-21" class="pop-up">
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Перегудова Юлия</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
+             alt="pop-up__logo"/>
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-21@2x.jpg, 2x"
+             src="media/pop-up/photo-21.jpg" alt="photo-21"/>
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner pop-up__inner--narrow">
+            <div class="pop-up__narrow">
+                <h3 class="pop-up__title">
+                    Укажите e-mail, на который направить комплектацию тарифов с указанием
+                    стоимости и сроков
+                    публикации
+                    в журналах из баз Scopus / Web of Science
+                </h3>
+
+                <p class="pop-up__desc">
+                    Письмо поступит на указанный эл.адрес<br>
+                    в течение 15 минут.
+                </p>
+
+                <form novalidate name="21" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="Имя" required/>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="email" type="email" class="pop-up__input"
+                                   placeholder="Email"
+                                   pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                   required/>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="22"
+                            data-step="2">
+                        Получить комплектацию тарифов
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных <br> и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+<!--ФИО, Тел.-->
+
+<section id="popup-22" class="pop-up">
+    <div class="pop-up__poster">
+        <div class="pop-up__labels">
+            <span class="pop-up__label">Перегудова Юлия</span>
+            <span class="pop-up__label">Специалист World Sci Publ</span>
+        </div>
+        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg"
+             alt="pop-up__logo"/>
+        <img loading="lazy" class="pop-up__img" srcset="./media/pop-up/photo-22@2x.jpg, 2x"
+             src="media/pop-up/photo-22.jpg" alt="photo-22"/>
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-2">
+            <div class="pop-up__narrow">
+                <div class="pop-up__header">
+                    <h3 class="parea__title">
+                        Комплектация тарифов отправлена на указанную Вами почту
+                        <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                    </h3>
+                </div>
+
+                <div class="pop-up__file">
+                    <div class="card-file">
+                        <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
+                        <span class="card-file__title">
+                            Статья<br>
+                            “Финансовая безопасность
+                            при публикации научных статей”
+                        </span>
+                    </div>
+                </div>
+
+                <p class="popup-2__description">
+                    Узнайте, как обезопасить себя от финансовых потерь при публикации
+                    научной статьи.
+                </p>
+
+                <p class="pop-up__desc">
+                    Укажите,пожалуйста, контактный номер телефона с WhatsApp,
+                    статья поступит в течение 15 минут.
+                </p>
+
+                <div class="popup-2__form">
+                    <form novalidate name="2" action="/">
+                        <div class="pop-up__inputs">
+                            <div class="input-wrapper">
+                                <input name="phone" type="tel" class="pop-up__input"
+                                       placeholder="Введите номер телефона"
+                                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                       required/>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="pop-up__button"
+                                data-show-popup="file_upload" data-step="3">
+                            Получить статью
+                        </button>
+                    </form>
+
+                    <p class="pop-up__super-desc">
+                        Нажимая на кнопку, вы даете согласие на обработку своих
+                        персональных данных и соглашаетесь с
+                        <button class="pop-up__super-desc pop-up__super-desc--link"
+                                data-show-popup="500">
+                            Политикой конфиденциальности
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+<!--Хорошего дня-->
+
+<!-- Политика конфиденциальности -->
+<section id="popup-500" class="pop-up pdf-reader">
+    <div class="pdf-reader__header">
+        <div class="pop-up__close pdf-reader__close">
+            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+        </div>
+    </div>
+
+    <div class="pdf-reader__viewer">
+        <iframe loading="lazy" class="pdf-reader__iframe"
+                src="https://drive.google.com/file/d/1MF_Wx6QopTXjhBHDtE-IRUXVrxKyIZ8o/preview"
+                width="700" height="500"
+                style="border: none"></iframe>
+    </div>
+
+    <div class="pdf-reader__footer">
+        <div class="pdf-reader__column">
+            <h2 class="pdf-reader__title">Политика конфиденциальности</h2>
+        </div>
+
+        <div class="pdf-reader__column">
+
+        </div>
+
+        <div class="pdf-reader__column">
+            <a href="https://drive.google.com/u/0/uc?id=1MF_Wx6QopTXjhBHDtE-IRUXVrxKyIZ8o&export=download"
+               target="_blank" class="pdf-reader__download pdf-download">
+                <span class="pdf-download__title">Cкачать в PDF</span>
+                <img loading="lazy" class="pdf-download__img"
+                     src="./media/download_icon.svg" alt=""/>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- PDF-reader -->
+
+<section id="mobile_cover" class="pop-up-cover">
+
+    <div class="cover">
+        <div class="cover__header">
+            <img src="./media/logo.svg" alt="logo" class="cover__logo">
+        </div>
+
+        <div class="cover__body">
+            <h4 class="cover__subtitle">
+                Мобильная версия сайта не доступна
+            </h4>
+
+            <p class="cover__text">
+                Ведутся технические работы.
+            </p>
+        </div>
+
+        <div class="cover__footer">
+            <div class="pop-up__social social">
+                <a href="https://teleg.run/worldscipubl" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                         class="social__img"/>
+                </a>
+                <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                         class="social__img"/>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                   target="_blank" class="social__link">
+                    <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                         class="social__img"/>
+                </a>
+                <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                   target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                         class="social__img"/>
+                </a>
+                <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/instagram.png" alt="instagram"
+                         class="social__img"/>
+                </a>
+                <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                   class="social__link">
+                    <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                         class="social__img"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Хорошего дня -->
+
+<section id="popup-file_upload" class="pop-up">
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-3">
+            <div class="pop-up__header">
+                <h3 class="parea__title">
+                    Статья о финансовых рисках будет направлена на WhatsApp указанного
+                    Вами номера телефона
+                    <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                </h3>
+            </div>
+
+            <div class="card-file">
+                <img src="./media/folder-clip.png" alt="folder" class="card-file__img">
+                <p class="card-file__title">Технический аудит</p>
+            </div>
+
+            <p class="popup-2__description">
+                Проведем бесплатный технический аудит Вашей статьи.
+                Заранее определим соответствие
+                международным стандартам академического письма
+            </p>
+
+            <p class="pop-up__desc">
+                Для этого выберите интересующую Вас базу
+                и загрузите свою статью
+            </p>
+
+            <div class="popup-3__form">
+                <form novalidate name="file-uploader" enctype="multipart/form-data"
+                      method="post" action="/">
+                    <div class="pop-up__inputs">
+                        <div class="selector" data-state="">
+                            <div class="selector__title" data-default="Option 0">
+                                Выберите базу (Scopus/WoS)
+                            </div>
+                            <div class="selector__content">
+                                <input id="singleSelect0" class="selector__input"
+                                       type="radio" name="db" value="0"
+                                       required/>
+                                <label for="singleSelect0" class="selector__label">
+                                    Выберите базу (Scopus/WoS)
+                                </label>
+
+                                <input id="singleSelect1" class="selector__input"
+                                       type="radio" name="db" value="1"
+                                       required/>
+                                <label for="singleSelect1" class="selector__label">
+                                    Scopus
+                                </label>
+
+                                <input id="singleSelect2" class="selector__input"
+                                       type="radio" name="db" value="2"
+                                       required/>
+                                <label for="singleSelect2" class="selector__label">
+                                    Web of Science
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <div class="p-uploader pop-up__input pop-up__input--file">
+                                <label for="file-upload-3" class="p-uploader__choose">
+                                        <span class="p-uploader__text">
+                                            Загрузить статью (.pdf .doc .docx)
+                                        </span>
+                                    <img loading="lazy" class="p-uploader__img"
+                                         src="./media/folder/folder.svg"
+                                         alt="uploader-img"/>
+                                </label>
+                                <input name="file" id="file-upload-3" type="file"
+                                       accept=".pdf, .doc, .docx"
+                                       required>
+                            </div>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="pop-up__button"
+                            data-show-popup="finished" data-step="4">
+                        Отправить
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+
+<section id="popup-file_upload-2" class="pop-up">
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-3">
+            <div class="pop-up__header">
+                <h3 class="parea__title">
+                    Статья о финансовых рисках будет направлена на WhatsApp указанного
+                    Вами номера телефона
+                    <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                </h3>
+            </div>
+
+            <div class="card-file">
+                <img src="./media/folder-clip.png" alt="folder" class="card-file__img">
+                <p class="card-file__title">Технический аудит</p>
+            </div>
+
+            <p class="popup-2__description">
+                Проведем бесплатный технический аудит Вашей статьи.
+                Заранее определим соответствие
+                международным стандартам академического письма
+            </p>
+
+            <p class="pop-up__desc">
+                Для этого выберите интересующую Вас базу
+                и загрузите свою статью
+            </p>
+
+            <div class="popup-3__form">
+                <form novalidate name="33" enctype="multipart/form-data" method="post"
+                      action="/">
+                    <div class="pop-up__inputs">
+                        <div class="selector" data-state="">
+                            <div class="selector__title" data-default="Option 0">
+                                Выберите базу (Scopus/WoS)
+                            </div>
+                            <div class="selector__content">
+                                <input id="singleSelect02" class="selector__input"
+                                       type="radio" name="db" value="0"
+                                       required/>
+                                <label for="singleSelect02" class="selector__label">
+                                    Выберите базу (Scopus/WoS)
+                                </label>
+
+                                <input id="singleSelect12" class="selector__input"
+                                       type="radio" name="db" value="1"
+                                       required/>
+                                <label for="singleSelect12" class="selector__label">
+                                    Scopus
+                                </label>
+
+                                <input id="singleSelect22" class="selector__input"
+                                       type="radio" name="db" value="2"
+                                       required/>
+                                <label for="singleSelect22" class="selector__label">
+                                    Web of Science
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <div class="p-uploader pop-up__input pop-up__input--file">
+                                <label for="file-upload-33" class="p-uploader__choose">
+                                        <span class="p-uploader__text">
+                                            Загрузить статью (.pdf .doc .docx)
+                                        </span>
+                                    <img loading="lazy" class="p-uploader__img"
+                                         src="./media/folder/folder.svg"
+                                         alt="uploader-img"/>
+                                </label>
+                                <input name="file" id="file-upload-33" type="file"
+                                       accept=".pdf, .doc, .docx"
+                                       required>
+                            </div>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="pop-up__button"
+                            data-show-popup="finished" data-step="3">
+                        Отправить
+                    </button>
+                </form>
+
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+<!-- Файл -->
+
+<section id="popup-finished" class="pop-up">
+
+    <div class="pop-up__main pop-up__main--full">
+        <div class="pop-up__inner">
+            <div class="pop-up__header">
+                <h3 class="parea__title">
+                    Ваша статья получена, специалист
+                    проведет аудит в течение двух дней.
+                    <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                </h3>
+            </div>
+
+            <div class="card-file">
+                <img src="./media/folder-clip.png" alt="folder" class="card-file__img">
+                <p class="card-file__title">Технический аудит</p>
+            </div>
+
+            <h4 class="parea__subtitle">
+                Отслеживайте работу в личном кабинете.
+            </h4>
+
+            <p class="parea__text">
+                Мы отправили письмо с паролем для входа
+                на указанную Вами почту:
+                <span class="parea__text parea__email">{Email Автора}</span>
+            </p>
+
+            <a href="https://worldscipubl.com/cabinet/login" target="_blank"
+               class="pop-up__button parea__btn">
+                Войти / Зарегистрироваться
+            </a>
+
+            <div class="parea__footer">
+                <div class="pop-up__social social">
+                    <a href="https://teleg.run/worldscipubl" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://vk.com/worldscipubl/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                       target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                       target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/instagram.png"
+                             alt="instagram" class="social__img"/>
+                    </a>
+                    <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                             class="social__img"/>
+                    </a>
+                </div>
+                <a class="social__web" href="www.worldscipubl.com">www.worldscipubl.com</a>
+                <p class="social__copy">Copyright @ 2021 WorldSciPubl, Все права
+                    защищены.</p>
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+
+<!-- Для Drag-n-Drop, если уже есть email в базе -->
+<section id="popup-finished-2" class="pop-up">
+    <div class="pop-up__main pop-up__main--full">
+        <div class="pop-up__inner">
+            <div class="pop-up__header">
+                <h3 class="parea__title parea__title--pink">
+                    Вы уже зарегистрированы в личном кабинете.
+                    Загрузите статью на аудит через личный кабинет.
+                    <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                </h3>
+            </div>
+
+            <div class="card-file">
+                <img src="./media/folder-clip.png" alt="folder" class="card-file__img">
+                <p class="card-file__title">Технический аудит</p>
+            </div>
+
+            <h4 class="parea__subtitle">
+                Отслеживайте работу в личном кабинете.
+            </h4>
+
+            <p class="parea__text">
+                В целях безопасности загрузите статью на технический аудит через личный
+                кабинет.
+                Профиль зарегистрирован на
+                <span class="parea__text parea__email">{Email Автора}</span>
+            </p>
+
+            <a href="https://worldscipubl.com/cabinet/login" target="_blank"
+               class="pop-up__button parea__btn">
+                Войти
+            </a>
+
+            <div class="parea__footer">
+                <div class="pop-up__social social">
+                    <a href="https://teleg.run/worldscipubl" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://vk.com/worldscipubl/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                       target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                       target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/instagram.png"
+                             alt="instagram" class="social__img"/>
+                    </a>
+                    <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                             class="social__img"/>
+                    </a>
+                </div>
+                <a class="social__web" href="www.worldscipubl.com">www.worldscipubl.com</a>
+                <p class="social__copy">Copyright @ 2021 WorldSciPubl, Все права
+                    защищены.</p>
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
+
+<!-- Для PopUp-ов, если уже есть email в базе -->
+<section id="popup-finished-3" class="pop-up">
+
+    <div class="pop-up__main pop-up__main--full">
+        <div class="pop-up__inner">
+            <div class="pop-up__header">
+                <h3 class="parea__title">
+                    Спасибо,
+                    в ближайшее время с Вами свяжется ответственный специалист.
+                    <br>
+                    Хорошего дня!
+                    <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                </h3>
+
+            </div>
+            <div class="pop-up__video">
+                <div class="pop-up__iframe">
+                    <iframe loading="lazy" class="reviews__iframe"
+                            src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+
+            <div class="parea__footer">
+                <div class="pop-up__social social">
+                    <a href="https://teleg.run/worldscipubl" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/telegram.png" alt="telegram"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://vk.com/worldscipubl/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/vk.png" alt="vk"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                       target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                       target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/youtube.png" alt="youtube"
+                             class="social__img"/>
+                    </a>
+                    <a href="https://www.instagram.com/world.sci.publ/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/instagram.png"
+                             alt="instagram" class="social__img"/>
+                    </a>
+                    <a href="https://www.facebook.com/worldscipubl/" target="_blank"
+                       class="social__link">
+                        <img loading="lazy" src="./media/social/facebook.png" alt="facebook"
+                             class="social__img"/>
+                    </a>
+                </div>
+                <a class="social__web" href="www.worldscipubl.com">www.worldscipubl.com</a>
+                <p class="social__copy">Copyright @ 2021 WorldSciPubl, Все права
+                    защищены.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn"/>
+    </div>
+</section>
 
 <noscript>
     <img src="https://vk.com/rtrg?p=VK-RTRG-837729-8F4Pd"
@@ -1407,7 +1656,6 @@
 <script src="./js/quiz.js"></script>
 <script src="./js/dragDrop.js"></script>
 <script src="./js/file_upload.js"></script>
-<script src="./js/float-navbar.js"></script>
 
 <!-- Roistat -->
 <script>

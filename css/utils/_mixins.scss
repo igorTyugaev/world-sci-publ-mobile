@@ -81,6 +81,16 @@
   }
 }
 
+@mixin padding-size($t-padding: 0px, $r-padding: 0px, $b-padding: 0px, $l-padding: 0px) {
+  padding: $t-padding $r-padding $b-padding $l-padding;
+
+  @media (min-width: $bp-xxl-375) {
+    padding: #{get-vw($t-padding, $bp-xxl-375)}
+    #{get-vw($r-padding, $bp-xxl-375)}
+    #{get-vw($b-padding, $bp-xxl-375)}
+    #{get-vw($l-padding, $bp-xxl-375)};
+  }
+}
 
 @mixin _more-than($resolution: 180px) {
   @media (min-width: $resolution) {

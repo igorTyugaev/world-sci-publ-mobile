@@ -1,11 +1,12 @@
 @import 'entry';
 
 @import "blocks/button";
+@import "blocks/img-frame";
 @import "blocks/spoilers";
+@import "blocks/feature-card";
 @import "blocks/quizlet";
 @import "blocks/progress-bar";
 @import "blocks/scrollDots";
-@import "blocks/float-navbar";
 
 @import "blocks/header";
 @import "blocks/consultation";
@@ -28,3 +29,4 @@
 @import "blocks/footer";
 
 @import "blocks/pop-up";
+@import "blocks/_nprogress";
