@@ -474,7 +474,7 @@ input {
 }
 
 .button--upload {
-  padding: 10px 24px;
+  font-size: 12px;
 }
 
 .button-quiz {
@@ -1284,7 +1284,7 @@ input {
 }
 
 .advantages-carousel {
-  height: 182px;
+  height: 212px;
 }
 
 .advantages-carousel .flickity-page-dots {
@@ -1454,7 +1454,7 @@ input {
 
 .promo-carousel__item {
   width: 100%;
-  height: 280px;
+  height: 320px;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -1752,7 +1752,7 @@ input {
 
 .quote:after {
   content: "“";
-  transform: rotateZ(180deg) translateX(200%);
+  transform: rotateZ(180deg) translateX(140%);
 }
 
 .quote:after,
@@ -1897,7 +1897,7 @@ input {
 
 .stages-carousel__item {
   width: 100%;
-  height: 745px;
+  height: 800px;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -2026,6 +2026,7 @@ input {
   padding-right: 12px;
   padding-bottom: 12px;
   padding-left: 12px;
+  margin-top: 2vh;
   color: #FFFFFF;
 }
 
@@ -2301,7 +2302,7 @@ input {
 
 .audit__btn {
   font-family: "Helvetica";
-  font-size: 14px;
+  font-size: 12px;
   width: 100%;
 }
 
@@ -5518,10 +5519,6 @@ input {
 
   .button--contract {
     border-radius: 0.6128702758vw;
-  }
-
-  .button--consultation {
-    border-radius: 3.4729315628vw;
   }
 
   .navbar-slider__btn {

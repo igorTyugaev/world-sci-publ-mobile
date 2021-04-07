@@ -75,15 +75,10 @@
     @include _more-than($bp-xxl-375) {
       border-radius: #{get-vw(34px, $bp-xxl-375)};
     }
-
-    @include _more-than($bp-lg-979) {
-      border-radius: #{get-vw(34px, $bp-lg-979)};
-    }
-
   }
 
   &--upload {
-    padding: 10px 24px;
+    font-size: 12px;
   }
 }
 
