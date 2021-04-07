@@ -136,6 +136,10 @@
     //@include padding(12px, 18px, 6px, 18px);
   }
 
+  &__hint {
+    margin-left: 2vw;
+  }
+
   &__main {
     display: flex;
     flex-direction: row;
@@ -207,6 +211,11 @@
 
   }
 
+  &__img-block {
+    display: flex;
+    flex-direction: row;
+  }
+
   &__human {
     object-fit: contain;
     object-position: right;
@@ -217,7 +226,6 @@
   &__arrow {
     object-fit: contain;
     object-position: top;
-    transform: translateY(-43%);
   }
 
   &__text {

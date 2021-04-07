@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <!--    <base href="/landing/">-->
+    <base href="/landing/">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link href="./media/incons/favicon.ico" rel="shortcut icon">
@@ -2362,10 +2362,12 @@
                                 Для просмотра остальных разделов — нажмите на другие кнопки
                                 меню
                             </p>
-                            <img src="./media/nav-arrow-hint.svg" alt="nav-hint-arrow"
-                                 class="nav-hint__arrow">
-                            <img src="./media/nav-hint-human.svg" alt="nav-hint-human"
-                                 class="nav-hint__human">
+                            <div class="nav-hint__img-block">
+                                <img src="./media/nav-arrow-hint.svg" alt="nav-hint-arrow"
+                                     class="nav-hint__arrow">
+                                <img src="./media/nav-hint-human.svg" alt="nav-hint-human"
+                                     class="nav-hint__human">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -4060,8 +4062,8 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <script>
-    // var csrfToken = '<?=$_SESSION['csrf-token']?>';
-    var csrfToken = 228;
+    var csrfToken = '<?=$_SESSION['csrf-token']?>';
+    // var csrfToken = 228;
 </script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js"></script>

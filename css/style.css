@@ -2172,6 +2172,10 @@ input {
   color: #FFFEFE;
 }
 
+.profile-nav__hint {
+  margin-left: 2vw;
+}
+
 .profile-nav__main {
   display: flex;
   flex-direction: row;
@@ -2232,6 +2236,11 @@ input {
   width: 50%;
 }
 
+.nav-hint__img-block {
+  display: flex;
+  flex-direction: row;
+}
+
 .nav-hint__human {
   object-fit: contain;
   object-position: right;
@@ -2242,7 +2251,6 @@ input {
 .nav-hint__arrow {
   object-fit: contain;
   object-position: top;
-  transform: translateY(-43%);
 }
 
 .nav-hint__text {
