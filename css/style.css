@@ -2375,6 +2375,10 @@ input {
   line-height: 200%;
 }
 
+.audit__carousel {
+  margin-top: 24px;
+}
+
 .audit-cart {
   position: relative;
   padding: 16px;
@@ -2406,12 +2410,14 @@ input {
 
 .audit-cart__link {
   font-family: "Helvetica";
-  font-size: 14px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  font-size: 12px;
   padding-top: 6px;
-  padding-right: 6px;
+  padding-right: 0px;
   padding-bottom: 6px;
-  padding-left: 6px;
-  text-align: center;
+  padding-left: 0px;
+  text-align: left;
   width: 50%;
 }
 
@@ -2629,6 +2635,39 @@ input {
   line-height: 110%;
   text-align: center;
   color: #383838;
+}
+
+.audit-carousel {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.audit-carousel__item {
+  width: 100%;
+  height: 180px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.audit-carousel__inner {
+  height: 100%;
+}
+
+.audit-carousel .flickity-page-dots {
+  bottom: 15px;
+}
+
+.audit-carousel .flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 0.3;
+  background: #C4C4C4;
+}
+
+.audit-carousel .flickity-page-dots .dot.is-selected {
+  opacity: 1;
 }
 
 .team {
@@ -5025,9 +5064,9 @@ input {
 
   .audit-cart__link {
     padding-top: 1.6vw;
-    padding-right: 1.6vw;
+    padding-right: 0vw;
     padding-bottom: 1.6vw;
-    padding-left: 1.6vw;
+    padding-left: 0vw;
   }
 
   .audit-form__input-wrapper:not(:first-child) {
@@ -5058,6 +5097,13 @@ input {
     padding-right: 3.2vw;
     padding-bottom: 0vw;
     padding-left: 3.2vw;
+  }
+
+  .audit-carousel__item {
+    padding-top: 2.6666666667vw;
+    padding-right: 2.6666666667vw;
+    padding-bottom: 2.6666666667vw;
+    padding-left: 2.6666666667vw;
   }
 
   .team {
