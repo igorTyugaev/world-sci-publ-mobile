@@ -13,34 +13,28 @@
 }
 
 .nav {
-  transform: translateX(-150%);
-
-  position: fixed;
   left: 0;
   top: 0;
-
-  transition: 0.6s;
-
   height: 100vh;
   width: 100vw;
+
+  transition: 0.6s;
+  transform: translateX(-150%);
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-color: #031435;
-  @include padding(0px, 50px, 0px, 50px);
+  padding: 15vh 15vw 2vh 15vw;
 
-  @include _more-than($bp-xl-1170) {
-    width: 42vw;
-  }
+  &__header-logo {
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    right: 2%;
 
-  &__header {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    align-items: flex-end;
-    transform: translateX(12%);
-
-    &-logo {
-      align-self: flex-end;
-      object-fit: contain;
-    }
   }
 
   &--show {
@@ -50,8 +44,6 @@
   &__links {
     display: flex;
     flex-direction: column;
-    height: 58%;
-    @include margin(20px);
   }
 
   &__link {
@@ -76,8 +68,8 @@
   &__footer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    @include margin(20px);
   }
 
   &__logo {
@@ -91,6 +83,7 @@
     font-family: $fontFamilyPrimary;
     color: $textColorSecondary;
     @include font-size(12px);
+    margin: 1vh;
     text-align: center;
   }
 }
