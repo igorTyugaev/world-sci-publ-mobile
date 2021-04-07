@@ -3551,6 +3551,10 @@ input {
   width: 15%;
 }
 
+.social__web {
+  margin: 0.8vh auto;
+}
+
 .social__img {
   object-fit: cover;
   border-radius: 6px;
@@ -3619,7 +3623,7 @@ input {
 
 .pop-up__label {
   font-family: "Helvetica";
-  font-size: 14px;
+  font-size: 10px;
   color: #FFFFFF;
   display: block;
 }
@@ -3631,9 +3635,9 @@ input {
 .pop-up__logo {
   position: absolute;
   left: 0;
-  top: -2.85%;
+  top: -4.6%;
   object-fit: contain;
-  height: 160px;
+  height: 80px;
 }
 
 .pop-up__logo--right {
@@ -3653,7 +3657,7 @@ input {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
 }
 
 .pop-up__main {
@@ -3675,6 +3679,7 @@ input {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-self: flex-start;
   padding-top: 0px;
   padding-right: 12px;
@@ -3692,14 +3697,14 @@ input {
   display: block;
   width: 84%;
   color: #000000;
-  margin: 5px 0px 0px 0px;
+  margin-top: 2vh;
 }
 
 .pop-up__input {
   width: 100%;
   font-weight: normal;
   cursor: text;
-  margin: 8px 0px 0px 0px;
+  margin-top: 2vh;
   font-size: 12px;
   padding-top: 10px;
   padding-right: 16px;
@@ -3724,7 +3729,8 @@ input {
   padding-left: 16px;
   transition: 0.3s;
   cursor: pointer;
-  margin: 8px 0px 0px 0px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   font-size: 14px;
   width: 100%;
 }
@@ -3766,7 +3772,7 @@ input {
 
 .pop-up__video {
   width: 100%;
-  margin: 128px 0px 65px 0px;
+  margin: 90px 0px 42px 0px;
 }
 
 .pop-up__social {
@@ -3793,7 +3799,7 @@ input {
 
 .pop-up__close {
   position: absolute;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
   transition: opacity 0.3s;
   right: 0;
@@ -3813,7 +3819,7 @@ input {
 }
 
 .pop-up__file {
-  margin: 40px 0px 0px 0px;
+  margin-top: 2vh;
 }
 
 .popup-2__promo {
@@ -3923,23 +3929,28 @@ input {
   text-align: left;
   font-style: "Helvetica";
   color: #B7B7B7;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .card-file {
   text-decoration: none;
-  width: 61%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-top: 24px;
+  padding-top: 18px;
   padding-right: 4px;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
   padding-left: 4px;
-  margin: 40px auto;
+  margin: 2vh auto;
   cursor: default;
+  max-width: 80%;
   background: #F5F5F5;
+}
+
+.card-file--pdf {
+  width: 80%;
+  height: auto;
 }
 
 .card-file__img {
@@ -3948,15 +3959,24 @@ input {
   object-position: center;
 }
 
+.card-file__img--pdf {
+  width: 18%;
+}
+
+.card-file__img--logo {
+  width: 60%;
+}
+
 .card-file__title {
   font-family: "Helvetica";
   font-size: 12px;
-  padding-top: 16px;
+  padding-top: 12px;
   padding-right: 12px;
   padding-bottom: 0px;
   padding-left: 12px;
   line-height: 110%;
   text-align: center;
+  margin-bottom: 2vh;
   color: #000000;
 }
 
@@ -3965,10 +3985,29 @@ input {
   flex-direction: column;
 }
 
+.pdf-reader__column {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1vh;
+}
+
 .pdf-reader__header {
+  position: relative;
   flex: 50;
   width: 100%;
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.pdf-reader__title {
+  font-size: 14px;
+  text-align: left;
+  width: 80%;
+  padding: 1vh;
 }
 
 .pdf-reader__viewer {
@@ -3982,7 +4021,7 @@ input {
   width: 100%;
   background-color: #FFFFFF;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -3993,7 +4032,15 @@ input {
   height: 100%;
 }
 
+.pdf-reader__close {
+  position: absolute;
+  top: 25%;
+  right: 0;
+}
+
 .pdf-reader__btn {
+  width: 90%;
+  margin: 0 auto;
   border: 1px solid #000000;
   border-radius: 300px;
   background-color: #fff;
@@ -4001,8 +4048,11 @@ input {
   padding-right: 50px;
   padding-bottom: 12px;
   padding-left: 50px;
+  font-size: 14px;
   transition: 0.3s;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .pdf-reader__btn:hover {
@@ -4018,6 +4068,8 @@ input {
 }
 
 .pdf-download__title {
+  text-align: center;
+  align-self: center;
   font-size: 14px;
 }
 
@@ -4041,10 +4093,10 @@ input {
   width: 100%;
   height: 100%;
   background-color: #FFFEFE;
-  margin: 15px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
   color: #b7b7b7;
   font-style: "Helvetica";
-  font-size: 14px;
+  font-size: 12px;
   padding-top: 12px;
   padding-right: 12px;
   padding-bottom: 12px;
@@ -4101,9 +4153,9 @@ input {
   width: 100%;
   height: 40px;
   max-height: 0;
-  padding: 0 16px;
+  padding: 0 12px;
   font-style: "Helvetica";
-  font-size: 14px;
+  font-size: 12px;
   transition: all 0.2s ease-out;
   background-color: #ececec;
   cursor: pointer;
@@ -4140,12 +4192,9 @@ input {
 }
 
 .parea {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
   width: 100%;
+  margin-top: 8vh;
 }
 
 .parea__header {
@@ -4173,8 +4222,8 @@ input {
   position: absolute;
   object-fit: contain;
   height: 18%;
-  right: 10px;
-  bottom: 10px;
+  right: 2%;
+  top: 8%;
 }
 
 .parea__title {
@@ -4184,7 +4233,7 @@ input {
   font-size: 14px;
   line-height: 116%;
   background-color: #031435;
-  padding-top: 18px;
+  padding-top: 26px;
   padding-right: 18px;
   padding-bottom: 18px;
   padding-left: 18px;
@@ -4209,11 +4258,11 @@ input {
   font-family: "Helvetica";
   color: #000000;
   font-size: 14px;
-  margin: 35px 0px 0px 0px;
+  margin-top: 2vh;
 }
 
 .parea__btn {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   font-size: 14px;
@@ -4221,7 +4270,7 @@ input {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
-  margin: 35px 0px 0px 0px;
+  margin-top: 2vh;
 }
 
 .cover {
@@ -4457,13 +4506,6 @@ input {
     box-shadow: 0.2666666667vw 0.2666666667vw 1.0666666667vw rgba(0,0,0,0.25);
   }
 
-  a,
-  button,
-  p,
-  span {
-    font-size: 3.2vw;
-  }
-
   .container {
     padding-left: 2.6666666667vw;
     padding-right: 2.6666666667vw;
@@ -4474,10 +4516,6 @@ input {
   }
 
   .input-wrapper__error {
-    font-size: 3.2vw;
-  }
-
-  .input-wrapper__error {
     padding-top: 1.0666666667vw;
     padding-right: 0vw;
     padding-bottom: 0vw;
@@ -4485,20 +4523,8 @@ input {
   }
 
   .button {
-    font-size: 3.7333333333vw;
-  }
-
-  .button {
     box-shadow: 0.2666666667vw 0.2666666667vw 1.0666666667vw rgba(0,0,0,0.25);
     border-radius: 6.4vw;
-  }
-
-  .button--submit {
-    font-size: 3.7333333333vw;
-  }
-
-  .button--contract {
-    font-size: 4.8vw;
   }
 
   .button--contract {
@@ -4520,10 +4546,6 @@ input {
   }
 
   .button--consultation {
-    font-size: 3.7333333333vw;
-  }
-
-  .button--consultation {
     border-radius: 9.0666666667vw;
   }
 
@@ -4539,22 +4561,6 @@ input {
     padding: 0vw 3.2vw 3.2vw 3.2vw;
   }
 
-  .img-frame__labels {
-    font-size: 2.6666666667vw;
-  }
-
-  .img-frame__label {
-    font-size: 3.2vw;
-  }
-
-  .spoiler__header:before {
-    font-size: 4.2666666667vw;
-  }
-
-  .spoiler__label {
-    font-size: 3.7333333333vw;
-  }
-
   .spoiler__label {
     padding-top: 5.6vw;
     padding-right: 4.8vw;
@@ -4562,32 +4568,12 @@ input {
     padding-left: 0vw;
   }
 
-  .spoiler__text {
-    font-size: 3.7333333333vw;
-  }
-
-  .spoiler__body:before {
-    font-size: 4.2666666667vw;
-  }
-
   .feature-card {
     padding: 8vw 6.4vw 12.8vw 4.5333333333vw;
   }
 
-  .feature-card__title {
-    font-size: 12.8vw;
-  }
-
-  .feature-card__text {
-    font-size: 3.2vw;
-  }
-
   .feature-card__text {
     margin-top: 1.0666666667vw;
-  }
-
-  .quizlet__question {
-    font-size: 3.7333333333vw;
   }
 
   .quizlet__question {
@@ -4601,14 +4587,6 @@ input {
   .progress-bar__circle {
     width: 5.8666666667vw;
     height: 5.8666666667vw;
-  }
-
-  .progress-bar__circle-text {
-    font-size: 3.7333333333vw;
-  }
-
-  .progress-bar__title {
-    font-size: 3.7333333333vw;
   }
 
   .progress-bar__inner {
@@ -4640,10 +4618,6 @@ input {
   }
 
   .nav__link {
-    font-size: 3.7333333333vw;
-  }
-
-  .nav__link {
     padding-top: 2.1333333333vw;
     padding-right: 5.3333333333vw;
     padding-bottom: 2.1333333333vw;
@@ -4662,25 +4636,13 @@ input {
     margin: 5.3333333333vw 0vw 0vw 0vw;
   }
 
-  .nav__date {
-    font-size: 3.2vw;
-  }
-
   .header {
     padding-top: 2.1333333333vw;
     padding-bottom: 2.1333333333vw;
   }
 
-  .header__call-text {
-    font-size: 2.6666666667vw;
-  }
-
   .header__logo {
     margin-left: 4.8vw;
-  }
-
-  .menu__title {
-    font-size: 3.2vw;
   }
 
   .menu__title {
@@ -4697,15 +4659,7 @@ input {
   }
 
   .consultation__text {
-    font-size: 3.7333333333vw;
-  }
-
-  .consultation__text {
     margin-bottom: 5.3333333333vw;
-  }
-
-  .consultation__text--subtext {
-    font-size: 4.2666666667vw;
   }
 
   .consultation__text--subtext {
@@ -4722,14 +4676,6 @@ input {
   .cost {
     box-shadow: 0.2666666667vw 0.2666666667vw 0.5333333333vw rgba(0,0,0,0.25);
     border-radius: 0.8vw;
-  }
-
-  .cost__title {
-    font-size: 4.8vw;
-  }
-
-  .cost__text {
-    font-size: 3.7333333333vw;
   }
 
   .cost__text {
@@ -4751,28 +4697,12 @@ input {
     padding-left: 2.6666666667vw;
   }
 
-  .feature-card__title {
-    font-size: 9.6vw;
-  }
-
-  .feature-card__text {
-    font-size: 3.2vw;
-  }
-
   .feature-card__text {
     margin-top: 1.0666666667vw;
   }
 
   .quiz {
     margin: 26.6666666667vw 0vw 0vw 0vw;
-  }
-
-  .quiz__title {
-    font-size: 6.4vw;
-  }
-
-  .quiz__subtitle {
-    font-size: 3.7333333333vw;
   }
 
   .quiz__subtitle {
@@ -4810,23 +4740,11 @@ input {
   }
 
   .img-frame__labels {
-    font-size: 2.6666666667vw;
-  }
-
-  .img-frame__labels {
     bottom: 12.2666666667vw;
-  }
-
-  .img-frame__label {
-    font-size: 3.2vw;
   }
 
   .promo {
     margin: 21.8666666667vw 0vw 0vw 0vw;
-  }
-
-  .promo__title {
-    font-size: 6.4vw;
   }
 
   .promo__content {
@@ -4865,27 +4783,11 @@ input {
     height: 21.3333333333vw;
   }
 
-  .manifest__title {
-    font-size: 3.7333333333vw;
-  }
-
-  .manifest__text {
-    font-size: 3.7333333333vw;
-  }
-
   .manifest__text:not(:first-child) {
     padding-top: 4.8vw;
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 0vw;
-  }
-
-  .manifest__text--green {
-    font-size: 3.7333333333vw;
-  }
-
-  .trailer__description {
-    font-size: 3.2vw;
   }
 
   .trailer__description {
@@ -4901,17 +4803,8 @@ input {
 
   .app-form__input,
   .audit-form__input {
-    font-size: 2.6666666667vw;
-  }
-
-  .app-form__input,
-  .audit-form__input {
     border: 0.2666666667vw solid rgba(0,0,0,0.3);
     border-radius: 1.6vw;
-  }
-
-  .app-form__title {
-    font-size: 4.2666666667vw;
   }
 
   .app-form__inner {
@@ -4920,10 +4813,6 @@ input {
 
   .app-form__inner {
     column-gap: 4.2666666667vw;
-  }
-
-  .app-form__note {
-    font-size: 2.4vw;
   }
 
   .app-form__note {
@@ -4936,10 +4825,6 @@ input {
 
   .guaranty {
     margin: 24vw 0vw 0vw 0vw;
-  }
-
-  .guaranty__title {
-    font-size: 6.4vw;
   }
 
   .guaranty__content {
@@ -4957,33 +4842,12 @@ input {
     height: 74.6666666667vw;
   }
 
-  .protection__text {
-    font-size: 4.8vw;
-  }
-
   .component {
     margin: 32vw 0vw 0vw 0vw;
   }
 
-  .component__title {
-    font-size: 6.4vw;
-  }
-
-  .component__text {
-    font-size: 3.7333333333vw;
-  }
-
   .quote {
     margin: 9.6vw 0vw 9.6vw 0vw;
-  }
-
-  .quote__text {
-    font-size: 3.2vw;
-  }
-
-  .quote:after,
-  .quote:before {
-    font-size: 13.8666666667vw;
   }
 
   .stages-slider__item {
@@ -4994,15 +4858,7 @@ input {
   }
 
   .stages-slider__title {
-    font-size: 4.8vw;
-  }
-
-  .stages-slider__title {
     margin: 5.3333333333vw 0vw 0vw 0vw;
-  }
-
-  .stages-slider__text {
-    font-size: 3.7333333333vw;
   }
 
   .stages-slider__text:not(:first-child) {
@@ -5016,22 +4872,6 @@ input {
     margin: 6.4vw 0vw 0vw 0vw;
   }
 
-  .stages-slider__link {
-    font-size: 3.7333333333vw;
-  }
-
-  .stages-slider__submit {
-    font-size: 3.7333333333vw;
-  }
-
-  .navbar-slider__btn {
-    font-size: 6.4vw;
-  }
-
-  .navbar-slider__title {
-    font-size: 6.4vw;
-  }
-
   .navbar-slider__btn {
     border-radius: 5.3333333333vw;
     padding: 1.6vw 5.3333333333vw;
@@ -5043,14 +4883,6 @@ input {
 
   .stages {
     margin: 40vw 0vw 0vw 0vw;
-  }
-
-  .stages__title {
-    font-size: 6.4vw;
-  }
-
-  .stages__carousel-counter {
-    font-size: 4.8vw;
   }
 
   .stages-carousel__item {
@@ -5067,18 +4899,6 @@ input {
     padding-left: 2.6666666667vw;
   }
 
-  .stages-card__title {
-    font-size: 6.4vw;
-  }
-
-  .stages-card__text {
-    font-size: 3.7333333333vw;
-  }
-
-  .stages-card__example-link {
-    font-size: 3.7333333333vw;
-  }
-
   .stages-card__submit {
     padding-top: 3.2vw;
     padding-right: 2.6666666667vw;
@@ -5091,10 +4911,6 @@ input {
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 2.6666666667vw;
-  }
-
-  .stepper__title {
-    font-size: 4.8vw;
   }
 
   .stepper__title {
@@ -5126,10 +4942,6 @@ input {
     padding-left: 4.8vw;
   }
 
-  .profile__subtitle {
-    font-size: 4.2666666667vw;
-  }
-
   .profile__footer {
     padding-top: 6.4vw;
     padding-right: 0vw;
@@ -5137,16 +4949,8 @@ input {
     padding-left: 0vw;
   }
 
-  .profile__title {
-    font-size: 6.4vw;
-  }
-
   .p-slider__img-wrapper {
     border-radius: 1.6vw;
-  }
-
-  .p-footer__text {
-    font-size: 4.8vw;
   }
 
   .p-footer__text {
@@ -5170,14 +4974,6 @@ input {
     padding-left: 4.8vw;
   }
 
-  .profile-nav__title {
-    font-size: 4.2666666667vw;
-  }
-
-  .accordion__item-title {
-    font-size: 2.6666666667vw;
-  }
-
   .accordion__item-title {
     margin: 0vw 0vw 0vw 4vw;
   }
@@ -5193,14 +4989,6 @@ input {
     margin: 0vw 0vw 1.6vw 3.2vw;
   }
 
-  .accordion__item-inner ol>li {
-    font-size: 2.6666666667vw;
-  }
-
-  .nav-hint__text {
-    font-size: 2.6666666667vw;
-  }
-
   .nav-hint__text {
     padding-top: 2.6666666667vw;
     padding-right: 2.6666666667vw;
@@ -5213,15 +5001,7 @@ input {
   }
 
   .audit__title {
-    font-size: 6.4vw;
-  }
-
-  .audit__title {
     margin: 0vw 0vw 5.8666666667vw 0vw;
-  }
-
-  .audit__desc {
-    font-size: 3.7333333333vw;
   }
 
   .audit__desc {
@@ -5240,14 +5020,6 @@ input {
 
   .audit__submit {
     margin: 0vw 0vw 0vw 5.3333333333vw;
-  }
-
-  .audit__btn {
-    font-size: 3.7333333333vw;
-  }
-
-  .audit__subtitle {
-    font-size: 4.8vw;
   }
 
   .audit__subtitle {
@@ -5272,26 +5044,6 @@ input {
     margin: 6.1333333333vw 0vw 0vw 0vw;
   }
 
-  .audit__instruction-title {
-    font-size: 4.8vw;
-  }
-
-  .audit__instruction-text {
-    font-size: 3.7333333333vw;
-  }
-
-  .audit-cart__title {
-    font-size: 4.8vw;
-  }
-
-  .audit-cart__text {
-    font-size: 3.2vw;
-  }
-
-  .audit-cart__link {
-    font-size: 3.7333333333vw;
-  }
-
   .audit-cart__link {
     padding-top: 1.6vw;
     padding-right: 1.6vw;
@@ -5301,10 +5053,6 @@ input {
 
   .audit-form__input-wrapper:not(:first-child) {
     margin: 3.2vw 0vw 0vw 0vw;
-  }
-
-  .audit-form__btn {
-    font-size: 3.7333333333vw;
   }
 
   .uploader__text {
@@ -5327,10 +5075,6 @@ input {
   }
 
   .file-cards__title {
-    font-size: 3.2vw;
-  }
-
-  .file-cards__title {
     padding-top: 0vw;
     padding-right: 3.2vw;
     padding-bottom: 0vw;
@@ -5339,14 +5083,6 @@ input {
 
   .team {
     margin: 42.6666666667vw 0vw 0vw 0vw;
-  }
-
-  .team__title {
-    font-size: 6.4vw;
-  }
-
-  .team__about {
-    font-size: 3.7333333333vw;
   }
 
   .team__about {
@@ -5371,14 +5107,6 @@ input {
     padding-left: 4.8vw;
   }
 
-  .tabs-team__tab {
-    font-size: 3.7333333333vw;
-  }
-
-  .tabs-team__tab span {
-    font-size: 3.7333333333vw;
-  }
-
   .tabs-team__inner {
     padding-top: 3.2vw;
     padding-right: 3.2vw;
@@ -5390,23 +5118,11 @@ input {
     height: 21.3333333333vw;
   }
 
-  .team-card__title {
-    font-size: 3.7333333333vw;
-  }
-
-  .team-card__subtitle {
-    font-size: 3.7333333333vw;
-  }
-
   .team-card__body {
     padding-top: 3.2vw;
     padding-right: 3.2vw;
     padding-bottom: 9.6vw;
     padding-left: 3.2vw;
-  }
-
-  .team-card__text {
-    font-size: 3.7333333333vw;
   }
 
   .team-card__text:not(:first-child) {
@@ -5427,10 +5143,6 @@ input {
     padding-left: 0vw;
   }
 
-  .foreign__footer-title {
-    font-size: 6.4vw;
-  }
-
   .foreign__footer {
     margin-top: 42.6666666667vw;
   }
@@ -5440,14 +5152,6 @@ input {
     padding-right: 10.1333333333vw;
     padding-bottom: 3.7333333333vw;
     padding-left: 6.4vw;
-  }
-
-  .card-txt__title {
-    font-size: 9.6vw;
-  }
-
-  .card-txt__text {
-    font-size: 3.7333333333vw;
   }
 
   .card-txt+.card-txt {
@@ -5465,16 +5169,8 @@ input {
     margin: 3.2vw 0vw 0vw 0vw;
   }
 
-  .card-profile__title {
-    font-size: 3.7333333333vw;
-  }
-
   .card-profile__option {
     margin: 3.2vw 0vw 0vw 0vw;
-  }
-
-  .card-profile__option {
-    font-size: 3.2vw;
   }
 
   .card-profile__option {
@@ -5495,27 +5191,11 @@ input {
     padding-left: 4.8vw;
   }
 
-  .card-profile__country {
-    font-size: 3.2vw;
-  }
-
-  .card-profile__btn {
-    font-size: 3.7333333333vw;
-  }
-
   .card-profile__btn {
     padding-top: 1.0666666667vw;
     padding-right: 2.6666666667vw;
     padding-bottom: 1.0666666667vw;
     padding-left: 2.6666666667vw;
-  }
-
-  .card-rating__title {
-    font-size: 9.6vw;
-  }
-
-  .card-rating__text {
-    font-size: 3.7333333333vw;
   }
 
   .card-rating__text {
@@ -5524,14 +5204,6 @@ input {
 
   .reviews {
     margin: 21.3333333333vw 0vw 0vw 0vw;
-  }
-
-  .reviews__subtitle {
-    font-size: 6.4vw;
-  }
-
-  .reviews__title {
-    font-size: 9.6vw;
   }
 
   .reviews__inner {
@@ -5556,35 +5228,11 @@ input {
     padding-left: 4.8vw;
   }
 
-  .review-card__name {
-    font-size: 3.7333333333vw;
-  }
-
-  .review-card__degree {
-    font-size: 3.2vw;
-  }
-
-  .review-card__profile-link {
-    font-size: 3.2vw;
-  }
-
   .review-card__item {
     padding-top: 1.6vw;
     padding-right: 0.5333333333vw;
     padding-bottom: 1.6vw;
     padding-left: 0.5333333333vw;
-  }
-
-  .review-card__counter {
-    font-size: 9.6vw;
-  }
-
-  .review-card__index {
-    font-size: 2.4vw;
-  }
-
-  .reviews-carousel__title {
-    font-size: 3.7333333333vw;
   }
 
   .reviews-carousel__title {
@@ -5608,27 +5256,11 @@ input {
     padding-left: 2.6666666667vw;
   }
 
-  .review__name {
-    font-size: 4.8vw;
-  }
-
-  .review__post {
-    font-size: 4.8vw;
-  }
-
-  .review__text {
-    font-size: 3.7333333333vw;
-  }
-
   .review__text:not(:first-child) {
     padding-top: 5.3333333333vw;
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 0vw;
-  }
-
-  .review__profile-link {
-    font-size: 3.7333333333vw;
   }
 
   .review__profile-link {
@@ -5642,20 +5274,8 @@ input {
     margin: 8.5333333333vw 0vw 0vw 0vw;
   }
 
-  .geography__title {
-    font-size: 3.7333333333vw;
-  }
-
   .faq {
     margin: 21.3333333333vw 0vw 0vw 0vw;
-  }
-
-  .faq__title {
-    font-size: 6.4vw;
-  }
-
-  .your-question__description {
-    font-size: 3.2vw;
   }
 
   .your-question__description {
@@ -5699,10 +5319,6 @@ input {
     padding-left: 0vw;
   }
 
-  .footer__about-text {
-    font-size: 3.2vw;
-  }
-
   .footer__about-text:not(:first-child) {
     padding-top: 4.8vw;
     padding-right: 0vw;
@@ -5710,28 +5326,12 @@ input {
     padding-left: 0vw;
   }
 
-  .contact-us__tel {
-    font-size: 3.2vw;
-  }
-
-  .contact-us__address {
-    font-size: 3.2vw;
-  }
-
   .pop-up__labels {
     padding: 0vw 3.2vw 3.2vw 3.2vw;
   }
 
-  .pop-up__labels {
-    font-size: 2.6666666667vw;
-  }
-
-  .pop-up__label {
-    font-size: 3.7333333333vw;
-  }
-
   .pop-up__logo {
-    height: 42.6666666667vw;
+    height: 21.3333333333vw;
   }
 
   .pop-up__inner {
@@ -5741,22 +5341,6 @@ input {
     padding-left: 3.2vw;
   }
 
-  .pop-up__desc {
-    font-size: 3.7333333333vw;
-  }
-
-  .pop-up__desc {
-    margin: 1.3333333333vw 0vw 0vw 0vw;
-  }
-
-  .pop-up__input {
-    margin: 2.1333333333vw 0vw 0vw 0vw;
-  }
-
-  .pop-up__input {
-    font-size: 3.2vw;
-  }
-
   .pop-up__input {
     padding-top: 2.6666666667vw;
     padding-right: 4.2666666667vw;
@@ -5769,26 +5353,6 @@ input {
     padding-right: 4.2666666667vw;
     padding-bottom: 2.6666666667vw;
     padding-left: 4.2666666667vw;
-  }
-
-  .pop-up__button {
-    margin: 2.1333333333vw 0vw 0vw 0vw;
-  }
-
-  .pop-up__button {
-    font-size: 3.7333333333vw;
-  }
-
-  .pop-up__super-desc {
-    font-size: 2.1333333333vw;
-  }
-
-  .pop-up__super-desc--finish {
-    font-size: 3.7333333333vw;
-  }
-
-  .pop-up__title {
-    font-size: 3.7333333333vw;
   }
 
   .pop-up__title {
@@ -5796,15 +5360,7 @@ input {
   }
 
   .pop-up__video {
-    margin: 34.1333333333vw 0vw 17.3333333333vw 0vw;
-  }
-
-  .pop-up__file {
-    margin: 10.6666666667vw 0vw 0vw 0vw;
-  }
-
-  .popup-2__promo {
-    font-size: 6.4vw;
+    margin: 24vw 0vw 11.2vw 0vw;
   }
 
   .popup-2__promo {
@@ -5812,14 +5368,6 @@ input {
     padding-right: 6.4vw;
     padding-bottom: 6.4vw;
     padding-left: 6.4vw;
-  }
-
-  .popup-2__description {
-    font-size: 3.7333333333vw;
-  }
-
-  .popup-3__promo {
-    font-size: 6.4vw;
   }
 
   .popup-3__promo {
@@ -5845,23 +5393,15 @@ input {
     padding-left: 3.2vw;
   }
 
-  .p-uploader__text {
-    font-size: 3.7333333333vw;
-  }
-
   .card-file {
-    padding-top: 6.4vw;
+    padding-top: 4.8vw;
     padding-right: 1.0666666667vw;
-    padding-bottom: 6.4vw;
+    padding-bottom: 4.8vw;
     padding-left: 1.0666666667vw;
   }
 
   .card-file__title {
-    font-size: 3.2vw;
-  }
-
-  .card-file__title {
-    padding-top: 4.2666666667vw;
+    padding-top: 3.2vw;
     padding-right: 3.2vw;
     padding-bottom: 0vw;
     padding-left: 3.2vw;
@@ -5874,10 +5414,6 @@ input {
     padding-left: 13.3333333333vw;
   }
 
-  .pdf-download__title {
-    font-size: 3.7333333333vw;
-  }
-
   .pdf-download__img {
     padding-top: 0vw;
     padding-right: 3.2vw;
@@ -5886,11 +5422,7 @@ input {
   }
 
   .selector__title {
-    margin: 4vw 0vw 0vw 0vw;
-  }
-
-  .selector__title {
-    font-size: 3.7333333333vw;
+    margin: 3.2vw 0vw 0vw 0vw;
   }
 
   .selector__title {
@@ -5900,35 +5432,11 @@ input {
     padding-left: 3.2vw;
   }
 
-  .selector__label {
-    font-size: 3.7333333333vw;
-  }
-
   .parea__title {
-    font-size: 3.7333333333vw;
-  }
-
-  .parea__title {
-    padding-top: 4.8vw;
+    padding-top: 6.9333333333vw;
     padding-right: 4.8vw;
     padding-bottom: 4.8vw;
     padding-left: 4.8vw;
-  }
-
-  .parea__subtitle {
-    font-size: 4.8vw;
-  }
-
-  .parea__text {
-    font-size: 3.7333333333vw;
-  }
-
-  .parea__text {
-    margin: 9.3333333333vw 0vw 0vw 0vw;
-  }
-
-  .parea__btn {
-    font-size: 3.7333333333vw;
   }
 
   .parea__btn {
@@ -5938,32 +5446,12 @@ input {
     padding-left: 2.6666666667vw;
   }
 
-  .parea__btn {
-    margin: 9.3333333333vw 0vw 0vw 0vw;
-  }
-
   .cover__footer {
     margin: 0vw 0vw 5.3333333333vw 0vw;
   }
 
-  .cover__subtitle {
-    font-size: 6.4vw;
-  }
-
-  .cover__text {
-    font-size: 6.4vw;
-  }
-
-  .folder__title {
-    font-size: 4.8vw;
-  }
-
   .folder__title {
     margin: 3.2vw 0vw 0vw 0vw;
-  }
-
-  .logos__title {
-    font-size: 3.7333333333vw;
   }
 
   .logos__title {
@@ -6037,31 +5525,11 @@ input {
     margin: 5.3333333333vw 0vw 0vw 0vw;
   }
 
-  .review-card__name {
-    font-size: 4.8vw;
-  }
-
-  .review-card__degree {
-    font-size: 4.2666666667vw;
-  }
-
-  .review-card__profile-link {
-    font-size: 4.2666666667vw;
-  }
-
   .review-card__item {
     padding-top: 3.2vw;
     padding-right: 0.5333333333vw;
     padding-bottom: 3.2vw;
     padding-left: 0.5333333333vw;
-  }
-
-  .review-card__index {
-    font-size: 3.7333333333vw;
-  }
-
-  .review__text {
-    font-size: 4.2666666667vw;
   }
 }
 
@@ -6125,5 +5593,11 @@ input {
     opacity: 1;
     overflow: visible;
     transform: translateY(-50%) translateX(0px);
+  }
+}
+
+@media (max-height:521px) {
+  .card-file {
+    display: none;
   }
 }

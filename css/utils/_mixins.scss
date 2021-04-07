@@ -21,10 +21,6 @@
 
 @mixin font-size($f-size: 12px,) {
   font-size: $f-size;
-
-  @media (min-width: $bp-xxl-375) {
-    font-size: #{get-vw($f-size, $bp-xxl-375)};
-  }
 }
 
 %s-border {
@@ -94,6 +90,12 @@
 
 @mixin _more-than($resolution: 180px) {
   @media (min-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin _less-than-height($resolution: 180px) {
+  @media (max-height: $resolution) {
     @content;
   }
 }

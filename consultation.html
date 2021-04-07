@@ -8,7 +8,7 @@
             Сервис подготовки и продвижения научных статей в проверенные журналы из баз
             данных Scopus и Web of Science
         </p>
-        <button class="button consultation__btn" data-show-popup="21"
+        <button class="button consultation__btn" data-show-popup="1"
                 data-step="1"
                 data-formsended="find_cost_">
             Узнать стоимость
@@ -40,8 +40,9 @@
     </div>
 
     <div class="pop-up__main">
-        <div class="pop-up__inner pop-up__inner--narrow">
-            <div class="pop-up__narrow">
+        <div class="pop-up__inner">
+
+            <div class="pop-up__group">
                 <h3 class="pop-up__title">
                     Необходима публикация<br>
                     в Scopus/Web of Science?
@@ -51,47 +52,47 @@
                     Мы перезвоним Вам,<br>
                     чтобы подобрать лучшее решение
                 </p>
+            </div>
 
-                <form novalidate id="activate_promo_code_" name="activate_promo_code_"
-                      action="/"
-                      enctype="multipart/form-data">
-                    <div class="pop-up__inputs">
-                        <div class="input-wrapper">
-                            <input name="name" type="text" class="pop-up__input"
-                                   placeholder="ФИО" required/>
-                            <span class="input-wrapper__error"></span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <input name="email" type="email" class="pop-up__input"
-                                   placeholder="Email"
-                                   pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                   required/>
-                            <span class="input-wrapper__error"></span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <input name="coupon" class="pop-up__input"
-                                   placeholder="Промокод" required/>
-                            <span class="input-wrapper__error"></span>
-                        </div>
+            <form novalidate id="activate_promo_code_" name="activate_promo_code_"
+                  action="/"
+                  enctype="multipart/form-data">
+                <div class="pop-up__inputs">
+                    <div class="input-wrapper">
+                        <input name="name" type="text" class="pop-up__input"
+                               placeholder="ФИО" required/>
+                        <span class="input-wrapper__error"></span>
                     </div>
 
-                    <button type="submit" class="pop-up__button" data-show-popup="2"
-                            data-step="2">
-                        Перейти к обсуждению
-                    </button>
-                </form>
+                    <div class="input-wrapper">
+                        <input name="email" type="email" class="pop-up__input"
+                               placeholder="Email"
+                               pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                               required/>
+                        <span class="input-wrapper__error"></span>
+                    </div>
 
-                <p class="pop-up__super-desc">
-                    Нажимая на кнопку, вы даете согласие на обработку своих
-                    персональных данных и соглашаетесь с
-                    <button class="pop-up__super-desc pop-up__super-desc--link"
-                            data-show-popup="500">
-                        Политикой конфиденциальности
-                    </button>
-                </p>
-            </div>
+                    <div class="input-wrapper">
+                        <input name="coupon" class="pop-up__input"
+                               placeholder="Промокод" required/>
+                        <span class="input-wrapper__error"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="pop-up__button" data-show-popup="2"
+                        data-step="2">
+                    Перейти к обсуждению
+                </button>
+            </form>
+
+            <p class="pop-up__super-desc">
+                Нажимая на кнопку, вы даете согласие на обработку своих
+                персональных данных и соглашаетесь с
+                <button class="pop-up__super-desc pop-up__super-desc--link"
+                        data-show-popup="500">
+                    Политикой конфиденциальности
+                </button>
+            </p>
         </div>
     </div>
 
@@ -167,7 +168,7 @@
 <!--ФИО, Тел.-->
 
 <section id="popup-2" class="pop-up">
-    <div class="pop-up__main">
+    <div class="pop-up__main pop-up__main--full">
         <div class="pop-up__inner popup-2">
             <div class="pop-up__header">
                 <h3 class="parea__title">
@@ -177,26 +178,28 @@
             </div>
 
             <div class="card-file">
-                <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
+                <img class="card-file__img" src="./media/pdf_img.svg"
+                     alt="pdf_img">
                 <span class="card-file__title">
                             Статья<br>
                             “Финансовая безопасность
                             при публикации научных статей”
                         </span>
-                </a>
             </div>
 
             <div class="pop-up__file">
 
-                <p class="popup-2__description">
-                    Узнайте, как обезопасить себя от финансовых потерь при публикации
-                    научной статьи.
-                </p>
+                <div class="pop-up__group">
+                    <p class="popup-2__description">
+                        Узнайте, как обезопасить себя от финансовых потерь при публикации
+                        научной статьи.
+                    </p>
 
-                <p class="pop-up__desc">
-                    Укажите,пожалуйста, контактный номер телефона с WhatsApp,
-                    статья поступит в течение 15 минут.
-                </p>
+                    <p class="pop-up__desc">
+                        Укажите,пожалуйста, контактный номер телефона с WhatsApp,
+                        статья поступит в течение 15 минут.
+                    </p>
+                </div>
 
                 <div class="popup-2__form">
                     <form novalidate name="2" action="/">
