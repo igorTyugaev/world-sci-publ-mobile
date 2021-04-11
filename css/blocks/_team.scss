@@ -43,6 +43,9 @@
     width: 100%;
     @include padding(10px, 10px, 10px, 10px);
     height: 676px;
+    @include _more-than($bp-xxl-375) {
+      height: #{get-vw(676px, $bp-xxl-375)};
+    }
   }
 
   &__inner {
@@ -50,7 +53,7 @@
   }
 
   .flickity-page-dots {
-    bottom: 15px;
+    bottom: 3vh;
   }
 
   .flickity-page-dots .dot {

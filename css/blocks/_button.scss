@@ -43,10 +43,11 @@
   }
 
   &--contract {
+    width: 80%;
     background: $textColorSecondary;
     color: $textColorPrimary;
     @extend %btn-white;
-    @include font-size(18px);
+    @include font-size(16px);
     @include padding(16px, 16px, 16px, 16px);
     line-height: 116.666667%;
     border-radius: 6px;
@@ -79,6 +80,7 @@
 
   &--upload {
     font-size: 12px;
+    @include padding(12px, 24px, 12px, 24px);
   }
 }
 
@@ -100,9 +102,7 @@
   background: $textColorSecondary;
   color: $textColorPrimary;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
+  font-family: $fontFamilySecondary;
   line-height: 100%;
   text-align: center;
 

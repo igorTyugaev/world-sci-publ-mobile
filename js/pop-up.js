@@ -5,101 +5,105 @@ function initPopUp(button) {
     const numberPopUp = button.dataset.showPopup;
     const idPopUp = 'popup-' + numberPopUp;
     const _popUp = document.getElementById(idPopUp);
-    const _closeButton = _popUp.querySelector('.pop-up__close');
-    const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 
-    if (_closeBtn) {
-        _closeBtn.addEventListener('click', () => {
-            closePopUp(_popUp, duration);
-        });
-    }
+    if (_popUp) {
+        const _closeButton = _popUp.querySelector('.pop-up__close');
+        const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 
-    function showPopUpLogic(email) {
-        const _fileInput = _popUp.querySelector('.p-uploader--active');
-        if (_fileInput) {
-            _fileInput.classList.remove('p-uploader--active');
-            const _label = _fileInput.querySelector('.p-uploader__text');
-            const _img = _fileInput.querySelector('.p-uploader__img');
-
-            _label.removeAttribute('style');
-            _img.src = "./media/folder/folder.svg";
-            _label.innerHTML = "Загрузить статью (.pdf .doc .docx)";
+        if (_closeBtn) {
+            _closeBtn.addEventListener('click', () => {
+                closePopUp(_popUp, duration);
+            });
         }
 
-        const _selector = _popUp.querySelector('.selector');
-        if (_selector) {
-            const _selectorTitle = _selector.querySelector('.selector__title');
-            _selector.setAttribute('data-state', 'Option 0');
-            _selector.removeAttribute('style');
+        function showPopUpLogic(email) {
+            const _fileInput = _popUp.querySelector('.p-uploader--active');
+            if (_fileInput) {
+                _fileInput.classList.remove('p-uploader--active');
+                const _label = _fileInput.querySelector('.p-uploader__text');
+                const _img = _fileInput.querySelector('.p-uploader__img');
 
-            const _radio = _selector.querySelector('input[type=radio]:checked')
-            if (_radio) _radio.checked = false;
-
-            _selectorTitle.classList.remove("selector__title--show");
-            _selectorTitle.textContent = "Выберите базу (Scopus/WoS)";
-        }
-
-        const _email = _popUp.querySelector('.parea__email');
-        if (_email) {
-            const email = localStorage.getItem('email');
-            if (email != null) {
-                _email.innerHTML = email;
-                localStorage.removeItem('email');
+                _label.removeAttribute('style');
+                _img.src = "./media/folder/folder.svg";
+                _label.innerHTML = "Загрузить статью (.pdf .doc .docx)";
             }
-        }
 
-        if (currentShowPopUp == 0) {
-            openPopUp(_popUp, duration);
-            currentShowPopUp = idPopUp;
-        } else {
-            closePopUpById(currentShowPopUp, false);
-            openPopUp(_popUp, false);
-            currentShowPopUp = idPopUp;
-        }
-    }
+            const _selector = _popUp.querySelector('.selector');
+            if (_selector) {
+                const _selectorTitle = _selector.querySelector('.selector__title');
+                _selector.setAttribute('data-state', 'Option 0');
+                _selector.removeAttribute('style');
 
-    button.addEventListener('click', (e) => {
-        const _currentBtn = e.target;
-        let goal = null;
+                const _radio = _selector.querySelector('input[type=radio]:checked')
+                if (_radio) _radio.checked = false;
 
-        if (_currentBtn.hasAttribute('data-formsended')) {
-            /* Считываем название цели */
-            const formSender = _currentBtn.getAttribute('data-formsended');
+                _selectorTitle.classList.remove("selector__title--show");
+                _selectorTitle.textContent = "Выберите базу (Scopus/WoS)";
+            }
 
-            if (_currentBtn.hasAttribute('data-show-popup')) {
-                /* Получаем доступ к открываемому popup-у */
-                const id = 'popup-' + e.target.getAttribute('data-show-popup');
-                const popUp = document.getElementById(id);
-
-                /* Меняем значение formsended для кнопки открытия след. попапа */
-                const _btn = popUp.querySelector('[data-show-popup]');
-                if (_btn) _btn.setAttribute('data-formsended', formSender);
-
-                if (_currentBtn.hasAttribute('data-step')) {
-                    const step = _currentBtn.getAttribute('data-step');
-                    goal = formSender + step;
-                    /* Меняем значение formsended у формы */
-                    const _form = popUp.querySelector('form');
-                    if (_form) _form.setAttribute('name', formSender);
+            const _email = _popUp.querySelector('.parea__email');
+            if (_email) {
+                const email = localStorage.getItem('email');
+                if (email != null) {
+                    _email.innerHTML = email;
+                    localStorage.removeItem('email');
                 }
             }
-        }
 
-        // Отправка цели для случаев где нет формы
-        if (button.getAttribute('type') !== 'submit') {
-            showPopUpLogic();
-
-            if (goal) {
-                triggerGoal(goal)
+            if (currentShowPopUp == 0) {
+                openPopUp(_popUp, duration);
+                currentShowPopUp = idPopUp;
+            } else {
+                closePopUpById(currentShowPopUp, false);
+                openPopUp(_popUp, false);
+                currentShowPopUp = idPopUp;
             }
         }
-    });
 
-    _closeButton.addEventListener('click', () => {
-        closePopUp(_popUp, duration);
-    });
+        button.addEventListener('click', (e) => {
+            const _currentBtn = e.target;
+            let goal = null;
 
-    return showPopUpLogic;
+            if (_currentBtn.hasAttribute('data-formsended')) {
+                /* Считываем название цели */
+                const formSender = _currentBtn.getAttribute('data-formsended');
+
+                if (_currentBtn.hasAttribute('data-show-popup')) {
+                    /* Получаем доступ к открываемому popup-у */
+                    const id = 'popup-' + e.target.getAttribute('data-show-popup');
+                    const popUp = document.getElementById(id);
+
+                    /* Меняем значение formsended для кнопки открытия след. попапа */
+                    const _btn = popUp.querySelector('[data-show-popup]');
+                    if (_btn) _btn.setAttribute('data-formsended', formSender);
+
+                    if (_currentBtn.hasAttribute('data-step')) {
+                        const step = _currentBtn.getAttribute('data-step');
+                        goal = formSender + step;
+                        /* Меняем значение formsended у формы */
+                        const _form = popUp.querySelector('form');
+                        if (_form) _form.setAttribute('name', formSender);
+                    }
+                }
+            }
+
+            // Отправка цели для случаев где нет формы
+            if (button.getAttribute('type') !== 'submit') {
+                showPopUpLogic();
+
+                if (goal) {
+                    triggerGoal(goal)
+                }
+            }
+        });
+
+        _closeButton.addEventListener('click', () => {
+            closePopUp(_popUp, duration);
+        });
+
+        return showPopUpLogic;
+    } else
+        return null;
 }
 
 function triggerGoal(formName) {
@@ -229,8 +233,7 @@ buttons.forEach((button) => {
 
             popups.set('finished-2', initPopUp(button_copy));
             popups.set('finished-3', initPopUp(button_copy_2));
-        }
-        else
+        } else
             popups.set(idShowPopUp, initPopUp(button));
     }
 });

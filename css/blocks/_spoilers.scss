@@ -64,7 +64,7 @@
       font-family: monospace;
       font-weight: bold;
       color: #C4C4C4;
-      font-size: 20px;
+      @include font-size(20px);
     }
   }
 

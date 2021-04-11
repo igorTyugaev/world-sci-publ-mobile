@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <base href="/landing/">
+    <base href="/landing_mobile/">
+    <link rel="preload" href="./fonts/HelveticaRegular/HelveticaRegular.woff" as="font"
+          type="font/woff"
+          crossorigin="anonymous">
+    <link rel="preload" href="./fonts/HelveticaBold/HelveticaBold.woff" as="font"
+          type="font/woff"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link href="./media/incons/favicon.ico" rel="shortcut icon">
@@ -241,7 +247,7 @@
 
     <!--    @import "component.html"-->
 
-    <!--    @import "stages.html"-->
+    @import "stages.html"
 
     <!--    @import "profile.html"-->
 
@@ -262,9 +268,11 @@
     <!--    @import "faq.html"-->
 
     <!--    @import "footer.html"-->
+
 </main>
 
 <!--@import "pop-up.html"-->
+
 
 <noscript>
     <img src="https://vk.com/rtrg?p=VK-RTRG-837729-8F4Pd"
@@ -294,7 +302,10 @@
 </script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js"></script>
-<script src="./js/flickity.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"
+        integrity="sha512-cA8gcgtYJ+JYqUe+j2JXl6J3jbamcMQfPe0JOmQGDescd+zqXwwgneDzniOd3k8PcO7EtTW6jA7L4Bhx03SXoA=="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
 
 <script src="./js/selector.js"></script>
 <script src="./js/pop-up.js"></script>
@@ -307,15 +318,15 @@
 <script src="./js/audit.js"></script>
 
 <script src="./js/profile.js"></script>
-<script src="./js/stages"></script>
+<!--<script src="./js/stages"></script>-->
 <script src="./js/team.js"></script>
 <script src="./js/faq.js"></script>
-<script src="./js/consultation.js"></script>
 <script src="./js/reviews.js"></script>
 <script src="./js/forms.js"></script>
 <script src="./js/quiz.js"></script>
 <script src="./js/dragDrop.js"></script>
 <script src="./js/file_upload.js"></script>
+<script src="./js/async_image.js"></script>
 
 <!-- Roistat -->
 <script>

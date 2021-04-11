@@ -16,9 +16,12 @@
 .advantages-carousel {
 
   height: 212px;
+  @include _more-than($bp-xxl-375) {
+    height: #{get-vw(212px, $bp-xxl-375)};
+  }
 
   .flickity-page-dots {
-    bottom: -15px;
+    bottom: -3vh;
   }
 
   .flickity-page-dots .dot {

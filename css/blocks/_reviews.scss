@@ -222,6 +222,7 @@
   }
 
   &__header {
+    width: 100%;
     background-color: $subtitleBackground;
   }
 
@@ -233,8 +234,7 @@
   }
 
   .flickity-page-dots {
-    bottom: 10px;
-    transform: translateX(-10px);
+    bottom: 4vh;
   }
 
   .flickity-page-dots .dot {
@@ -255,6 +255,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-self: flex-start;
     @include padding(10px, 10px, 10px, 10px);
   }
 
