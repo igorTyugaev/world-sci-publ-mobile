@@ -1333,7 +1333,6 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 664px;
   background: #FFFFFF;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
   border-radius: 6px;
@@ -4916,7 +4915,6 @@ input {
   }
 
   .quiz__inner {
-    height: 177.0666666667vw;
     border-radius: 1.6vw;
   }
 
@@ -5188,6 +5186,10 @@ input {
 
   .stages__carousel-counter {
     font-size: 4.8vw;
+  }
+
+  .stages-carousel__item {
+    height: 213.3333333333vw;
   }
 
   .stages-carousel__item {
