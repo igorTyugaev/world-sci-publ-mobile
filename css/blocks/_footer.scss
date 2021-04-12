@@ -94,8 +94,24 @@
     width: 15%;
   }
 
+  &__copy {
+    font-family: $fontFamilyPrimary;
+    @include font-size(9px);
+    @include margin(8px);
+    color: $textColorPrimary;
+    text-align: center;
+
+    @include _more-than(1220px) {
+      font-size: #{get-vw(10px, 1220px)};
+    }
+  }
+
   &__web {
     margin: 0.8vh auto;
+
+    @include _more-than(1220px) {
+      font-size: #{get-vw(12px, 1220px)};
+    }
   }
 
   &__img {
