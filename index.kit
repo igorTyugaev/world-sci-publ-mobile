@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <!--    <base href="/landing_mobile/">-->
+    <base href="/landing_mobile/">
     <link rel="preload" href="./fonts/HelveticaRegular/HelveticaRegular.woff" as="font"
           type="font/woff"
           crossorigin="anonymous">
@@ -247,7 +247,7 @@
 
     <!--    @import "component.html"-->
 
-    @import "stages.html"
+    <!--    @import "stages.html"-->
 
     <!--    @import "profile.html"-->
 
@@ -297,8 +297,10 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <script>
-    // var csrfToken = '<?=$_SESSION['csrf-token']?>';
-    var csrfToken = 228;
+    var csrfToken = '<?=$_SESSION['
+    csrf - token
+    ']?>';
+    // var csrfToken = 228;
 </script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js"></script>
@@ -318,7 +320,7 @@
 <script src="./js/audit.js"></script>
 
 <script src="./js/profile.js"></script>
-<!--<script src="./js/stages"></script>-->
+<script src="./js/stages"></script>
 <script src="./js/team.js"></script>
 <script src="./js/faq.js"></script>
 <script src="./js/reviews.js"></script>
