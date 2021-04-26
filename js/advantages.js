@@ -1,5 +1,5 @@
 (function () {
-    const _carousel = document.querySelector('.advantages-carousel');
+    const _carousel = document.querySelector('.profile-carousel');
     const flkty = new Flickity(_carousel, {
         // options
         cellAlign: 'left',

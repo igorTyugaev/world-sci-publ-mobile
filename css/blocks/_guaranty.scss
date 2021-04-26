@@ -17,10 +17,10 @@
 
 .guaranty-carousel {
   width: 100%;
-  overflow-x: hidden;
+
 
   &__item {
-    width: 100%;
+    width: 94%;
     height: 280px;
     @include _more-than($bp-xxl-375) {
       height: #{get-vw(280px, $bp-xxl-375)};
@@ -33,7 +33,7 @@
   }
 
   .flickity-page-dots {
-    bottom: 3vh;
+    bottom: -3vh;
   }
 
   .flickity-page-dots .dot {

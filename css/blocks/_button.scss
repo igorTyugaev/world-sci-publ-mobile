@@ -10,6 +10,7 @@
 
 
 .button {
+  font-family: $fontFamilySecondary;
   @extend %btn-green;
   box-shadow: 1px 1px 4px $colorShadow;
   border-radius: 24px;
@@ -80,7 +81,8 @@
 
   &--upload {
     font-size: 12px;
-    @include padding(12px, 24px, 12px, 24px);
+    @include padding(6px, 12px, 6px, 12px);
+    background: #001437;
   }
 }
 

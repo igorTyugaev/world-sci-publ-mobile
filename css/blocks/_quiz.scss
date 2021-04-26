@@ -1,5 +1,5 @@
 .quiz {
-  @include margin(100px);
+  @include margin(134px);
 
   &__title {
     font-family: $fontFamilySecondary;
@@ -11,7 +11,7 @@
     color: $textColorSecondary;
 
     @include font-size(14px);
-    @include padding(8px, 10px, 8px, 10px);
+    @include padding(8px, 20px, 8px, 10px);
   }
 
   &__main {
@@ -51,6 +51,11 @@
     width: 100%;
     position: relative;
     @include margin(24px);
+
+    height: 455px;
+    @include _more-than($bp-xxl-375) {
+      height: #{get-vw(455px, $bp-xxl-375)};
+    }
   }
 
   &__button-next {
@@ -64,6 +69,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 0px;
   }
 
   &__labels {

@@ -1,5 +1,5 @@
 .team {
-  @include margin(160px);
+  @include margin(134px);
 
   &__wrap {
     display: flex;
@@ -31,6 +31,10 @@
     transform: translate(5%, 0);
     height: 80%;
   }
+
+  &__footer {
+    margin-top: 42px;
+  }
 }
 
 .team-carousel {
@@ -40,8 +44,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    @include padding(10px, 10px, 10px, 10px);
+    width: 94%;
+    @include padding(10px, 5px, 10px, 5px);
     height: 676px;
     @include _more-than($bp-xxl-375) {
       height: #{get-vw(676px, $bp-xxl-375)};
@@ -53,7 +57,7 @@
   }
 
   .flickity-page-dots {
-    bottom: 3vh;
+    bottom: -3vh;
   }
 
   .flickity-page-dots .dot {
@@ -169,7 +173,7 @@
   border-radius: 3px;
 
   &__poster {
-    height: 40%;
+    height: 47.5%;
     overflow: hidden;
     border-radius: 3px;
   }

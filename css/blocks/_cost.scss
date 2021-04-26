@@ -15,7 +15,7 @@
     flex-direction: row;
     width: 100%;
 
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 90px;
   }
 
@@ -27,15 +27,22 @@
   &__title {
     font-family: $fontFamilySecondary;
     @include font-size(18px);
+    padding-right: 15px;
+
+    @include _more-than($bp-xxl-375) {
+      padding-right: #{get-vw(15px, $bp-xxl-375)};
+    }
   }
 
   &__text {
     @include font-size(14px);
     text-align: left;
-    margin-top: 38px;
+    margin-top: 27px;
+    padding-right: 15px;
 
     @include _more-than($bp-xxl-375) {
-      margin-top: #{get-vw(38px, $bp-xxl-375)};
+      margin-top: #{get-vw(27px, $bp-xxl-375)};
+      padding-right: #{get-vw(15px, $bp-xxl-375)};
     }
   }
 

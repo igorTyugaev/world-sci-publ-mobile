@@ -1,5 +1,5 @@
 .profile {
-  @include margin(80px);
+  @include margin(134px);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,15 @@
   }
 
   &__content {
+    width: 100%;
     @include margin(23px);
   }
 
   &__sign {
+    display: block;
     width: 80%;
-    margin: 18px auto;
+    margin: 0 auto;
+    margin-top: 6vh;
   }
 
   &__background {
@@ -51,6 +54,7 @@
     font-family: $fontFamilySecondary;
     color: #000000;
     @include font-size(24px);
+    @include padding(0px, 20px, 0px, 0px)
   }
 
   &__inner {
@@ -89,7 +93,6 @@
   }
 
   &__img {
-    display: none;
     object-fit: contain;
 
     &--show {
@@ -115,36 +118,39 @@
   }
 }
 
-.profile-nav {
+.profile-carousel {
   width: 100%;
-  @extend %s-border;
-  background-color: $popupBackground;
-  @include padding(10px, 10px, 10px, 10px);
 
-  &__header {
-    background: #191847;
-    @include padding(14px, 18px, 14px, 18px);
+  &__item {
+    width: 94%;
+    height: 186px;
+
+    @include _more-than($bp-xxl-375) {
+      height: #{get-vw(186px, $bp-xxl-375)};
+    }
+
+    @include padding(10px, 5px, 10px, 5px);
   }
 
-  &__title {
-    font-family: $fontFamilySecondary;
-    @include font-size(16px);
-    color: #FFFEFE;
+  &__inner {
+    height: 100%;
   }
 
-  &__body {
-    //@include padding(12px, 18px, 6px, 18px);
+  .flickity-page-dots {
+    bottom: -3vh;
   }
 
-  &__hint {
-    margin-left: 2vw;
+  .flickity-page-dots .dot {
+    width: 8px;
+    height: 8px;
+    opacity: .3;
+    background: #C4C4C4;
   }
 
-  &__main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .flickity-page-dots .dot.is-selected {
+    opacity: 1;
   }
+
 }
 
 .accordion {

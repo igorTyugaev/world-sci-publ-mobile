@@ -41,16 +41,16 @@
 }
 
 .stages-carousel {
-  position: relative;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &__item {
+    //position: relative;
     width: 100%;
-    height: 800px;
+    height: 740px;
 
     @include _more-than($bp-xxl-375) {
-      height: #{get-vw(800px, $bp-xxl-375)};
+      height: #{get-vw(740px, $bp-xxl-375)};
     }
 
     @include padding(10px, 10px, 10px, 10px);
@@ -67,7 +67,7 @@
   }
 
   .flickity-page-dots {
-    bottom: 3vh;
+    bottom: -3vh;
   }
 
   .flickity-page-dots .dot {
