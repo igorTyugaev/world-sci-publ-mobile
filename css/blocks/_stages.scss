@@ -4,7 +4,7 @@
   @include margin(150px);
 
   &__header {
-
+    margin-bottom: 6vh;
   }
 
   &__title {
@@ -42,16 +42,15 @@
 
 .stages-carousel {
   width: 100%;
-  overflow: hidden;
+  height: 740px;
+  @include _more-than($bp-xxl-375) {
+    height: #{get-vw(740px, $bp-xxl-375)};
+  }
+
 
   &__item {
-    //position: relative;
     width: 100%;
-    height: 740px;
-
-    @include _more-than($bp-xxl-375) {
-      height: #{get-vw(740px, $bp-xxl-375)};
-    }
+    height: 100%;
 
     @include padding(10px, 10px, 10px, 10px);
   }

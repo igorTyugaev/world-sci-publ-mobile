@@ -138,6 +138,7 @@
   }
 
   &__stars {
+    width: 50%;
 
     &-img {
       display: block;
@@ -214,17 +215,17 @@
 
 .foreign-carousel {
   width: 100%;
+  height: 280px;
+  @include _more-than($bp-xxl-375) {
+    height: #{get-vw(280px, $bp-xxl-375)};
+  }
 
   &__item {
     width: 100%;
-    height: 400px;
+    height: 100%;
 
-    @include _more-than($bp-xxl-375) {
-      height: #{get-vw(400px, $bp-xxl-375)};
-    }
     @include padding(10px, 5px, 10px, 5px);
   }
-
 
   &__inner {
     padding: 5px;

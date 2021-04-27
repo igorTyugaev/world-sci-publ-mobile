@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <base href="/landing_mobile/">
+<!--    <base href="/landing_mobile/">-->
     <link rel="preload" href="./fonts/HelveticaRegular/HelveticaRegular.woff" as="font"
           type="font/woff"
           crossorigin="anonymous">
@@ -359,7 +359,7 @@
 
                     <div class="input-wrapper">
                         <input name="email" type="email" class="pop-up__input"
-                               placeholder="Email"
+                               placeholder="Email куда направить результат"
                                pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                required/>
                         <span class="input-wrapper__error"></span>
@@ -435,7 +435,7 @@
 
                     <div class="input-wrapper">
                         <input name="email" type="email" class="pop-up__input"
-                               placeholder="Email"
+                               placeholder="Email куда направить результат"
                                pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                required/>
                         <span class="input-wrapper__error"></span>
@@ -608,7 +608,7 @@
 
                     <div class="input-wrapper">
                         <input name="email" type="email" class="pop-up__input"
-                               placeholder="Email"
+                               placeholder="Email куда направить результат"
                                pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                required/>
                         <span class="input-wrapper__error"></span>
@@ -865,7 +865,7 @@
         </h3>
         <form novalidate name="promo" class="app-form__inner">
             <div class="input-wrapper">
-                <input name="email" type="email" class="app-form__input" placeholder="Email"
+                <input name="email" type="email" class="app-form__input" placeholder="Email куда направить результат"
                        pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                        required/>
                 <span class="input-wrapper__error"></span>
@@ -1037,7 +1037,7 @@
 
                     <div class="input-wrapper">
                         <input name="email" type="email" class="pop-up__input"
-                               placeholder="Email"
+                               placeholder="Email куда направить результат"
                                pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                required/>
                         <span class="input-wrapper__error"></span>
@@ -1174,7 +1174,7 @@
             <form novalidate name="guaranty" action="/" class="app-form__inner">
                 <div class="input-wrapper">
                     <input name="email" type="email" class="app-form__input"
-                           placeholder="Email"
+                           placeholder="Email куда направить результат"
                            pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                            required/>
                     <span class="input-wrapper__error"></span>
@@ -1317,6 +1317,12 @@
         </h2>
     </div>
 
+    <div class="profile__subheader">
+        <h3 class="profile__subtitle">
+            Этапы публикации:
+        </h3>
+    </div>
+
     <div class="stages__carousel">
         <h4 class="stages__carousel-counter">3/11</h4>
         <div class="stages-carousel">
@@ -1368,7 +1374,6 @@
                             data-formsended="step_1_1_" data-step="1">
                         Отправить заявку на публикацию
                     </button>
-
                 </div>
             </div>
             <!--                        Договор о сотрудничестве с World Sci Publ-->
@@ -2070,7 +2075,7 @@
 
                     <div class="input-wrapper">
                         <input name="email" type="email" class="pop-up__input"
-                               placeholder="Email"
+                               placeholder="Email куда направить результат"
                                pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                required/>
                         <span class="input-wrapper__error"></span>
@@ -2232,7 +2237,7 @@
 
                         <div class="input-wrapper">
                             <input name="email" type="email" class="pop-up__input"
-                                   placeholder="Email"
+                                   placeholder="Email куда направить результат"
                                    pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                    required/>
                             <span class="input-wrapper__error"></span>
@@ -2265,8 +2270,8 @@
 <!--ФИО, Тел.-->
 <section class="profile" id="profile">
 
-    <div class="profile__wrap container">
-        <div class="profile__header">
+    <div class="profile__wrap">
+        <div class="profile__header container">
             <h2 class="profile__title">
                 Личный кабинет позволяет отслеживать
                 процесс публикации на всех этапах работы
@@ -2579,28 +2584,6 @@
         <div class="foreign__carousel foreign-carousel">
 
             <div class="foreign-carousel__item">
-                <div class="foreign-carousel__inner">
-                    <div class="foreign__column">
-
-                        <div class="foreign__card card-txt">
-                            <h3 class="card-txt__title">89</h3>
-                            <p class="card-txt__text">
-                                Экспертов по <br> социо-гуманитарным наукам
-                            </p>
-                        </div>
-
-                        <div class="foreign__card card-txt">
-                            <h3 class="card-txt__title">51</h3>
-                            <p class="card-txt__text">
-                                Экспертов по <br> медико-биологическим наукам
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="foreign-carousel__item">
                 <div class="foreign-carousel__inner foreign-carousel__inner--half">
                     <div class="foreign__column foreign__column--half">
                         <div class="foreign__card card-profile">
@@ -2674,6 +2657,28 @@
             <div class="foreign-carousel__item">
                 <div class="foreign-carousel__inner">
                     <div class="foreign__column">
+
+                        <div class="foreign__card card-txt">
+                            <h3 class="card-txt__title">89</h3>
+                            <p class="card-txt__text">
+                                Экспертов по <br> социо-гуманитарным наукам
+                            </p>
+                        </div>
+
+                        <div class="foreign__card card-txt">
+                            <h3 class="card-txt__title">51</h3>
+                            <p class="card-txt__text">
+                                Экспертов по <br> медико-биологическим наукам
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="foreign-carousel__item">
+                <div class="foreign-carousel__inner">
+                    <div class="foreign__column">
                         <div class="foreign__card card-txt">
                             <h3 class="card-txt__title">116</h3>
                             <p class="card-txt__text">
@@ -2691,7 +2696,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -3073,7 +3077,7 @@
 
             <div class="input-wrapper">
                 <input name="email" type="email" class="your-question__email"
-                       placeholder="Email"
+                       placeholder="Email куда направить результат"
                        pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                        required>
                 <span class="input-wrapper__error"></span>
@@ -3201,7 +3205,7 @@
 
                     <div class="input-wrapper">
                         <input name="email" type="email" class="pop-up__input"
-                               placeholder="Email"
+                               placeholder="Email куда направить результат"
                                pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                required/>
                         <span class="input-wrapper__error"></span>
@@ -3415,7 +3419,7 @@
 
                         <div class="input-wrapper">
                             <input name="email" type="email" class="pop-up__input"
-                                   placeholder="Email"
+                                   placeholder="Email куда направить результат"
                                    pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                    required/>
                             <span class="input-wrapper__error"></span>
@@ -4158,8 +4162,8 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <script>
-    var csrfToken = '<?=$_SESSION['csrf-token']?>';
-    // var csrfToken = 228;
+    // var csrfToken = '<?=$_SESSION['csrf-token']?>';
+    var csrfToken = 228;
 </script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js"></script>

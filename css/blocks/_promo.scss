@@ -43,16 +43,16 @@
 }
 
 .promo-carousel {
+  height: 280px;
+  @include _more-than($bp-xxl-375) {
+    height: #{get-vw(280px, $bp-xxl-375)};
+  }
   width: 100%;
 
 
   &__item {
     width: 94%;
-    height: 280px;
-
-    @include _more-than($bp-xxl-375) {
-      height: #{get-vw(280px, $bp-xxl-375)};
-    }
+    height: 100%;
 
     @include padding(10px, 5px, 10px, 5px);
   }

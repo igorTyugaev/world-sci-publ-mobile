@@ -39,17 +39,19 @@
 
 .team-carousel {
   width: 100%;
+  height: 676px;
+  @include _more-than($bp-xxl-375) {
+    height: #{get-vw(676px, $bp-xxl-375)};
+  }
 
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 94%;
+    height: 100%;
+
     @include padding(10px, 5px, 10px, 5px);
-    height: 676px;
-    @include _more-than($bp-xxl-375) {
-      height: #{get-vw(676px, $bp-xxl-375)};
-    }
   }
 
   &__inner {

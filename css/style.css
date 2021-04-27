@@ -1440,12 +1440,13 @@ input {
 }
 
 .promo-carousel {
+  height: 280px;
   width: 100%;
 }
 
 .promo-carousel__item {
   width: 94%;
-  height: 280px;
+  height: 100%;
   padding-top: 10px;
   padding-right: 5px;
   padding-bottom: 10px;
@@ -1609,11 +1610,12 @@ input {
 
 .guaranty-carousel {
   width: 100%;
+  height: 280px;
 }
 
 .guaranty-carousel__item {
   width: 94%;
-  height: 280px;
+  height: 100%;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -1850,6 +1852,10 @@ input {
   margin: 150px 0px 0px 0px;
 }
 
+.stages__header {
+  margin-bottom: 6vh;
+}
+
 .stages__title {
   font-family: "HelveticaBold";
   font-size: 24px;
@@ -1879,12 +1885,12 @@ input {
 
 .stages-carousel {
   width: 100%;
-  overflow: hidden;
+  height: 740px;
 }
 
 .stages-carousel__item {
   width: 100%;
-  height: 740px;
+  height: 100%;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -2057,20 +2063,21 @@ input {
 }
 
 .profile__subheader {
-  background: #001437;
   width: 100%;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
-  border-radius: 3px;
-  padding-top: 14px;
-  padding-right: 18px;
-  padding-bottom: 14px;
-  padding-left: 18px;
+  padding-left: 9px;
 }
 
 .profile__subtitle {
   font-family: "HelveticaBold";
   font-size: 16px;
   color: #FFFEFE;
+  background: #001437;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  border-radius: 3px;
+  padding-top: 14px;
+  padding-right: 18px;
+  padding-bottom: 14px;
+  padding-left: 18px;
 }
 
 .profile__footer {
@@ -2144,11 +2151,12 @@ input {
 
 .profile-carousel {
   width: 100%;
+  height: 186px;
 }
 
 .profile-carousel__item {
   width: 94%;
-  height: 186px;
+  height: 100%;
   padding-top: 10px;
   padding-right: 5px;
   padding-bottom: 10px;
@@ -2641,11 +2649,12 @@ input {
 
 .audit-carousel {
   width: 100%;
+  height: 180px;
 }
 
 .audit-carousel__item {
   width: 100%;
-  height: 180px;
+  height: 100%;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -2709,6 +2718,7 @@ input {
 
 .team-carousel {
   width: 100%;
+  height: 676px;
 }
 
 .team-carousel__item {
@@ -2716,11 +2726,11 @@ input {
   flex-direction: column;
   justify-content: space-between;
   width: 94%;
+  height: 100%;
   padding-top: 10px;
   padding-right: 5px;
   padding-bottom: 10px;
   padding-left: 5px;
-  height: 676px;
 }
 
 .team-carousel__inner {
@@ -3016,6 +3026,10 @@ input {
   align-items: center;
 }
 
+.card-profile__stars {
+  width: 50%;
+}
+
 .card-profile__stars-img {
   display: block;
   height: 30%;
@@ -3091,11 +3105,12 @@ input {
 
 .foreign-carousel {
   width: 100%;
+  height: 280px;
 }
 
 .foreign-carousel__item {
   width: 100%;
-  height: 400px;
+  height: 100%;
   padding-top: 10px;
   padding-right: 5px;
   padding-bottom: 10px;
@@ -4983,7 +4998,7 @@ input {
     padding-left: 0vw;
   }
 
-  .promo-carousel__item {
+  .promo-carousel {
     height: 74.4680851064vw;
   }
 
@@ -5086,7 +5101,7 @@ input {
     margin: 6.3829787234vw 0vw 0vw 0vw;
   }
 
-  .guaranty-carousel__item {
+  .guaranty-carousel {
     height: 74.4680851064vw;
   }
 
@@ -5197,7 +5212,7 @@ input {
     font-size: 4.7872340426vw;
   }
 
-  .stages-carousel__item {
+  .stages-carousel {
     height: 196.8085106383vw;
   }
 
@@ -5267,15 +5282,15 @@ input {
     margin: 6.1170212766vw 0vw 0vw 0vw;
   }
 
-  .profile__subheader {
+  .profile__subtitle {
+    font-size: 4.2553191489vw;
+  }
+
+  .profile__subtitle {
     padding-top: 3.7234042553vw;
     padding-right: 4.7872340426vw;
     padding-bottom: 3.7234042553vw;
     padding-left: 4.7872340426vw;
-  }
-
-  .profile__subtitle {
-    font-size: 4.2553191489vw;
   }
 
   .profile__footer {
@@ -5311,7 +5326,7 @@ input {
     padding-left: 0vw;
   }
 
-  .profile-carousel__item {
+  .profile-carousel {
     height: 49.4680851064vw;
   }
 
@@ -5485,7 +5500,7 @@ input {
     padding-left: 3.1914893617vw;
   }
 
-  .audit-carousel__item {
+  .audit-carousel {
     height: 47.8723404255vw;
   }
 
@@ -5516,15 +5531,15 @@ input {
     margin: 4.7872340426vw 0vw 0vw 0vw;
   }
 
+  .team-carousel {
+    height: 179.7872340426vw;
+  }
+
   .team-carousel__item {
     padding-top: 2.6595744681vw;
     padding-right: 1.329787234vw;
     padding-bottom: 2.6595744681vw;
     padding-left: 1.329787234vw;
-  }
-
-  .team-carousel__item {
-    height: 179.7872340426vw;
   }
 
   .tabs-team__tab {
@@ -5674,8 +5689,8 @@ input {
     margin: 3.1914893617vw 0vw 0vw 0vw;
   }
 
-  .foreign-carousel__item {
-    height: 106.3829787234vw;
+  .foreign-carousel {
+    height: 74.4680851064vw;
   }
 
   .foreign-carousel__item {
