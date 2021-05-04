@@ -15,7 +15,7 @@
     color: $textColorPrimary;
 
     @include font-size(14px);
-    @include padding(20px, 20px, 20px, 20px);
+    @include padding(20px, 12px, 20px, 12px);
     line-height: 120%
   }
 
@@ -25,7 +25,16 @@
     align-items: center;
     justify-content: space-between;
     align-items: flex-start;
-    @include padding(0px, 20px, 0px, 20px);
+    width: 100%;
+    @include padding(0px, 12px, 0px, 12px);
+  }
+
+  &__inputs {
+    width: 60%;
+  }
+
+  &__btns {
+    width: 35%;
   }
 
   &__email {
@@ -33,9 +42,6 @@
   }
 
   &__submit {
-    flex: 1;
-    @include margin(0px, 0px, 0px, 20px);
-    width: 100%;
   }
 
   &__btn {

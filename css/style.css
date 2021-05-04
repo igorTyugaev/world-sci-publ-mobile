@@ -1490,10 +1490,10 @@ input {
 
 .manifest__logo {
   position: absolute;
-  right: -2.8%;
+  right: 2.8%;
   top: 0;
   object-fit: contain;
-  height: 80px;
+  height: 56px;
 }
 
 .manifest__title {
@@ -1670,6 +1670,7 @@ input {
 }
 
 .protection__form {
+  width: 100%;
   margin-top: 24px;
 }
 
@@ -2281,9 +2282,9 @@ input {
   color: #000000;
   font-size: 14px;
   padding-top: 20px;
-  padding-right: 20px;
+  padding-right: 12px;
   padding-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 12px;
   line-height: 120%;
 }
 
@@ -2293,20 +2294,23 @@ input {
   align-items: center;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
   padding-top: 0px;
-  padding-right: 20px;
+  padding-right: 12px;
   padding-bottom: 0px;
-  padding-left: 20px;
+  padding-left: 12px;
+}
+
+.audit__inputs {
+  width: 60%;
+}
+
+.audit__btns {
+  width: 35%;
 }
 
 .audit__email {
   flex: 2;
-}
-
-.audit__submit {
-  flex: 1;
-  margin: 0px 0px 0px 20px;
-  width: 100%;
 }
 
 .audit__btn {
@@ -5024,7 +5028,7 @@ input {
   }
 
   .manifest__logo {
-    height: 21.2765957447vw;
+    height: 14.8936170213vw;
   }
 
   .manifest__title {
@@ -5389,20 +5393,16 @@ input {
 
   .audit__desc {
     padding-top: 5.3191489362vw;
-    padding-right: 5.3191489362vw;
+    padding-right: 3.1914893617vw;
     padding-bottom: 5.3191489362vw;
-    padding-left: 5.3191489362vw;
+    padding-left: 3.1914893617vw;
   }
 
   .audit__fields {
     padding-top: 0vw;
-    padding-right: 5.3191489362vw;
+    padding-right: 3.1914893617vw;
     padding-bottom: 0vw;
-    padding-left: 5.3191489362vw;
-  }
-
-  .audit__submit {
-    margin: 0vw 0vw 0vw 5.3191489362vw;
+    padding-left: 3.1914893617vw;
   }
 
   .audit__btn {
