@@ -1,5 +1,5 @@
 .reviews {
-  @include margin(80px);
+  @include margin(118px);
 
   &__wrap {
     position: relative;
@@ -10,6 +10,7 @@
     @include font-size(24px);
     color: #000000;
     text-align: left;
+    @include margin(0px, 0px, 30px, 0px);
   }
 
   &__title {
@@ -205,7 +206,7 @@
   width: 100%;
 
   &__item {
-    padding: 10px;
+    @include padding(0px, 10px, 0px, 10px);
     width: 100%;
   }
 

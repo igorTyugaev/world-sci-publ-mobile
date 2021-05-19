@@ -1,5 +1,5 @@
 .guaranty {
-  @include margin(90px);
+  @include margin(118px);
 
   &__title {
     font-family: $fontFamilySecondary;
@@ -27,7 +27,7 @@
   &__item {
     width: 94%;
     height: 100%;
-    @include padding(10px, 10px, 10px, 10px);
+    @include padding(0px, 10px, 10px, 10px);
   }
 
   &__inner {
@@ -35,7 +35,11 @@
   }
 
   .flickity-page-dots {
-    bottom: -3vh;
+    bottom: -12px;
+
+    @media (min-width: $bp-xxl-375) {
+      bottom: #{get-vw(-12px, $bp-xxl-375)};
+    }
   }
 
   .flickity-page-dots .dot {
@@ -54,7 +58,7 @@
 .protection {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
+  @include margin(24px);
 
   &__poster {
     display: flex;

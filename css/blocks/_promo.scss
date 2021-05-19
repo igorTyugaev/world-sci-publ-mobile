@@ -16,12 +16,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include margin(24px);
+    @include margin(30px);
     overflow: hidden;
   }
 
   &__carousel {
-    margin-top: 24px;
+    @include margin(23px);
   }
 
   &__footer {
@@ -54,7 +54,7 @@
     width: 94%;
     height: 100%;
 
-    @include padding(10px, 5px, 10px, 5px);
+    @include padding(0px, 5px, 10px, 5px);
   }
 
   &__inner {
@@ -62,7 +62,11 @@
   }
 
   .flickity-page-dots {
-    bottom: -3vh;
+    bottom: -12px;
+
+    @media (min-width: $bp-xxl-375) {
+      bottom: #{get-vw(-12px, $bp-xxl-375)};
+    }
   }
 
   .flickity-page-dots .dot {
@@ -127,6 +131,11 @@
 }
 
 .trailer {
+  &__video-block {
+    width: 100%;
+    @include padding(0px, 5px, 0px, 5px);
+  }
+
   &__video {
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
@@ -149,7 +158,7 @@
 
   &__description {
     @include font-size(12px);
-    @include margin(16px);
+    @include margin(23px);
   }
 }
 

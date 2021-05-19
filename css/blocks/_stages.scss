@@ -4,7 +4,11 @@
   @include margin(150px);
 
   &__header {
-    margin-bottom: 6vh;
+    margin-bottom: 30px;
+
+    @media (min-width: $bp-xxl-375) {
+      margin-bottom: #{get-vw(30px, $bp-xxl-375)};
+    }
   }
 
   &__title {
@@ -66,7 +70,11 @@
   }
 
   .flickity-page-dots {
-    bottom: -3vh;
+    bottom: -12px;
+
+    @media (min-width: $bp-xxl-375) {
+      bottom: #{get-vw(-12px, $bp-xxl-375)};
+    }
   }
 
   .flickity-page-dots .dot {

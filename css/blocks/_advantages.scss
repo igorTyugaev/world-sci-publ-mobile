@@ -21,7 +21,11 @@
   }
 
   .flickity-page-dots {
-    bottom: -3vh;
+    bottom: -12px;
+
+    @media (min-width: $bp-xxl-375) {
+      bottom: #{get-vw(-12px, $bp-xxl-375)};
+    }
   }
 
   .flickity-page-dots .dot {

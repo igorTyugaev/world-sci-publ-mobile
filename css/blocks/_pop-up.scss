@@ -588,6 +588,11 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
+    @media (min-width: $bp-xxl-375) {
+      border-bottom-left-radius: #{get-vw(5px, $bp-xxl-375)};
+      border-bottom-right-radius: #{get-vw(5px, $bp-xxl-375)};
+    }
+
     transition: all 0.3s ease-out;
 
     opacity: 0;
@@ -702,6 +707,11 @@
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 
+    @media (min-width: $bp-xxl-375) {
+      border-bottom-left-radius: #{get-vw(6px, $bp-xxl-375)};
+      border-bottom-right-radius: #{get-vw(6px, $bp-xxl-375)};
+    }
+
     &--pink {
       font-family: $fontFamilyPrimary;
       background-color: #F595A8;
@@ -787,9 +797,14 @@
     flex: 1;
     width: 100%;
     background-color: $colorPrimary;
-    //@include padding(32px, 77px, 32px, 15px);
+
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+
+    @media (min-width: $bp-xxl-375) {
+      border-bottom-left-radius: #{get-vw(6px, $bp-xxl-375)};
+      border-bottom-right-radius: #{get-vw(6px, $bp-xxl-375)};
+    }
   }
 
   &__body {
@@ -860,6 +875,7 @@
     height: 100%;
   }
 
+  //  TODO: PROPD_COVER
   @include _more-than(720px) {
     display: flex;
     z-index: 99999;

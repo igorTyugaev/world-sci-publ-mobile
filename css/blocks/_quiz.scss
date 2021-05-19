@@ -50,7 +50,7 @@
   &__poster {
     width: 100%;
     position: relative;
-    @include margin(24px);
+    @include margin(30px);
 
     height: 455px;
     @include _more-than($bp-xxl-375) {
@@ -73,7 +73,7 @@
   }
 
   &__labels {
-    @include padding(0px, 12px, 12px, 12px);
+    @include padding(0px, 24px, 12px, 24px);
     @include font-size(10px);
     width: 100%;
 
