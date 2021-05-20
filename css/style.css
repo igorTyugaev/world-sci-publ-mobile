@@ -2864,6 +2864,7 @@ input {
   height: 47.5%;
   overflow: hidden;
   border-radius: 3px;
+  position: relative;
 }
 
 .team-card__img {

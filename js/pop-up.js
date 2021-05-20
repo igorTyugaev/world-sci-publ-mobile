@@ -149,6 +149,10 @@ function initPopUpById(id, scriptForm = null) {
 function openPopUp(popUp, duration = false) {
     duration && addAnimation(popUp, duration);
     popUp.classList.add('pop-up_active');
+    const _iframe = popUp.querySelector('iframe');
+    const iframeID = _iframe.getAttribute('id');
+    if (iframeID === "example_cooperation_agreement_pdf")
+        _iframe.src = "https://drive.google.com/file/d/1W-CW3Q27ebiwfl-wv9S4B_3oIZaWSgUY/preview";
     scrollRemove();
 }
 
